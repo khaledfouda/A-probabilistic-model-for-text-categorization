@@ -34,6 +34,8 @@ def read_lines_zst(file_name):
 if __name__ == '__main__':
 	input_folder = sys.argv[1]
 	output_folder = sys.argv[2]
+	# Whatchout of case sensitivity in subreddit names.
+	# For example, as below, some starts with upper letters and others with small
 	subreddit_list = ['canada', 'liberal', 'conservative','politics']
 	input_files = []
 	output_files = []
@@ -70,7 +72,7 @@ if __name__ == '__main__':
 			try:
 				obj = json.loads(line)
 				created = datetime.utcfromtimestamp(int(obj['created_utc']))
-				sub = obj['subreddit']
+				sub = obj['subreddit'].lower()
 				if sub in subreddit_list:
 					if comma_flags[sub]:
 						comma_flags[sub] = False
