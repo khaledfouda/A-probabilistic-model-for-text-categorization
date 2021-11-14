@@ -16,8 +16,9 @@ log.addHandler(logging.StreamHandler())
 #--------------------------------------------------------------
 def parsefile(input_file):
     d = pd.read_json(input_file)
+    # "Ups" is removed since not included in 2019 data.
     keeped_cols = ['author', 'created_utc', 'title', 'num_comments',
-                  'score', 'ups', 'domain', 'selftext', 'locked', 'subreddit']
+                  'score', 'domain', 'selftext', 'locked', 'subreddit']
     d = d[keeped_cols]
     d.created_utc = pd.to_datetime(d.created_utc, unit='s').dt.date
     d = d.loc[d.num_comments>=15]
@@ -25,7 +26,7 @@ def parsefile(input_file):
 #------------------------------------------------
 if __name__ == '__main__':
     input_folder = sys.argv[1]
-    subreddit = sys.argv[2]
+    subreddit = sys.argv[2].lower()
     year = sys.argv[3]
     output_folder = sys.argv[4]
     input_files = []
@@ -40,7 +41,7 @@ if __name__ == '__main__':
                 continue
             if output_file == '':
                 output_file = output_folder + '/' +str(filename.split('-')[0]) +\
-                 str(subreddit) + 'df.feather'
+                 "_"+str(subreddit) + '_df.feather'
             file_path = os.path.join(subdir, filename)
             input_files.append(file_path)
             total_size += os.stat(file_path).st_size
