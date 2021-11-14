@@ -58,3 +58,5 @@ def clean_text(text):
     return tokens
 #--------------------------------------------------
 data.text = data.text.swifter.allow_dask_on_strings(enable=True).apply(clean_text)
+data.reset_index().drop(columns=['index'])\
+    .to_feather('../data/feather_files/data2019clean.feather')
