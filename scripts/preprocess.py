@@ -1,30 +1,46 @@
 import pandas as pd
 from nltk import sent_tokenize, word_tokenize, WordNetLemmatizer
 from nltk.corpus import stopwords
+import swifter
 pd.options.display.max_colwidth = 5000
+subreddit_list = ['canada', 'liberal', 'conservative','politics',\
+"twoxchromosomes","showerthoughts","tifu"]
+political = ['liberal', 'conservative','politics']
+nonpolitical = ["twoxchromosomes","showerthoughts","tifu"]
+# Read the feather files
+data = pd.DataFrame()
+for sub in subreddit_list:
+    rf = pd.read_feather('../data/feather_files/RS_2019_'+sub+'_df.feather')
+    if sub in political:
+        rf['class'] = 'political'
+    elif sub in nonpolitical:
+        rf['class'] = 'nonpolitical'
+    elif sub == 'canada':
+        rf['class'] = 'test'
+    else:
+        rf['class'] = 'Unkown'
+    data = pd.concat((data,rf))
 
-lib19 = pd.read_feather('../data/feather_files/RS_2019_liberal_df.feather')
-con19 = pd.read_feather("../data/feather_files/RS_2019_conservative_df.feather")
-pol19 = pd.read_feather('../data/feather_files/RS_2019_politics_df.feather')
-can19 = pd.read_feather('../data/feather_files/RS_2019_canada_df.feather')
+# Removing posts with less than 10 characters in the body.
+data = data[(data.selftext.astype(str).str.len()>10)].reset_index()
+print(data.groupby('class').describe(percentiles=[.5]))
 
-pol19_sub = pol19[(pol19.selftext.astype(str).str.len()>10)].reset_index()
-can19_sub = can19[(can19.selftext.astype(str).str.len()>10)].reset_index()
-lib19_sub = lib19[(lib19.selftext.astype(str).str.len()>10)].reset_index()
-con19_sub = con19[(con19.selftext.astype(str).str.len()>10)].reset_index()
-
-def concat_text(df):
-    df['text'] = df.title + " " + df.selftext
-    df.drop(columns=["title","selftext"],inplace=True)
-    return df
-pol19_sub = concat_text(pol19_sub)
-con19_sub = concat_text(con19_sub)
-lib19_sub = concat_text(lib19_sub)
-can19_sub = concat_text(can19_sub)
+# combining titles with the post body.
+data['text'] = data.title + " " + data.selftext
+# deleting the previous two columns.
+data.drop(columns=["title","selftext"],inplace=True)
 
 def clean_text(text):
     """
-    To be filled later
+    Input : text
+    output : cleaned text
+    process:
+        1.Remove non-alphabitical words
+        2.remove words of less than 3 characters
+        3.Remove stopwords
+        4.Transform words to lower characters
+        4.lemmatize the text - First verbs then nouns
+        * Steps are performed in that order.
     """
     tokens = word_tokenize(text)
     lemma = WordNetLemmatizer()
@@ -40,8 +56,5 @@ def clean_text(text):
             ,pos="n") for word in tokens if clean(word)]\
         )
     return tokens
-
-can19_sub.text = can19_sub.text.map(clean_text)
-pol19_sub.text = pol19_sub.text.map(clean_text)
-con19_sub.text = con19_sub.text.map(clean_text)
-lib19_sub.text = lib19_sub.text.map(clean_text)
+#--------------------------------------------------
+data.text = data.text.swifter.allow_dask_on_strings(enable=True).apply(clean_text)

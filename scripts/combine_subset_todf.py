@@ -58,3 +58,5 @@ if __name__ == '__main__':
     log.info("Data file saved successfully.")
     log.info("..DONE..")
     #------------------------------------------------
+data.reset_index().drop(columns=['index'])\
+    .to_feather('../data/feather_files/data2019clean.feather')

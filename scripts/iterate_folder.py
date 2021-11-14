@@ -36,8 +36,9 @@ if __name__ == '__main__':
 	output_folder = sys.argv[2]
 	# Whatchout of case sensitivity in subreddit names.
 	# For example, as below, some starts with upper letters and others with small
-	#subreddit_list = ['canada', 'liberal', 'conservative','politics']
-	subreddit_list = ["twoxchromosomes","Showerthoughts","todayilearned","tifu"]
+	#subreddit_list = []
+	subreddit_list = ['canada', 'liberal', 'conservative','politics',\
+	"twoxchromosomes","Showerthoughts","todayilearned","tifu"]
 	subreddit_list = [s.lower() for s in subreddit_list]
 	input_files = []
 	output_files = []
