@@ -12,18 +12,18 @@ data = pd.DataFrame()
 for sub in subreddit_list:
     rf = pd.read_feather('../data/feather_files/RS_2019_'+sub+'_df.feather')
     if sub in political:
-        rf['class'] = 'political'
+        rf['tclass'] = 'political'
     elif sub in nonpolitical:
-        rf['class'] = 'nonpolitical'
+        rf['tclass'] = 'nonpolitical'
     elif sub == 'canada':
-        rf['class'] = 'test'
+        rf['tclass'] = 'test'
     else:
-        rf['class'] = 'Unkown'
+        rf['tclass'] = 'Unkown'
     data = pd.concat((data,rf))
 
 # Removing posts with less than 10 characters in the body.
 data = data[(data.selftext.astype(str).str.len()>10)].reset_index()
-print(data.groupby('class').describe(percentiles=[.5]))
+print(data.groupby('tclass').describe(percentiles=[.5]))
 
 # combining titles with the post body.
 data['text'] = data.title + " " + data.selftext
