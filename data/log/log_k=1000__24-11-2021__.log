@@ -1,0 +1,209 @@
+18:46:28,693 Bot INFO ###########################################################
+18:46:30,110 Bot INFO A data sample
+18:46:30,110 Bot INFO                 author created_utc  num_comments  score        domain  locked  \
+0  LazySundayBreakfast  2019-01-01            19    330  self.Liberal   False   
+
+  subreddit     tclass  \
+0   Liberal  political   
+
+                                                                   text  
+0      crime   democrat slogan    presidential election  anything        
+18:46:30,117 Bot INFO The shape of the data is (505676, 9)
+18:46:30,977 Bot INFO Taking 20.0% test subset. The resulting train shape is (404540, 9) and test shape is (101136, 9)
+18:46:32,207 Bot INFO dividng data into classes
+18:46:32,376 Bot INFO Joining the series of text into one string per category
+18:46:32,670 Bot INFO Dividing those long strings into lists of words
+18:46:33,370 Bot INFO Creating wordclouds of each class (pol, nonpol, Canada) and saving the resulting images to disk
+18:46:33,377 Bot INFO word cloud 1/3
+18:46:33,377 Bot INFO Political wordcloud
+18:46:50,388 Bot INFO word cloud 2/3
+18:46:50,388 Bot INFO non- Political wordcloud
+18:47:16,544 Bot INFO word cloud 3/3
+18:47:16,544 Bot INFO R/Canada (test)
+18:47:20,643 Bot INFO Couting the occurences of each word per class
+18:47:20,643 Bot INFO Number of words are 2025894, 3124629, and 332602
+18:47:21,497 Bot INFO Number of distinct words is 25052, 48967, and 15191
+18:47:21,497 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+18:47:21,528 Bot INFO +------------------------------------------+
+|  Most common 15 words in each category   |
++-------------+---------------+------------+
+|  Political  | Non-Political |   Canada   |
++-------------+---------------+------------+
+|    trump    |      like     |   canada   |
+|    biden    |      make     |  canadian  |
+|    house    |      know     |  trudeau   |
+| coronavirus |     think     |    news    |
+|     call    |      tell     |   would    |
+|   democrat  |     would     |    make    |
+|  president  |      want     |    like    |
+|    white    |      take     |    want    |
+|   election  |      time     |   people   |
+|     vote    |     people    | government |
+|  republican |      feel     |    year    |
+|    sander   |     start     |  ontario   |
+|    state    |      year     |    call    |
+|    donald   |      come     |  liberal   |
+|   campaign  |      look     |    take    |
++-------------+---------------+------------+
+18:47:21,530 Bot INFO \begin{tabular}{ccc}
+Political & Non-Political & Canada \\
+trump & like & canada \\
+biden & make & canadian \\
+house & know & trudeau \\
+coronavirus & think & news \\
+call & tell & would \\
+democrat & would & make \\
+president & want & like \\
+white & take & want \\
+election & time & people \\
+vote & people & government \\
+republican & feel & year \\
+sander & start & ontario \\
+state & year & call \\
+donald & come & liberal \\
+campaign & look & take \\
+\end{tabular}
+18:47:21,649 Bot INFO Creating a table of the number of occurence of each word in each of the two classes. Saved as worddict
+18:47:22,158 Bot INFO Number of distinct words is 56255
+18:47:22,158 Bot INFO Droping word occuring less than 50 times
+18:47:22,173 Bot INFO  number of words occuring at least 50 times is 6385 wordds
+18:47:22,173 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+18:47:22,177 Bot INFO Removing names and other non-recognizable words. Unfortunately, some names would be detected since they hold a second meaning
+18:47:22,429 Bot INFO keeping top 1000 words in each class
+18:47:22,443 Bot INFO Number of words after keeping top 1000 words is 2000
+18:47:22,506 Bot INFO Creating wordcloud of each of the k=1000 words and saving them inside /data/images/
+18:47:22,506 Bot INFO top political wordcloud
+18:47:23,648 Bot INFO top non-political wordcloud
+18:47:24,532 Bot INFO Couting the occurence of the chosen words inside each of the posts. The resulting dataframe is of shape (number of posts)x(2k).
+18:51:36,890 Bot INFO saved as wp_in_u_1000 with the dimension of (404540, 1)
+18:51:37,59 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_1000
+18:55:18,304 Bot INFO Finding outliers and printing them.
+18:55:18,316 Bot INFO Words appearing more than 30 times in the same post are considered as outliers.
+18:55:18,316 Bot INFO No action is being taken atm but we can consider resetting them to 30
+18:55:22,747 Bot INFO +--------------------------------------------------------------------------------------+
+|                  Words occuring more than 30 times in a single post                  |
++---------------+----------------------------------------------------------------------+
+|      word     |                           high occurences                            |
++---------------+----------------------------------------------------------------------+
+|  impeachment  |                          36,41,45,48,69,89                           |
+|    impeach    |                         37,41,44,45,48,70,89                         |
+|     trump     | 31,31,32,32,32,33,34,35,36,39,39,39,40,41,44,53,54,54,64,64,65,83,85 |
+|    subpoena   |                                  35                                  |
+|    democrat   |                                35,39                                 |
+|     sander    |                               59,64,80                               |
+|      tara     |                                  35                                  |
+| congresswoman |                                  35                                  |
+|    elector    |                                  35                                  |
+|     kamala    |                                44,65                                 |
+|    election   |                          31,39,44,45,65,99                           |
+|     senate    |                                  33                                  |
+|    endorse    |                                35,49                                 |
+|    inquiry    |                                  33                                  |
+|  presidential |                             33,34,39,48                              |
+|    campaign   |                                  32                                  |
+|     tweet     |                                  46                                  |
+|    maxwell    |                                  52                                  |
+|     fraud     |                                  46                                  |
+|    congress   |                                  36                                  |
+|    supreme    |                            32,34,43,44,54                            |
+|    testify    |                                  42                                  |
+|     pardon    |                                45,56                                 |
+|      veto     |                                  35                                  |
+|      vote     |                            32,34,48,55,68                            |
+|     border    |                               50,51,63                               |
+|    twitter    |                                  38                                  |
+|    attorney   |                                40,76                                 |
+|     miller    |                                  32                                  |
+|   president   |                       32,34,37,40,41,50,53,56                        |
+|     debate    |                                  88                                  |
+|    justice    |                                  36                                  |
+|     summit    |                                  62                                  |
+|   executive   |                                39,69                                 |
+|     russia    |                                  41                                  |
+|     court     |                           42,43,64,77,103                            |
+|      halt     |                                  37                                  |
+|      ruth     |                                  55                                  |
+|  citizenship  |                                  45                                  |
+|  investigate  |                                  43                                  |
+|     elect     |                       31,36,39,44,45,47,66,99                        |
+|    override   |                                  47                                  |
+|    national   |                               31,87,94                               |
+|      fund     |                                  51                                  |
+|      ally     |                                31,33                                 |
+|   transition  |                                  80                                  |
+|    declare    |                                50,79                                 |
+|    defense    |                                  32                                  |
+|     delay     |                                 101                                  |
+|     relief    |                                  38                                  |
+|     report    |                         32,38,42,52,58,73,79                         |
+|      vice     |                                  34                                  |
+|     china     |                                  47                                  |
+|     acquit    |                                  38                                  |
+|     thread    |                               36,37,38                               |
+|     union     |                                  69                                  |
+|     virus     |                                31,55                                 |
+|     emerge    |                              32,70,128                               |
+|     defend    |                                  53                                  |
+|    suspend    |                                  31                                  |
+|     reject    |                                  43                                  |
+|     medium    |                                  37                                  |
+|      firm     |                                  49                                  |
+|     nation    |                               31,88,94                               |
+|   complaint   |                                  38                                  |
+|     arrest    |                                  49                                  |
+|      rule     |                                  50                                  |
+|    general    |                                  86                                  |
+|    finance    |                                  31                                  |
+|    security   |                                31,32                                 |
+|    evidence   |                                  40                                  |
+|   defendant   |                                  53                                  |
+|     house     |                             37,40,48,59                              |
+|     state     |                                  95                                  |
+|   emergency   |                              32,70,128                               |
+|      wall     |                                  32                                  |
+|     police    |                                  38                                  |
+|      rain     |                             33,36,41,50                              |
+|      girl     |                                  41                                  |
+|     friend    |                                33,53                                 |
+|      gene     |                                  86                                  |
+|      chin     |                                  47                                  |
+|      emma     |                                  31                                  |
+|      disc     |                                  39                                  |
++---------------+----------------------------------------------------------------------+
+18:55:23,849 Bot INFO Computing the sum of words in each post
+18:55:32,110 Bot INFO Creating the first set of features, equation 2. (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+18:55:36,820 Bot INFO saved as proto_1000
+18:55:36,892 Bot INFO The next feature is a score per (post,class)
+18:55:46,887 Bot INFO saved as protoc_1000
+19:45:44,565 Bot INFO Log is already initiated.
+19:46:49,60 Bot INFO ###########################################################
+19:47:27,891 Bot INFO              Valid_200 train_200
+0                53529    200853
+1                46826    191992
+-1                 781     11695
+Accuracy        98.36%    94.26%
+non-Response    52.93%    49.65%
+19:50:38,402 parso.python.diff DEBUG diff parser start
+19:50:38,403 parso.python.diff DEBUG line_lengths old: 1; new: 1
+19:50:38,403 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+19:50:38,404 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+19:50:38,405 parso.python.diff DEBUG diff parser end
+19:50:51,282 parso.python.diff DEBUG diff parser start
+19:50:51,283 parso.python.diff DEBUG line_lengths old: 1; new: 1
+19:50:51,283 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+19:50:51,284 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+19:50:51,284 parso.python.diff DEBUG diff parser end
+19:53:11,497 parso.python.diff DEBUG diff parser start
+19:53:11,498 parso.python.diff DEBUG line_lengths old: 1; new: 1
+19:53:11,499 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+19:53:11,502 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+19:53:11,504 parso.python.diff DEBUG diff parser end
+19:53:30,623 Bot INFO +--------------+-------------+-------------+
+|              | Valid_200   | train_200   |
+|--------------+-------------+-------------|
+| 0            | 53529       | 200853      |
+| 1            | 46826       | 191992      |
+| -1           | 781         | 11695       |
+| Accuracy     | 98.36%      | 94.26%      |
+| non-Response | 52.93%      | 49.65%      |
++--------------+-------------+-------------+

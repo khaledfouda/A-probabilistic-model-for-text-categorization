@@ -1,0 +1,134 @@
+20:55:03,747 Bot INFO ###########################################################
+20:57:13,950 Bot INFO ###########################################################
+20:57:14,713 Bot INFO A data sample
+20:57:14,713 Bot INFO                 author created_utc  num_comments  score        domain  locked  \
+0  LazySundayBreakfast  2019-01-01            19    330  self.Liberal   False   
+
+  subreddit     tclass  \
+0   Liberal  political   
+
+                                                                   text  
+0      crime   democrat slogan    presidential election  anything        
+20:57:14,717 Bot INFO The shape of the data is (505676, 9)
+20:57:15,233 Bot INFO Taking 20.0% test subset. The resulting train shape is (404540, 9) and test shape is (101136, 9)
+20:57:15,821 Bot INFO dividng data into classes
+20:57:15,901 Bot INFO Joining the series of text into one string per category
+20:57:16,115 Bot INFO Dividing those long strings into lists of words
+20:57:16,614 Bot INFO Creating wordclouds of each class (pol, nonpol, Canada) and saving the resulting images to disk
+20:57:16,615 Bot INFO word cloud 1/3
+20:57:16,616 Bot INFO Political wordcloud
+20:57:31,221 Bot INFO word cloud 2/3
+20:57:31,222 Bot INFO non- Political wordcloud
+20:57:55,155 Bot INFO word cloud 3/3
+20:57:55,155 Bot INFO R/Canada (test)
+20:57:58,65 Bot INFO Couting the occurences of each word per class
+20:57:58,65 Bot INFO Number of words are 2025894, 3124629, and 332602
+20:57:58,609 Bot INFO Number of distinct words is 25052, 48967, and 15191
+20:57:58,609 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+20:57:58,650 Bot INFO +------------------------------------------+
+|  Most common 15 words in each category   |
++-------------+---------------+------------+
+|  Political  | Non-Political |   Canada   |
++-------------+---------------+------------+
+|    trump    |      like     |   canada   |
+|    biden    |      make     |  canadian  |
+|    house    |      know     |  trudeau   |
+| coronavirus |     think     |    news    |
+|     call    |      tell     |   would    |
+|   democrat  |     would     |    make    |
+|  president  |      want     |    like    |
+|    white    |      take     |    want    |
+|   election  |      time     |   people   |
+|     vote    |     people    | government |
+|  republican |      feel     |    year    |
+|    sander   |     start     |  ontario   |
+|    state    |      year     |    call    |
+|    donald   |      come     |  liberal   |
+|   campaign  |      look     |    take    |
++-------------+---------------+------------+
+20:57:58,650 Bot INFO \begin{tabular}{ccc}
+Political & Non-Political & Canada \\
+trump & like & canada \\
+biden & make & canadian \\
+house & know & trudeau \\
+coronavirus & think & news \\
+call & tell & would \\
+democrat & would & make \\
+president & want & like \\
+white & take & want \\
+election & time & people \\
+vote & people & government \\
+republican & feel & year \\
+sander & start & ontario \\
+state & year & call \\
+donald & come & liberal \\
+campaign & look & take \\
+\end{tabular}
+20:57:58,781 Bot INFO Creating a table of the number of occurence of each word in each of the two classes. Saved as worddict
+20:57:59,347 Bot INFO Number of distinct words is 56255
+20:57:59,348 Bot INFO Droping word occuring less than 50 times
+20:57:59,356 Bot INFO  number of words occuring at least 50 times is 6385 wordds
+20:57:59,356 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+20:57:59,360 Bot INFO Removing names and other non-recognizable words. Unfortunately, some names would be detected since they hold a second meaning
+20:57:59,642 Bot INFO keeping top 400 words in each class
+20:57:59,657 Bot INFO Number of words after keeping top 400 words is 800
+20:57:59,707 Bot INFO Creating wordcloud of each of the k=400 words and saving them inside /data/images/
+20:57:59,708 Bot INFO top political wordcloud
+20:58:01,178 Bot INFO top non-political wordcloud
+20:58:02,656 Bot INFO Couting the occurence of the chosen words inside each of the posts. The resulting dataframe is of shape (number of posts)x(2k).
+20:59:40,871 Bot INFO saved as wp_in_u_400 with the dimension of (404540, 1)
+20:59:40,907 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_400
+21:01:25,968 Bot INFO Finding outliers and printing them.
+21:01:25,968 Bot INFO Words appearing more than 30 times in the same post are considered as outliers.
+21:01:25,968 Bot INFO No action is being taken atm but we can consider resetting them to 30
+21:01:28,301 Bot INFO +--------------------------------------------------------------------------------------+
+|                  Words occuring more than 30 times in a single post                  |
++---------------+----------------------------------------------------------------------+
+|      word     |                           high occurences                            |
++---------------+----------------------------------------------------------------------+
+|  impeachment  |                          36,41,45,48,69,89                           |
+|    impeach    |                         37,41,44,45,48,70,89                         |
+|     trump     | 31,31,32,32,32,33,34,35,36,39,39,39,40,41,44,53,54,54,64,64,65,83,85 |
+|    subpoena   |                                  35                                  |
+|    democrat   |                                35,39                                 |
+|     sander    |                               59,64,80                               |
+|      tara     |                                  35                                  |
+| congresswoman |                                  35                                  |
+|    elector    |                                  35                                  |
+|     kamala    |                                44,65                                 |
+|    election   |                          31,39,44,45,65,99                           |
+|     senate    |                                  33                                  |
+|    endorse    |                                35,49                                 |
+|    inquiry    |                                  33                                  |
+|  presidential |                             33,34,39,48                              |
+|    campaign   |                                  32                                  |
+|     tweet     |                                  46                                  |
+|    maxwell    |                                  52                                  |
+|     fraud     |                                  46                                  |
+|    congress   |                                  36                                  |
+|    supreme    |                            32,34,43,44,54                            |
+|    testify    |                                  42                                  |
+|     pardon    |                                45,56                                 |
+|      veto     |                                  35                                  |
+|      vote     |                            32,34,48,55,68                            |
+|     border    |                               50,51,63                               |
+|    twitter    |                                  38                                  |
+|    attorney   |                                40,76                                 |
+|     miller    |                                  32                                  |
+|   president   |                       32,34,37,40,41,50,53,56                        |
+|     debate    |                                  88                                  |
+|    justice    |                                  36                                  |
+|     summit    |                                  62                                  |
+|   executive   |                                39,69                                 |
+|     russia    |                                  41                                  |
+|     court     |                           42,43,64,77,103                            |
+|      halt     |                                  37                                  |
+|      ruth     |                                  55                                  |
+|  citizenship  |                                  45                                  |
+|      disc     |                                  39                                  |
++---------------+----------------------------------------------------------------------+
+21:01:28,546 Bot INFO Computing the sum of words in each post
+21:01:32,895 Bot INFO Creating the first set of features, equation 2. (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:01:34,217 Bot INFO saved as proto_400
+21:01:34,263 Bot INFO The next feature is a score per (post,class)
+21:01:36,543 Bot INFO saved as protoc_400

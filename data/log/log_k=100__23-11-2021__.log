@@ -1,0 +1,64 @@
+20:38:18,111 Bot INFO ###########################################################
+20:38:24,763 Bot INFO A data sample
+20:38:24,763 Bot INFO                 author created_utc  num_comments  score        domain  locked  \
+0  LazySundayBreakfast  2019-01-01            19    330  self.Liberal   False   
+
+  subreddit     tclass  \
+0   Liberal  political   
+
+                                                                   text  
+0      crime   democrat slogan    presidential election  anything        
+20:38:24,771 Bot INFO The shape of the data is (505676, 9)
+20:40:02,512 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\jedi\third_party\typeshed\stdlib\3\builtins.pyi
+20:40:02,663 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\jedi\third_party\typeshed\stdlib\3\sys.pyi
+20:49:30,554 parso.python.diff DEBUG diff parser start
+20:49:30,555 parso.python.diff DEBUG line_lengths old: 12; new: 8
+20:49:30,555 parso.python.diff DEBUG -> code[replace] old[1:12] new[1:8]
+20:49:30,559 parso.python.diff DEBUG parse_part from 1 to 8 (to 7 in part parser)
+20:49:30,559 parso.python.diff DEBUG diff parser end
+20:49:33,423 parso.python.diff DEBUG diff parser start
+20:49:33,423 parso.python.diff DEBUG line_lengths old: 8; new: 8
+20:49:33,424 parso.python.diff DEBUG -> code[equal] old[1:7] new[1:7]
+20:49:33,424 parso.python.diff DEBUG copy old[2:7] new[1:7]
+20:49:33,425 parso.python.diff DEBUG -> code[replace] old[8:8] new[8:8]
+20:49:33,426 parso.python.diff DEBUG parse_part from 8 to 8 (to 7 in part parser)
+20:49:33,427 parso.python.diff DEBUG diff parser end
+20:50:12,776 parso.python.diff DEBUG diff parser start
+20:50:12,778 parso.python.diff DEBUG line_lengths old: 8; new: 8
+20:50:12,778 parso.python.diff DEBUG -> code[equal] old[1:7] new[1:7]
+20:50:12,779 parso.python.diff DEBUG copy old[2:7] new[1:7]
+20:50:12,779 parso.python.diff DEBUG -> code[replace] old[8:8] new[8:8]
+20:50:12,780 parso.python.diff DEBUG parse_part from 8 to 8 (to 7 in part parser)
+20:50:12,782 parso.python.diff DEBUG diff parser end
+20:50:55,412 parso.python.diff DEBUG diff parser start
+20:50:55,412 parso.python.diff DEBUG line_lengths old: 8; new: 10
+20:50:55,412 parso.python.diff DEBUG -> code[equal] old[1:7] new[1:7]
+20:50:55,413 parso.python.diff DEBUG copy old[2:7] new[1:7]
+20:50:55,414 parso.python.diff DEBUG -> code[replace] old[8:8] new[8:10]
+20:50:55,416 parso.python.diff DEBUG parse_part from 8 to 10 (to 9 in part parser)
+20:50:55,418 parso.python.diff DEBUG diff parser end
+20:50:57,631 parso.python.diff DEBUG diff parser start
+20:50:57,632 parso.python.diff DEBUG line_lengths old: 10; new: 10
+20:50:57,632 parso.python.diff DEBUG -> code[equal] old[1:9] new[1:9]
+20:50:57,633 parso.python.diff DEBUG copy old[2:9] new[1:9]
+20:50:57,634 parso.python.diff DEBUG -> code[replace] old[10:10] new[10:10]
+20:50:57,635 parso.python.diff DEBUG parse_part from 10 to 10 (to 9 in part parser)
+20:50:57,636 parso.python.diff DEBUG diff parser end
+20:51:27,757 Bot INFO ###########################################################
+20:51:28,541 Bot INFO A data sample
+20:51:28,541 Bot INFO                 author created_utc  num_comments  score        domain  locked  \
+0  LazySundayBreakfast  2019-01-01            19    330  self.Liberal   False   
+
+  subreddit     tclass  \
+0   Liberal  political   
+
+                                                                   text  
+0      crime   democrat slogan    presidential election  anything        
+20:51:28,547 Bot INFO The shape of the data is (505676, 9)
+20:51:29,105 Bot INFO Taking 20.0% test subset. The resulting train shape is (404540, 9) and test shape is (101136, 9)
+20:51:29,718 Bot INFO dividng data into classes
+20:51:29,823 Bot INFO Joining the series of text into one string per category
+20:51:30,9 Bot INFO Dividing those long strings into lists of words
+20:51:30,522 Bot INFO Creating wordclouds of each class (pol, nonpol, Canada) and saving the resulting images to disk
+20:51:30,523 Bot INFO word cloud 1/3
+20:51:30,523 Bot INFO Political wordcloud
