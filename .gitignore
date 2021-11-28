@@ -2,3 +2,4 @@
 *.zst
 *.json
 *.feather
+*.pickle

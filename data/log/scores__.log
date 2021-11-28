@@ -9,3 +9,76 @@
 | Accuracy     | 89.53%       | 85.14%       |
 | non-Response | 16.02%       | 9.9%         |
 +--------------+--------------+--------------+
+13:44:11,776 Bot INFO ###########################################################
+13:51:22,308 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\__init__.py
+13:51:22,321 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\io\feather_format.py
+13:51:22,423 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\jedi\third_party\typeshed\stdlib\3\builtins.pyi
+13:51:22,541 parso.python.diff DEBUG diff parser start
+13:51:22,541 parso.python.diff DEBUG line_lengths old: 15; new: 15
+13:51:22,542 parso.python.diff DEBUG -> code[equal] old[1:14] new[1:14]
+13:51:22,542 parso.python.diff DEBUG copy old[1:14] new[1:13]
+13:51:22,542 parso.python.diff DEBUG parse_part from 14 to 15 (to 14 in part parser)
+13:51:22,543 parso.python.diff DEBUG -> code[replace] old[15:15] new[15:15]
+13:51:22,543 parso.python.diff DEBUG diff parser end
+13:51:23,663 parso.python.diff DEBUG diff parser start
+13:51:23,663 parso.python.diff DEBUG line_lengths old: 15; new: 15
+13:51:23,663 parso.python.diff DEBUG -> code[equal] old[1:14] new[1:14]
+13:51:23,664 parso.python.diff DEBUG copy old[1:14] new[1:13]
+13:51:23,666 parso.python.diff DEBUG parse_part from 14 to 15 (to 14 in part parser)
+13:51:23,666 parso.python.diff DEBUG -> code[replace] old[15:15] new[15:15]
+13:51:23,666 parso.python.diff DEBUG diff parser end
+13:52:36,284 Bot INFO Log is already initiated.
+13:54:17,590 parso.python.diff DEBUG diff parser start
+13:54:17,591 parso.python.diff DEBUG line_lengths old: 15; new: 11
+13:54:17,591 parso.python.diff DEBUG -> code[equal] old[1:10] new[1:10]
+13:54:17,593 parso.python.diff DEBUG copy old[1:14] new[1:10]
+13:54:17,594 parso.python.diff DEBUG -> code[replace] old[11:15] new[11:11]
+13:54:17,595 parso.python.diff DEBUG parse_part from 11 to 11 (to 10 in part parser)
+13:54:17,597 parso.python.diff DEBUG diff parser end
+13:54:17,712 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\frame.py
+13:54:17,749 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\__init__.py
+13:54:17,839 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\generic.py
+13:54:17,947 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\base.py
+13:54:17,983 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\accessor.py
+13:54:18,40 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\indexing.py
+13:54:18,84 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\core\arraylike.py
+13:54:18,135 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\pandas\_typing.py
+13:54:18,178 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\typing.py
+13:54:18,207 parso.cache DEBUG pickle loaded: C:\JupyterLab\resources\jlab_server\lib\site-packages\jedi\third_party\typeshed\stdlib\3\typing.pyi
+13:54:29,170 parso.python.diff DEBUG diff parser start
+13:54:29,171 parso.python.diff DEBUG line_lengths old: 11; new: 15
+13:54:29,171 parso.python.diff DEBUG -> code[equal] old[1:10] new[1:10]
+13:54:29,171 parso.python.diff DEBUG copy old[1:10] new[1:10]
+13:54:29,172 parso.python.diff DEBUG -> code[replace] old[11:11] new[11:15]
+13:54:29,177 parso.python.diff DEBUG parse_part from 11 to 15 (to 14 in part parser)
+13:54:29,177 parso.python.diff DEBUG diff parser end
+13:54:45,442 parso.python.diff DEBUG diff parser start
+13:54:45,442 parso.python.diff DEBUG line_lengths old: 15; new: 15
+13:54:45,443 parso.python.diff DEBUG -> code[equal] old[1:14] new[1:14]
+13:54:45,443 parso.python.diff DEBUG copy old[1:14] new[1:13]
+13:54:45,446 parso.python.diff DEBUG parse_part from 14 to 15 (to 14 in part parser)
+13:54:45,446 parso.python.diff DEBUG -> code[replace] old[15:15] new[15:15]
+13:54:45,446 parso.python.diff DEBUG diff parser end
+13:54:47,955 parso.python.diff DEBUG diff parser start
+13:54:47,956 parso.python.diff DEBUG line_lengths old: 15; new: 15
+13:54:47,956 parso.python.diff DEBUG -> code[equal] old[1:14] new[1:14]
+13:54:47,956 parso.python.diff DEBUG copy old[1:14] new[1:13]
+13:54:47,957 parso.python.diff DEBUG parse_part from 14 to 15 (to 14 in part parser)
+13:54:47,957 parso.python.diff DEBUG -> code[replace] old[15:15] new[15:15]
+13:54:47,957 parso.python.diff DEBUG diff parser end
+13:56:19,548 parso.python.diff DEBUG diff parser start
+13:56:19,548 parso.python.diff DEBUG line_lengths old: 15; new: 15
+13:56:19,549 parso.python.diff DEBUG -> code[equal] old[1:14] new[1:14]
+13:56:19,549 parso.python.diff DEBUG copy old[1:14] new[1:13]
+13:56:19,551 parso.python.diff DEBUG parse_part from 14 to 15 (to 14 in part parser)
+13:56:19,551 parso.python.diff DEBUG -> code[replace] old[15:15] new[15:15]
+13:56:19,551 parso.python.diff DEBUG diff parser end
+14:13:51,667 parso.python.diff DEBUG diff parser start
+14:13:51,668 parso.python.diff DEBUG line_lengths old: 15; new: 6
+14:13:51,668 parso.python.diff DEBUG -> code[equal] old[1:5] new[1:5]
+14:13:51,670 parso.python.diff DEBUG copy old[1:14] new[1:5]
+14:13:51,670 parso.python.diff DEBUG -> code[replace] old[6:15] new[6:6]
+14:13:51,673 parso.python.diff DEBUG parse_part from 6 to 6 (to 5 in part parser)
+14:13:51,673 parso.python.diff DEBUG diff parser end
+15:25:53,277 Bot INFO ###########################################################
+15:25:58,107 Bot INFO Hellow
