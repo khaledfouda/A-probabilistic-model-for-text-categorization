@@ -1,0 +1,445 @@
+17:42:22: ###################awe########################################
+17:42:22: Starting fit
+17:42:22: A data sample
+17:42:22: +--------+------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                            |   Y |
+|--------+------------------------------------------------------------------------------------------------------------------------------+-----|
+|  92940 | note show  comey write  memo  month  trump fire                                                                              |   1 |
+|  44073 | would   difficult   select     mate                                                                                          |   1 |
+| 227303 | rumor spread   banquet  czar nicholas  coronation   would   enough beer  pretzel  everyone    result crowd crush kill almost |   0 |
++--------+------------------------------------------------------------------------------------------------------------------------------+-----+
+17:42:22: The shape of the data is (505676, 2)
+17:42:22: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+17:42:22: Taking 20.0% test subset.
+17:42:22: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:42:22: dividing data into classes
+17:42:22: Joining the series of text into one string per category
+17:42:22: Dividing those long strings into lists of words
+17:42:23: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+17:42:23: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+17:42:23: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+17:42:23: Word Cloud
+17:42:23: class 1
+17:42:38: Word Cloud
+17:42:38: class 0
+17:43:03: Counting the occurrences of each word per class
+17:43:03: Total umber of words (training+validation) is:
+17:43:03: Class 1: 2527675, Class 0: 3903092
+17:43:04: Number of distinct training words for each class is
+17:43:04: 25052 and 48967
+17:43:04: Visualizing the top 15 common words in each category [latex code below]
+17:43:05: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+17:43:05: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+17:43:05: Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+17:43:05: Number of distinct words is 56255
+17:43:05: Dropping words occurring less than 50 times
+17:43:05:  number of words occurring at least 50 times is 6385 words
+17:43:05: Computing proto score. Equation 1. Objective, choose top k words
+17:43:05: Removing names and other non-recognizable words.
+17:43:05: Unfortunately, some names would be detected since they hold a second meaning
+17:43:05: keeping top 900 words in each class
+17:43:05: Number of words after keeping top 900 words is 1800
+17:43:05: Word Cloud
+17:43:05: Top of class 1
+17:43:06: Word Cloud
+17:43:06: Top of class 0
+17:43:07: Computing the sum of words in each post
+17:43:08: Counting the occurrence of the chosen words inside each of the posts.
+17:43:08: The resulting dataframe is of shape (number of posts)x(2k).
+17:47:04: saved as wp_in_u_900 with the dimension of (404540, 1)
+17:47:04: Transforming the previous variable into a dataframe. saved as wp_proto_900
+18:00:37: ######################################################################################
+18:00:37: Starting fit
+18:00:37: A data sample
+18:00:37: +--------+---------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                           |   Y |
+|--------+---------------------------------------------------------------------------------------------+-----|
+| 286726 | hampshire primary matter   ever  year    chaos   iowa   hampshire could provide             |   1 |
+| 425792 | biden  poise  hand republican  incredible tool  investigate  hunter corruption scandal      |   1 |
+| 444418 | zombie bite   turn    zombie  real     people     shoot   face   reason   zombie apocalypse |   0 |
++--------+---------------------------------------------------------------------------------------------+-----+
+18:00:37: The shape of the data is (505676, 2)
+18:00:37: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:00:37: Taking 20.0% test subset.
+18:00:37: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:00:37: dividing data into classes
+18:00:37: Joining the series of text into one string per category
+18:00:38: Dividing those long strings into lists of words
+18:00:38: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:00:39: Loaded backend qtagg version unknown.
+18:00:40: Loaded backend QtAgg version unknown.
+18:00:40: Word Cloud
+18:00:40: class 1
+18:00:54: Word Cloud
+18:00:54: class 0
+18:01:16: Counting the occurrences of each word per class
+18:01:16: Total umber of words (training+validation) is:
+18:01:16: Class 1: 2527675, Class 0: 3903092
+18:01:16: Number of distinct training words for each class is
+18:01:16: 25052 and 48967
+18:01:16: Visualizing the top 15 common words in each category [latex code below]
+18:01:17: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:01:17: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:01:17: Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+18:01:18: Number of distinct words is 56255
+18:01:18: Dropping words occurring less than 50 times
+18:01:18:  number of words occurring at least 50 times is 6385 words
+18:01:18: Computing proto score. Equation 1. Objective, choose top k words
+18:01:18: Removing names and other non-recognizable words.
+18:01:18: Unfortunately, some names would be detected since they hold a second meaning
+18:01:18: keeping top 900 words in each class
+18:01:18: Number of words after keeping top 900 words is 1800
+18:01:18: Word Cloud
+18:01:18: Top of class 1
+18:01:18: Word Cloud
+18:01:18: Top of class 0
+18:01:19: Computing the sum of words in each post
+18:01:20: Counting the occurrence of the chosen words inside each of the posts.
+18:01:20: The resulting dataframe is of shape (number of posts)x(2k).
+18:05:34: saved as wp_in_u_900 with the dimension of (404540, 1)
+18:05:34: Transforming the previous variable into a dataframe. saved as wp_proto_900
+18:05:42: ######################################################################################
+18:05:42: Starting fit
+18:05:42: A data sample
+18:05:42: +--------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                          |   Y |
+|--------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 187217 | helen keller probably  know   dead                                                                                                                         |   0 |
+| 491222 | specie  snake   genus chrysopelea  capable  perform glide   range  great    snake   genus achieve   leap    suck   abdomen  flare    turn  body    concave |   0 |
+| 173569 | spill  coffee   adult  like drop   cream                                                                                                                   |   0 |
++--------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+18:05:42: The shape of the data is (505676, 2)
+18:05:42: ######################################################################################
+18:05:42: Starting fit
+18:05:42: A data sample
+18:05:42: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:05:42: +--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |   Y |
+|--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 474578 | froot loop                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   0 |
+| 468826 | drawer   stave   originally intend  store extra    keep cook food warm  meal                                                                                                                                                                                                                                                                                                                                                                                                                    |   0 |
+| 497174 | tifu  wear       bite chilly   house   grab   light weight sweater   awesome hood  warm     hour  tiny spider crawl across    instantly think  spider     sweater       search  nope  spider         minute    another tiny spider     like   heck   come     side    stand   seek   emerge baby spider issue        pull           transfer   sweater hood   hair  spider  hatch    anyways   save  life  smash      promptly jump      spider       wear  sweater   spider    stick     start |   0 |
++--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+18:05:42: The shape of the data is (505676, 2)
+18:05:42: ######################################################################################
+18:05:42: Starting fit
+18:05:42: A data sample
+18:05:42: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:05:42: +--------+----------------------------------------------+-----+
+|        | X                                            |   Y |
+|--------+----------------------------------------------+-----|
+| 282136 | trump    president  speak  march  life rally |   1 |
+| 380978 | trump      abide  election result            |   1 |
+| 311521 | kill  white work                             |   1 |
++--------+----------------------------------------------+-----+
+18:05:42: The shape of the data is (505676, 2)
+18:05:42: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:05:43: Taking 20.0% test subset.
+18:05:43: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:05:43: dividing data into classes
+18:05:43: Taking 20.0% test subset.
+18:05:43: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:05:43: dividing data into classes
+18:05:43: Taking 20.0% test subset.
+18:05:43: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:05:43: dividing data into classes
+18:05:43: Joining the series of text into one string per category
+18:05:43: Joining the series of text into one string per category
+18:05:43: Joining the series of text into one string per category
+18:05:43: Dividing those long strings into lists of words
+18:05:43: Dividing those long strings into lists of words
+18:05:43: Dividing those long strings into lists of words
+18:05:44: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:05:45: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:05:45: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:05:45: Loaded backend qtagg version unknown.
+18:05:45: Loaded backend qtagg version unknown.
+18:05:45: Loaded backend QtAgg version unknown.
+18:05:45: Loaded backend QtAgg version unknown.
+18:05:45: Word Cloud
+18:05:45: class 1
+18:05:45: Word Cloud
+18:05:45: class 1
+18:05:45: Loaded backend qtagg version unknown.
+18:05:45: Loaded backend QtAgg version unknown.
+18:05:45: Word Cloud
+18:05:45: class 1
+18:06:13: Word Cloud
+18:06:13: class 0
+18:06:13: Word Cloud
+18:06:13: class 0
+18:06:14: Word Cloud
+18:06:14: class 0
+18:06:45: Counting the occurrences of each word per class
+18:06:45: Total umber of words (training+validation) is:
+18:06:45: Class 1: 2527675, Class 0: 3903092
+18:06:45: Counting the occurrences of each word per class
+18:06:45: Total umber of words (training+validation) is:
+18:06:45: Class 1: 2527675, Class 0: 3903092
+18:06:45: Counting the occurrences of each word per class
+18:06:45: Total umber of words (training+validation) is:
+18:06:45: Class 1: 2527675, Class 0: 3903092
+18:06:46: Number of distinct training words for each class is
+18:06:46: 25052 and 48967
+18:06:46: Visualizing the top 15 common words in each category [latex code below]
+18:06:46: Number of distinct training words for each class is
+18:06:46: 25052 and 48967
+18:06:46: Visualizing the top 15 common words in each category [latex code below]
+18:06:47: Number of distinct training words for each class is
+18:06:47: 25052 and 48967
+18:06:47: Visualizing the top 15 common words in each category [latex code below]
+18:06:47: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:06:47: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:06:47: Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+18:06:47: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:06:47: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:06:48: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:06:48: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:06:48: Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+18:06:48: Number of distinct words is 56255
+18:06:48: Dropping words occurring less than 50 times
+18:06:48:  number of words occurring at least 50 times is 6385 words
+18:06:48: Computing proto score. Equation 1. Objective, choose top k words
+18:06:48: Removing names and other non-recognizable words.
+18:06:48: Unfortunately, some names would be detected since they hold a second meaning
+18:06:48: Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+18:06:48: keeping top 900 words in each class
+18:06:48: Number of distinct words is 56255
+18:06:48: Dropping words occurring less than 50 times
+18:06:48: Number of words after keeping top 900 words is 1800
+18:06:48: Word Cloud
+18:06:48: Top of class 1
+18:06:48:  number of words occurring at least 50 times is 6385 words
+18:06:48: Computing proto score. Equation 1. Objective, choose top k words
+18:06:48: Removing names and other non-recognizable words.
+18:06:48: Unfortunately, some names would be detected since they hold a second meaning
+18:06:48: Number of distinct words is 56255
+18:06:48: Dropping words occurring less than 50 times
+18:06:48:  number of words occurring at least 50 times is 6385 words
+18:06:48: Computing proto score. Equation 1. Objective, choose top k words
+18:06:48: Removing names and other non-recognizable words.
+18:06:48: Unfortunately, some names would be detected since they hold a second meaning
+18:06:48: keeping top 900 words in each class
+18:06:48: Number of words after keeping top 900 words is 1800
+18:06:48: keeping top 900 words in each class
+18:06:48: Word Cloud
+18:06:48: Top of class 1
+18:06:48: Number of words after keeping top 900 words is 1800
+18:06:48: Word Cloud
+18:06:48: Top of class 1
+18:06:49: Word Cloud
+18:06:49: Top of class 0
+18:06:49: Word Cloud
+18:06:49: Top of class 0
+18:06:49: Word Cloud
+18:06:49: Top of class 0
+18:06:49: Computing the sum of words in each post
+18:06:50: Computing the sum of words in each post
+18:06:50: Computing the sum of words in each post
+18:06:51: Counting the occurrence of the chosen words inside each of the posts.
+18:06:51: The resulting dataframe is of shape (number of posts)x(2k).
+18:06:51: Counting the occurrence of the chosen words inside each of the posts.
+18:06:51: The resulting dataframe is of shape (number of posts)x(2k).
+18:06:51: Counting the occurrence of the chosen words inside each of the posts.
+18:06:51: The resulting dataframe is of shape (number of posts)x(2k).
+18:13:30: saved as wp_in_u_900 with the dimension of (404540, 1)
+18:13:31: Transforming the previous variable into a dataframe. saved as wp_proto_900
+18:13:41: saved as wp_in_u_900 with the dimension of (404540, 1)
+18:13:41: Transforming the previous variable into a dataframe. saved as wp_proto_900
+18:13:42: saved as wp_in_u_900 with the dimension of (404540, 1)
+18:13:42: Transforming the previous variable into a dataframe. saved as wp_proto_900

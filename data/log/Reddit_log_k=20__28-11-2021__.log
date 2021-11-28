@@ -1,0 +1,84 @@
+17:26:06,713 Bot INFO ###################awe########################################
+17:26:06,713 Bot INFO Starting fit
+17:26:06,714 Bot INFO A data sample
+17:26:06,732 Bot INFO +--------+--------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                            |   Y |
+|--------+--------------------------------------------------------------------------------------------------------------+-----|
+| 346630 | jacksonville  require mask   likely include   convention                                                     |   0 |
+| 479352 | apollo guidance     moon    kilobyte  memory    megahertz   iphone    gigabyte  memory    gigahertz     time |   1 |
+|  13161 | bernie   blame   bros                                                                                        |   0 |
++--------+--------------------------------------------------------------------------------------------------------------+-----+
+17:26:06,734 Bot INFO The shape of the data is (505676, 2)
+17:26:06,738 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:26:06,947 Bot INFO Taking 20.0% test subset.
+17:26:06,949 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:26:06,950 Bot INFO dividing data into classes
+17:26:07,13 Bot INFO Joining the series of text into one string per category
+17:26:07,263 Bot INFO Dividing those long strings into lists of words
+17:26:07,868 Bot INFO Word Cloud
+17:26:07,869 Bot INFO class 1
+17:26:18,963 Bot INFO ###################awe########################################
+17:26:18,964 Bot INFO Starting fit
+17:26:18,964 Bot INFO A data sample
+17:26:18,983 Bot INFO +--------+------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                        |   Y |
+|--------+------------------------------------------------------------------------------------------+-----|
+| 358174 | progressive applaud  proposal      military recruit  school                              |   0 |
+| 260178 | radical   sasha johnson call        capitalism                                           |   0 |
+| 205994 | year   misunderstand   young child diagnose  cystic fibrosis  teach      help  pronounce |   1 |
++--------+------------------------------------------------------------------------------------------+-----+
+17:26:18,984 Bot INFO The shape of the data is (505676, 2)
+17:26:18,989 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:26:19,192 Bot INFO Taking 20.0% test subset.
+17:26:19,194 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:26:19,195 Bot INFO dividing data into classes
+17:26:19,264 Bot INFO Joining the series of text into one string per category
+17:26:19,515 Bot INFO Dividing those long strings into lists of words
+17:26:20,207 Bot INFO Word Cloud
+17:26:20,208 Bot INFO class 1
+17:27:57: ###################awe########################################
+17:27:57: Starting fit
+17:27:57: A data sample
+17:27:57: +--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   Y |
+|--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 233357 | tifu  tell  friend   area  raid    book  plane ticket  join      first time ever post     feel like  might cause  death  arrest   something     work  morning  coworker  happen    friend  mine happen           area  meme       internet lately     band  busy prepare   battle   band     think   joke    apparently      tell     area  raid   think   joke  first   search       hour late  come      smile        check    show   plane ticket  september         dumbfound   first word  come   mouth   combination       think      already   join  event even though    stop    bring  akatsuki    naruto    tell  friend   area  raid    might   cause   arrest                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   1 |
+| 500969 | tifu  trust microsoft      delete  file  recently instal  driver update program call driver easy      driver    update like    driver easy  create backup   case something fuck     restore point   able   back       think anything   program make massive change     download  driver  tell   restart    would   point      time machine  would  back   time  punch     restart   blue screen    something   well     think      program create  restore point         locate    apparently  restore point       therefore    access      reason          blue screen   desktop  could load  program  restore       mess     option   start menu  window       something along  line   computer problem without delete personal file   delete    sound like  could   naively think    microsoft    infinite wisdom  think format  entire program file folder would delete  personal        driver easy  program  restore    application   computer   spend     flstudio song   work     point  loose  fuck    think   least   post   reddit       fuck   believe microsoft      delete  personal file  refresh   cause   lose year  work   thank  read    driver easy     occasionally   authenticate   driver come        also   make  post  window   like    format  program file          startup   delete  personal    finish download        file   save game data   skyrim  folder   good  take stock   previous programfiles    thing  miss   music        make   also   make sure   constant backup  prevent  future |   1 |
+|  65275 | china  russia           fight  author                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |   0 |
++--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+17:27:57: The shape of the data is (505676, 2)
+17:27:57: 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:27:57: Taking 20.0% test subset.
+17:27:57: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:27:57: dividing data into classes
+17:27:57: Joining the series of text into one string per category
+17:27:57: Dividing those long strings into lists of words
+17:27:58: Word Cloud
+17:27:58: class 1
+17:28:18: ###################awe########################################
+17:28:18: Starting fit
+17:28:18: A data sample
+17:28:18: +--------+-------------------------------------------------------------------------+-----+
+|        | X                                                                       |   Y |
+|--------+-------------------------------------------------------------------------+-----|
+| 268979 | michigan legislature  hold public hear   trump campaign                 |   0 |
+| 115721 | punch     trump declare  trade  blow   manufacture  blame everyone else |   0 |
+| 228949 | tifu  accidentally     face                                             |   1 |
++--------+-------------------------------------------------------------------------+-----+
+17:28:18: The shape of the data is (505676, 2)
+17:28:18: 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:28:18: Taking 20.0% test subset.
+17:28:18: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:28:18: dividing data into classes
+17:28:18: Joining the series of text into one string per category
+17:28:19: Dividing those long strings into lists of words
+17:28:20: Word Cloud
+17:28:20: class 1

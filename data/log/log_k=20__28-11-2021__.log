@@ -1,0 +1,750 @@
+15:09:11,623 Bot INFO ###########################################################
+15:09:11,626 Bot INFO Starting fit
+15:09:11,628 Bot INFO A data sample
+15:09:11,631 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+15:09:11,637 Bot INFO The shape of the data is (505676, 2)
+15:09:11,639 Bot INFO Proportions of positive (y1itical) and negative labels:
+15:09:11,648 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+15:09:11,881 Bot INFO Taking 20.0% test subset.
+15:09:11,882 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+15:09:11,885 Bot INFO dividng data into classes
+15:09:11,950 Bot INFO Joining the series of text into one string per category
+15:09:12,203 Bot INFO Dividing those long strings into lists of words
+15:10:26,406 Bot INFO ###########################################################
+15:10:26,408 Bot INFO Starting fit
+15:10:26,411 Bot INFO A data sample
+15:10:26,415 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+15:10:26,424 Bot INFO The shape of the data is (505676, 2)
+15:10:26,426 Bot INFO Proportions of positive (y1itical) and negative labels:
+15:10:26,435 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+15:10:26,674 Bot INFO Taking 20.0% test subset.
+15:10:26,676 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+15:10:26,677 Bot INFO dividng data into classes
+15:10:26,814 Bot INFO Joining the series of text into one string per category
+15:10:27,89 Bot INFO Dividing those long strings into lists of words
+15:10:27,861 Bot INFO Word Cloud
+15:10:27,863 Bot INFO class 1
+15:10:55,249 Bot INFO Word Cloud
+15:10:55,250 Bot INFO class 0
+15:11:10,784 Bot INFO Couting the occurences of each word per class
+15:11:10,787 Bot INFO Total umber of words (training+validation) is:
+15:11:10,789 Bot INFO Class 1: 3903092, Class 0: 2527675
+15:11:11,365 Bot INFO Number of distinct training words for each class is
+15:11:11,367 Bot INFO 49095 and 24919
+15:11:11,370 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+15:11:12,306 Bot INFO +--------------------------------------+
+| Most common 15 words in each category  |
++---------------+----------------------+
+|    class 1    |       class 0        |
++---------------+----------------------+
+|      like     |        trump         |
+|      make     |        biden         |
+|      know     |        house         |
+|     think     |     coronavirus      |
+|      tell     |         call         |
+|     would     |       democrat       |
+|      want     |      president       |
+|      take     |        white         |
+|      time     |       election       |
+|     people    |         vote         |
+|      feel     |      republican      |
+|     start     |        sander        |
+|      year     |        state         |
+|      come     |        donald        |
+|      look     |       campaign       |
++---------------+----------------------+
+15:11:12,315 Bot INFO \begin{tabular}{cc}
+class 1 & class 0 \\
+like & trump \\
+make & biden \\
+know & house \\
+think & coronavirus \\
+tell & call \\
+would & democrat \\
+want & president \\
+take & white \\
+time & election \\
+people & vote \\
+feel & republican \\
+start & sander \\
+year & state \\
+come & donald \\
+look & campaign \\
+\end{tabular}
+15:11:12,403 Bot INFO Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+15:11:12,724 Bot INFO Number of distinct words is 56246
+15:11:12,726 Bot INFO Dropping words occurring less than 50 times
+15:11:12,734 Bot INFO  number of words occurring at least 50 times is 6422 words
+15:11:12,736 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+15:11:12,742 Bot INFO Removing names and other non-recognizable words. Unfortunately, some names would be detected since they hold a second meaning
+15:11:12,937 Bot INFO keeping top 20 words in each class
+15:11:12,946 Bot INFO Number of words after keeping top 20 words is 40
+15:11:12,964 Bot INFO Word Cloud
+15:11:12,966 Bot INFO Top of class 1
+15:11:13,449 Bot INFO Word Cloud
+15:11:13,451 Bot INFO Top of class 0
+15:11:13,979 Bot INFO Computing the sum of words in each post
+15:11:15,181 Bot INFO Couting the occurence of the chosen words inside each of the posts. The resulting dataframe is of shape (number of posts)x(2k).
+15:11:26,893 Bot INFO saved as wp_in_u_20 with the dimension of (404540, 1)
+15:11:26,898 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_20
+15:12:05,202 Bot INFO Creating the first set of features, equation 2. (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+15:12:05,361 Bot INFO saved as proto_20
+15:12:05,364 Bot INFO The next feature is a score per (post,class)
+15:12:05,617 Bot INFO Computing training set predictions (1 if matches, 0 if not, nonres_flag = -1 if both probabilities are 0
+15:12:05,655 Bot INFO saving to disk
+15:12:05,676 Bot INFO saved as proto_train_20
+15:12:05,717 Bot INFO         sc_1  sc_0  Y  Y_pred  nonresp_flag
+233520   0.0   0.0  1       0             1
+278899   0.0   0.0  1       0             1
+82332    0.0   0.0  0       0             1
+15:12:05,740 Bot INFO Computing the probabilities of classes given proto words
+15:12:05,746 Bot INFO The pclass is an assignment to the class of higher probability
+15:12:13,317 Bot INFO dataframe was created successfully. Saving to disk...
+15:12:13,321 Bot INFO                sc_1      sc_0      Y       word
+word                                           
+parnas     0.000000  1.163261  False     parnas
+electable  0.000000  1.056777  False  electable
+squirt     0.267882  0.000000   True     squirt
+15:12:13,334 Bot INFO saved to disk
+15:12:13,335 Bot INFO Computing validation set predictions
+15:12:13,336 Bot INFO The class prob of a post is the sum of class|word probabilties for all proto word in class and in post
+15:13:10,852 Bot INFO ###########################################################
+15:13:10,857 Bot INFO Starting fit
+15:13:10,862 Bot INFO A data sample
+15:13:10,866 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+15:13:10,879 Bot INFO The shape of the data is (505676, 2)
+15:13:10,884 Bot INFO Proportions of positive (y1itical) and negative labels:
+15:13:10,893 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+15:13:11,115 Bot INFO Taking 20.0% test subset.
+15:13:11,120 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+15:13:11,124 Bot INFO dividng data into classes
+15:13:11,188 Bot INFO Joining the series of text into one string per category
+15:13:11,453 Bot INFO Dividing those long strings into lists of words
+15:13:12,70 Bot INFO Word Cloud
+15:13:12,72 Bot INFO class 1
+15:13:35,824 Bot INFO Word Cloud
+15:13:35,827 Bot INFO class 0
+15:13:52,559 Bot INFO Couting the occurences of each word per class
+15:13:52,561 Bot INFO Total umber of words (training+validation) is:
+15:13:52,564 Bot INFO Class 1: 3903092, Class 0: 2527675
+15:13:53,482 Bot INFO Number of distinct training words for each class is
+15:13:53,484 Bot INFO 49095 and 24919
+15:13:53,487 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+15:13:54,431 Bot INFO +--------------------------------------+
+| Most common 15 words in each category  |
++---------------+----------------------+
+|    class 1    |       class 0        |
++---------------+----------------------+
+|      like     |        trump         |
+|      make     |        biden         |
+|      know     |        house         |
+|     think     |     coronavirus      |
+|      tell     |         call         |
+|     would     |       democrat       |
+|      want     |      president       |
+|      take     |        white         |
+|      time     |       election       |
+|     people    |         vote         |
+|      feel     |      republican      |
+|     start     |        sander        |
+|      year     |        state         |
+|      come     |        donald        |
+|      look     |       campaign       |
++---------------+----------------------+
+15:13:54,442 Bot INFO \begin{tabular}{cc}
+class 1 & class 0 \\
+like & trump \\
+make & biden \\
+know & house \\
+think & coronavirus \\
+tell & call \\
+would & democrat \\
+want & president \\
+take & white \\
+time & election \\
+people & vote \\
+feel & republican \\
+start & sander \\
+year & state \\
+come & donald \\
+look & campaign \\
+\end{tabular}
+15:13:54,530 Bot INFO Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+15:13:54,852 Bot INFO Number of distinct words is 56246
+15:13:54,855 Bot INFO Dropping words occurring less than 50 times
+15:13:54,864 Bot INFO  number of words occurring at least 50 times is 6422 words
+15:13:54,866 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+15:13:54,875 Bot INFO Removing names and other non-recognizable words. Unfortunately, some names would be detected since they hold a second meaning
+15:13:55,68 Bot INFO keeping top 20 words in each class
+15:13:55,79 Bot INFO Number of words after keeping top 20 words is 40
+15:13:55,88 Bot INFO Word Cloud
+15:13:55,91 Bot INFO Top of class 1
+15:13:55,569 Bot INFO Word Cloud
+15:13:55,571 Bot INFO Top of class 0
+15:13:56,102 Bot INFO Computing the sum of words in each post
+15:13:57,224 Bot INFO Couting the occurence of the chosen words inside each of the posts. The resulting dataframe is of shape (number of posts)x(2k).
+15:14:07,918 Bot INFO saved as wp_in_u_20 with the dimension of (404540, 1)
+15:14:07,922 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_20
+15:14:49,732 Bot INFO Creating the first set of features, equation 2. (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+15:14:49,860 Bot INFO saved as proto_20
+15:14:49,864 Bot INFO The next feature is a score per (post,class)
+15:14:50,74 Bot INFO Computing training set predictions (1 if matches, 0 if not, nonres_flag = -1 if both probabilities are 0
+15:14:50,104 Bot INFO saving to disk
+15:14:50,119 Bot INFO saved as proto_train_20
+15:14:50,153 Bot INFO         sc_1  sc_0  Y  Y_pred  nonresp_flag
+358370   0.0   0.0  1       0             1
+281445   0.0   0.0  0       0             1
+28988    0.0   0.0  0       0             1
+15:14:50,181 Bot INFO Computing the probabilities of classes given proto words
+15:14:50,186 Bot INFO The pclass is an assignment to the class of higher probability
+15:14:57,916 Bot INFO dataframe was created successfully. Saving to disk...
+15:14:57,920 Bot INFO                       sc_1      sc_0      Y              word
+word                                                         
+undies            0.004531  0.000000   True            undies
+clemency          0.000000  0.174330  False          clemency
+authoritarianism  0.000000  0.689131  False  authoritarianism
+15:14:57,934 Bot INFO saved to disk
+15:14:57,936 Bot INFO Computing validation set predictions
+15:14:57,939 Bot INFO The class prob of a post is the sum of class|word probabilties for all proto word in class and in post
+15:16:26,864 Bot INFO saving to disk
+15:16:26,873 Bot INFO saved as proto_valid_20
+15:16:26,881 Bot INFO        sc_1  sc_0  Y  Y_pred  nonresp_flag
+28973   0.0   0.0  0       0             1
+25496   0.0   0.0  1       0             1
+18507   0.0   0.0  1       0             1
+15:16:27,100 Bot INFO +-------------+------------+------------+
+|             |   Train_20 |   Valid_20 |
+|-------------+------------+------------|
+| nonresponse |  0.989329  |  0.98943   |
+| f1_score    |  0.0196858 |  0.0177819 |
+| f1_score_a  |  0.996085  |  0.981197  |
+| Accuracy    |  0.686839  |  0.686501  |
+| Accuracy_a  |  0.997684  |  0.98971   |
++-------------+------------+------------+
+15:16:27,103 Bot INFO \begin{tabular}{lrr}
+\hline
+             &   Train_20 &   Valid_20 \\
+\hline
+ nonresponse &  0.989329  &  0.98943   \\
+ f1_score    &  0.0196858 &  0.0177819 \\
+ f1_score_a  &  0.996085  &  0.981197  \\
+ Accuracy    &  0.686839  &  0.686501  \\
+ Accuracy_a  &  0.997684  &  0.98971   \\
+\hline
+\end{tabular}
+15:16:27,106 Bot INFO End
+15:21:22,591 Bot INFO ###########################################################
+15:21:22,592 Bot INFO Starting fit
+15:21:22,593 Bot INFO A data sample
+15:21:22,594 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+15:21:22,599 Bot INFO The shape of the data is (505676, 2)
+15:21:22,599 Bot INFO Proportions of positive (y1itical) and negative labels:
+15:21:22,603 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+15:21:22,821 Bot INFO Taking 20.0% test subset.
+15:21:22,822 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+15:21:22,822 Bot INFO dividng data into classes
+15:21:22,889 Bot INFO Joining the series of text into one string per category
+15:21:23,142 Bot INFO Dividing those long strings into lists of words
+15:21:23,787 Bot INFO Word Cloud
+15:21:23,789 Bot INFO class 1
+15:21:50,286 Bot INFO Word Cloud
+15:21:50,287 Bot INFO class 0
+15:22:16,747 Bot INFO Couting the occurences of each word per class
+15:22:16,748 Bot INFO Total umber of words (training+validation) is:
+15:22:16,749 Bot INFO Class 1: 3903092, Class 0: 2527675
+15:22:17,884 Bot INFO Number of distinct training words for each class is
+15:22:17,887 Bot INFO 49095 and 24919
+15:22:17,888 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+15:22:19,223 Bot INFO +--------------------------------------+
+| Most common 15 words in each category  |
++---------------+----------------------+
+|    class 1    |       class 0        |
++---------------+----------------------+
+|      like     |        trump         |
+|      make     |        biden         |
+|      know     |        house         |
+|     think     |     coronavirus      |
+|      tell     |         call         |
+|     would     |       democrat       |
+|      want     |      president       |
+|      take     |        white         |
+|      time     |       election       |
+|     people    |         vote         |
+|      feel     |      republican      |
+|     start     |        sander        |
+|      year     |        state         |
+|      come     |        donald        |
+|      look     |       campaign       |
++---------------+----------------------+
+15:22:19,226 Bot INFO \begin{tabular}{cc}
+class 1 & class 0 \\
+like & trump \\
+make & biden \\
+know & house \\
+think & coronavirus \\
+tell & call \\
+would & democrat \\
+want & president \\
+take & white \\
+time & election \\
+people & vote \\
+feel & republican \\
+start & sander \\
+year & state \\
+come & donald \\
+look & campaign \\
+\end{tabular}
+15:22:19,334 Bot INFO Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+15:22:19,866 Bot INFO Number of distinct words is 56246
+15:22:19,867 Bot INFO Dropping words occurring less than 50 times
+15:22:19,876 Bot INFO  number of words occurring at least 50 times is 6422 words
+15:22:19,877 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+15:22:19,882 Bot INFO Removing names and other non-recognizable words. Unfortunately, some names would be detected since they hold a second meaning
+15:22:20,159 Bot INFO keeping top 20 words in each class
+15:22:20,170 Bot INFO Number of words after keeping top 20 words is 40
+15:22:20,179 Bot INFO Word Cloud
+15:22:20,182 Bot INFO Top of class 1
+15:22:20,923 Bot INFO Word Cloud
+15:22:20,924 Bot INFO Top of class 0
+15:22:21,670 Bot INFO Computing the sum of words in each post
+15:22:23,259 Bot INFO Couting the occurence of the chosen words inside each of the posts. The resulting dataframe is of shape (number of posts)x(2k).
+15:22:39,932 Bot INFO saved as wp_in_u_20 with the dimension of (404540, 1)
+15:22:39,934 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_20
+15:23:39,423 Bot INFO Creating the first set of features, equation 2. (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+15:23:39,582 Bot INFO saved as proto_20
+15:23:39,583 Bot INFO The next feature is a score per (post,class)
+15:23:39,855 Bot INFO Computing training set predictions (1 if matches, 0 if not, nonres_flag = -1 if both probabilities are 0
+15:23:39,895 Bot INFO saving to disk
+15:23:39,908 Bot INFO saved as proto_train_20
+15:23:39,952 Bot INFO         sc_1  sc_0  Y  Y_pred  nonresp_flag
+188808   0.0   0.0  0       0             1
+245811   0.0   0.0  0       0             1
+191580   0.0   0.0  0       0             1
+15:23:39,962 Bot INFO Computing the probabilities of classes given proto words
+15:23:39,962 Bot INFO The pclass is an assignment to the class of higher probability
+15:23:53,340 Bot INFO dataframe was created successfully. Saving to disk...
+15:23:53,343 Bot INFO                 sc_1      sc_0      Y        word
+word                                             
+infinitely  0.345814  0.000000   True  infinitely
+undies      0.004531  0.000000   True      undies
+chairwoman  0.000000  0.375454  False  chairwoman
+15:23:53,358 Bot INFO saved to disk
+15:23:53,359 Bot INFO Computing validation set predictions
+15:23:53,360 Bot INFO The class prob of a post is the sum of class|word probabilties for all proto word in class and in post
+15:27:49,319 Bot INFO saving to disk
+15:27:49,325 Bot INFO saved as proto_valid_20
+15:27:49,333 Bot INFO        sc_1  sc_0  Y  Y_pred  nonresp_flag
+96691   0.0   0.0  0       0             1
+84208   0.0   0.0  0       0             1
+53793   0.0   0.0  0       0             1
+15:27:49,583 Bot INFO +-------------+------------+------------+
+|             |   Train_20 |   Valid_20 |
+|-------------+------------+------------|
+| nonresponse |  0.989329  |  0.98943   |
+| f1_score    |  0.0196858 |  0.0177819 |
+| f1_score_a  |  0.996085  |  0.981197  |
+| Accuracy    |  0.686839  |  0.686501  |
+| Accuracy_a  |  0.997684  |  0.98971   |
++-------------+------------+------------+
+15:27:49,584 Bot INFO \begin{tabular}{lrr}
+\hline
+             &   Train_20 &   Valid_20 \\
+\hline
+ nonresponse &  0.989329  &  0.98943   \\
+ f1_score    &  0.0196858 &  0.0177819 \\
+ f1_score_a  &  0.996085  &  0.981197  \\
+ Accuracy    &  0.686839  &  0.686501  \\
+ Accuracy_a  &  0.997684  &  0.98971   \\
+\hline
+\end{tabular}
+15:27:49,585 Bot INFO End
+16:57:18,153 Bot INFO Starting fit
+16:57:18,157 Bot INFO A data sample
+16:57:18,169 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+16:57:18,189 Bot INFO The shape of the data is (505676, 2)
+16:57:18,200 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+16:57:18,604 Bot INFO Taking 20.0% test subset.
+16:57:18,605 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+16:57:43,788 Bot INFO Starting fit
+16:57:43,790 Bot INFO A data sample
+16:57:43,792 Bot INFO                                                                       X  Y
+0      crime   democrat slogan    presidential election  anything        0
+16:57:43,797 Bot INFO The shape of the data is (505676, 2)
+16:57:43,803 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+16:57:44,2 Bot INFO Taking 20.0% test subset.
+16:57:44,4 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+16:57:44,4 Bot INFO dividing data into classes
+16:57:44,75 Bot INFO Joining the series of text into one string per category
+16:57:44,333 Bot INFO Dividing those long strings into lists of words
+16:57:45,134 Bot INFO Word Cloud
+16:57:45,135 Bot INFO class 1
+16:58:08,446 Bot INFO Word Cloud
+16:58:08,447 Bot INFO class 0
+16:58:27,101 Bot INFO Counting the occurrences of each word per class
+16:58:27,102 Bot INFO Total umber of words (training+validation) is:
+16:58:27,102 Bot INFO Class 1: 3903092, Class 0: 2527675
+16:58:27,890 Bot INFO Number of distinct training words for each class is
+16:58:27,891 Bot INFO 49095 and 24919
+16:58:27,893 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+16:58:28,881 Bot INFO +--------------------------------------+
+| Most common 15 words in each category  |
++---------------+----------------------+
+|    class 1    |       class 0        |
++---------------+----------------------+
+|      like     |        trump         |
+|      make     |        biden         |
+|      know     |        house         |
+|     think     |     coronavirus      |
+|      tell     |         call         |
+|     would     |       democrat       |
+|      want     |      president       |
+|      take     |        white         |
+|      time     |       election       |
+|     people    |         vote         |
+|      feel     |      republican      |
+|     start     |        sander        |
+|      year     |        state         |
+|      come     |        donald        |
+|      look     |       campaign       |
++---------------+----------------------+
+16:58:28,888 Bot INFO \begin{tabular}{cc}
+class 1 & class 0 \\
+like & trump \\
+make & biden \\
+know & house \\
+think & coronavirus \\
+tell & call \\
+would & democrat \\
+want & president \\
+take & white \\
+time & election \\
+people & vote \\
+feel & republican \\
+start & sander \\
+year & state \\
+come & donald \\
+look & campaign \\
+\end{tabular}
+16:58:29,39 Bot INFO Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+16:58:29,407 Bot INFO Number of distinct words is 56246
+16:58:29,409 Bot INFO Dropping words occurring less than 50 times
+16:58:29,419 Bot INFO  number of words occurring at least 50 times is 6422 words
+16:58:29,420 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+16:58:29,425 Bot INFO Removing names and other non-recognizable words.
+16:58:29,427 Bot INFO Unfortunately, some names would be detected since they hold a second meaning
+16:58:29,629 Bot INFO keeping top 20 words in each class
+16:58:29,643 Bot INFO Number of words after keeping top 20 words is 40
+16:58:29,649 Bot INFO Word Cloud
+16:58:29,651 Bot INFO Top of class 1
+16:58:30,45 Bot INFO Word Cloud
+16:58:30,45 Bot INFO Top of class 0
+16:58:30,482 Bot INFO Computing the sum of words in each post
+16:58:32,22 Bot INFO Counting the occurrence of the chosen words inside each of the posts.
+16:58:32,23 Bot INFO The resulting dataframe is of shape (number of posts)x(2k).
+16:58:44,864 Bot INFO saved as wp_in_u_20 with the dimension of (404540, 1)
+16:58:44,865 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_20
+16:59:24,402 Bot INFO Creating the first set of features, equation 2.
+16:59:24,404 Bot INFO (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+16:59:24,490 Bot INFO saved as proto_20
+16:59:24,491 Bot INFO The next feature is a score per (post,class)
+16:59:24,696 Bot INFO saving to disk
+16:59:24,697 Bot INFO saved as proto_train_20
+16:59:24,720 Bot INFO         sc_1  sc_0  Y  Y_pred  nonresp_flag
+64959    0.0   0.0  1       0             1
+197193   0.0   0.0  0       0             1
+293634   0.0   0.0  0       0             1
+16:59:24,727 Bot INFO Computing the probabilities of classes given proto words
+16:59:24,728 Bot INFO The Y is an assignment to the class of higher probability
+16:59:32,50 Bot INFO dataframe was created successfully. Saving to disk...
+16:59:32,53 Bot INFO                   sc_1      sc_0      Y              word
+word                                                     
+politico           0.0  0.690336  False          politico
+baseless           0.0  0.796153  False          baseless
+authoritarianism   0.0  0.689131  False  authoritarianism
+16:59:32,65 Bot INFO saved to disk
+16:59:32,66 Bot INFO Computing validation set predictions
+16:59:32,68 Bot INFO The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+17:00:13,865 Bot INFO Starting fit
+17:00:13,866 Bot INFO A data sample
+17:00:13,887 Bot INFO +--------+--------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                              |   Y |
+|--------+--------------------------------------------------------------------------------------------------------------------------------+-----|
+| 287981 | pete buttigieg lead  iowa almost evaporate  sander storm  near   tortuous caucus count                                         |   0 |
+| 313200 | sailor cheer navy captain   remove  plead  help  coronavirus outbreak                                                          |   0 |
+| 487606 | think inception would      finance  anyway   believe  would  well  award  inception          infamously snub    major category |   1 |
++--------+--------------------------------------------------------------------------------------------------------------------------------+-----+
+17:00:13,888 Bot INFO The shape of the data is (505676, 2)
+17:00:13,892 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:00:14,99 Bot INFO Taking 20.0% test subset.
+17:00:14,101 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:00:14,101 Bot INFO dividing data into classes
+17:00:14,174 Bot INFO Joining the series of text into one string per category
+17:00:14,425 Bot INFO Dividing those long strings into lists of words
+17:00:14,995 Bot INFO Word Cloud
+17:00:14,996 Bot INFO class 1
+17:00:38,700 Bot INFO Word Cloud
+17:00:38,701 Bot INFO class 0
+17:00:51,837 Bot INFO Counting the occurrences of each word per class
+17:00:51,838 Bot INFO Total umber of words (training+validation) is:
+17:00:51,839 Bot INFO Class 1: 3903092, Class 0: 2527675
+17:00:52,369 Bot INFO Number of distinct training words for each class is
+17:00:52,369 Bot INFO 49095 and 24919
+17:00:52,370 Bot INFO Visualizing the top 15 common words in each category [latex code below]
+17:00:53,127 Bot INFO +--------------------------------------+
+| Most common 15 words in each category  |
++---------------+----------------------+
+|    class 1    |       class 0        |
++---------------+----------------------+
+|      like     |        trump         |
+|      make     |        biden         |
+|      know     |        house         |
+|     think     |     coronavirus      |
+|      tell     |         call         |
+|     would     |       democrat       |
+|      want     |      president       |
+|      take     |        white         |
+|      time     |       election       |
+|     people    |         vote         |
+|      feel     |      republican      |
+|     start     |        sander        |
+|      year     |        state         |
+|      come     |        donald        |
+|      look     |       campaign       |
++---------------+----------------------+
+17:00:53,130 Bot INFO \begin{tabular}{cc}
+class 1 & class 0 \\
+like & trump \\
+make & biden \\
+know & house \\
+think & coronavirus \\
+tell & call \\
+would & democrat \\
+want & president \\
+take & white \\
+time & election \\
+people & vote \\
+feel & republican \\
+start & sander \\
+year & state \\
+come & donald \\
+look & campaign \\
+\end{tabular}
+17:00:53,250 Bot INFO Creating a table of the number of occurrences of each word in each of the two classes. Saved as worddict
+17:00:53,556 Bot INFO Number of distinct words is 56246
+17:00:53,558 Bot INFO Dropping words occurring less than 50 times
+17:00:53,564 Bot INFO  number of words occurring at least 50 times is 6422 words
+17:00:53,565 Bot INFO Computing proto score. Equation 1. Objective, choose top k words
+17:00:53,568 Bot INFO Removing names and other non-recognizable words.
+17:00:53,569 Bot INFO Unfortunately, some names would be detected since they hold a second meaning
+17:00:53,728 Bot INFO keeping top 20 words in each class
+17:00:53,734 Bot INFO Number of words after keeping top 20 words is 40
+17:00:53,741 Bot INFO Word Cloud
+17:00:53,742 Bot INFO Top of class 1
+17:00:54,53 Bot INFO Word Cloud
+17:00:54,53 Bot INFO Top of class 0
+17:00:54,392 Bot INFO Computing the sum of words in each post
+17:00:55,503 Bot INFO Counting the occurrence of the chosen words inside each of the posts.
+17:00:55,505 Bot INFO The resulting dataframe is of shape (number of posts)x(2k).
+17:01:05,165 Bot INFO saved as wp_in_u_20 with the dimension of (404540, 1)
+17:01:05,166 Bot INFO Transforming the previous variable into a dataframe. saved as wp_proto_20
+17:01:39,428 Bot INFO Creating the first set of features, equation 2.
+17:01:39,430 Bot INFO (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+17:01:39,500 Bot INFO saved as proto_20
+17:01:39,501 Bot INFO The next feature is a score per (post,class)
+17:01:39,664 Bot INFO saving to disk
+17:01:39,665 Bot INFO saved as proto_train_20
+17:01:39,684 Bot INFO +--------+--------+--------+-----+----------+----------------+
+|        |   sc_1 |   sc_0 |   Y |   Y_pred |   nonresp_flag |
+|--------+--------+--------+-----+----------+----------------|
+| 363302 |      0 |      0 |   1 |        0 |              1 |
+|    107 |      0 |      0 |   0 |        0 |              1 |
+| 226108 |      0 |      0 |   1 |        0 |              1 |
++--------+--------+--------+-----+----------+----------------+
+17:01:39,686 Bot INFO Computing the probabilities of classes given proto words
+17:01:39,687 Bot INFO The Y is an assignment to the class of higher probability
+17:01:47,249 Bot INFO dataframe was created successfully. Saving to disk...
+17:01:47,251 Bot INFO +------------+----------+----------+-------+------------+
+| word       |     sc_1 |     sc_0 | Y     | word       |
+|------------+----------+----------+-------+------------|
+| squirt     | 0.267882 | 0        | True  | squirt     |
+| woodward   | 0        | 1.00054  | False | woodward   |
+| unredacted | 0        | 0.104754 | False | unredacted |
++------------+----------+----------+-------+------------+
+17:01:47,254 Bot INFO saved to disk
+17:01:47,255 Bot INFO Computing validation set predictions
+17:01:47,256 Bot INFO The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+17:03:10,525 Bot INFO saving to disk
+17:03:10,527 Bot INFO saved as proto_valid_20
+17:03:10,534 Bot INFO +-------+--------+--------+-----+----------+----------------+
+|       |   sc_1 |   sc_0 |   Y |   Y_pred |   nonresp_flag |
+|-------+--------+--------+-----+----------+----------------|
+| 61928 |      0 |      0 |   0 |        0 |              1 |
+| 65967 |      0 |      0 |   0 |        0 |              1 |
+| 79569 |      0 |      0 |   1 |        0 |              1 |
++-------+--------+--------+-----+----------+----------------+
+17:03:10,749 Bot INFO +-------------+------------+------------+
+|             |   Train_20 |   Valid_20 |
+|-------------+------------+------------|
+| nonresponse |  0.989329  |  0.98943   |
+| f1_score    |  0.0196858 |  0.0177819 |
+| f1_score_a  |  0.996085  |  0.981197  |
+| Accuracy    |  0.686839  |  0.686501  |
+| Accuracy_a  |  0.997684  |  0.98971   |
++-------------+------------+------------+
+17:03:10,751 Bot INFO \begin{tabular}{lrr}
+\hline
+             &   Train_20 &   Valid_20 \\
+\hline
+ nonresponse &  0.989329  &  0.98943   \\
+ f1_score    &  0.0196858 &  0.0177819 \\
+ f1_score_a  &  0.996085  &  0.981197  \\
+ Accuracy    &  0.686839  &  0.686501  \\
+ Accuracy_a  &  0.997684  &  0.98971   \\
+\hline
+\end{tabular}
+17:03:10,751 Bot INFO End
+17:13:39,276 Bot INFO ###########################################################
+17:13:39,278 Bot INFO Starting fit
+17:13:39,280 Bot INFO A data sample
+17:13:39,301 Bot INFO +--------+--------------------------------------------------+-----+
+|        | X                                                |   Y |
+|--------+--------------------------------------------------+-----|
+| 419885 | blasio  reopen  york elementary school  reversal |   0 |
+| 157759 | afraid   male housemate                          |   1 |
+| 330607 | biden refuse  apologize  comment                 |   0 |
++--------+--------------------------------------------------+-----+
+17:13:39,304 Bot INFO The shape of the data is (505676, 2)
+17:13:39,309 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:13:39,516 Bot INFO Taking 20.0% test subset.
+17:13:39,518 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:13:39,518 Bot INFO dividing data into classes
+17:13:39,588 Bot INFO Joining the series of text into one string per category
+17:13:39,859 Bot INFO Dividing those long strings into lists of words
+17:13:40,406 Bot INFO Word Cloud
+17:13:40,407 Bot INFO class 1
+17:13:42,871 Bot INFO ###########################################################
+17:13:42,872 Bot INFO Starting fit
+17:13:42,873 Bot INFO A data sample
+17:13:42,888 Bot INFO +--------+----------------------------------------------------------------------------------+-----+
+|        | X                                                                                |   Y |
+|--------+----------------------------------------------------------------------------------+-----|
+| 372286 | defy local  trump arrive  kenosha amid protest  racial unrest                    |   0 |
+| 476566 | reason    blue      flavor  maker   excess   color item  blue    enough     blue |   1 |
+| 386446 | fringe conspiracy theorist think trump   immortal   covid  cover  shapeshift     |   0 |
++--------+----------------------------------------------------------------------------------+-----+
+17:13:42,889 Bot INFO The shape of the data is (505676, 2)
+17:13:42,897 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:13:43,111 Bot INFO Taking 20.0% test subset.
+17:13:43,112 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:13:43,113 Bot INFO dividing data into classes
+17:13:43,176 Bot INFO Joining the series of text into one string per category
+17:13:43,412 Bot INFO Dividing those long strings into lists of words
+17:13:44,105 Bot INFO Word Cloud
+17:13:44,106 Bot INFO class 1
+17:15:03,792 Bot INFO ###########################################################
+17:15:03,794 Bot INFO Starting fit
+17:15:03,794 Bot INFO A data sample
+17:15:03,820 Bot INFO +--------+---------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                           |   Y |
+|--------+---------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 393489 | majority  register voter     good      four year                                                                                            |   0 |
+| 461725 | troll people online       ever   nice     great                                                                                             |   1 |
+| 164668 | take  moment  reflect   amaze  brain    language  often   forget    massive database      access spontaneously  express something  abstract |   1 |
++--------+---------------------------------------------------------------------------------------------------------------------------------------------+-----+
+17:15:03,821 Bot INFO The shape of the data is (505676, 2)
+17:15:03,827 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:15:04,57 Bot INFO Taking 20.0% test subset.
+17:15:04,59 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:15:04,60 Bot INFO dividing data into classes
+17:15:04,549 Bot INFO Joining the series of text into one string per category
+17:15:04,789 Bot INFO Dividing those long strings into lists of words
+17:15:05,352 Bot INFO Word Cloud
+17:15:05,353 Bot INFO class 1
+17:17:06,994 Bot INFO ###################awe########################################
+17:17:06,996 Bot INFO Starting fit
+17:17:06,997 Bot INFO A data sample
+17:17:07,19 Bot INFO +--------+-----------------------------------------------------------+-----+
+|        | X                                                         |   Y |
+|--------+-----------------------------------------------------------+-----|
+| 330605 | lindsey  transformation  trump critic                     |   0 |
+| 193223 | human    animal   world    split                          |   1 |
+| 297900 | trump urge south carolina republican  vote  bernie sander |   0 |
++--------+-----------------------------------------------------------+-----+
+17:17:07,21 Bot INFO The shape of the data is (505676, 2)
+17:17:07,29 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:17:07,252 Bot INFO Taking 20.0% test subset.
+17:17:07,254 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:17:07,255 Bot INFO dividing data into classes
+17:17:07,318 Bot INFO Joining the series of text into one string per category
+17:17:07,567 Bot INFO Dividing those long strings into lists of words
+17:17:08,240 Bot INFO Word Cloud
+17:17:08,241 Bot INFO class 1
+17:18:09,9 Bot INFO ###################awe########################################
+17:18:09,10 Bot INFO Starting fit
+17:18:09,11 Bot INFO A data sample
+17:18:09,32 Bot INFO +--------+----------------------------------------------------------------------------+-----+
+|        | X                                                                          |   Y |
+|--------+----------------------------------------------------------------------------+-----|
+|  31117 | would require  actual revolution                                           |   0 |
+| 177775 | gwen stefani inadvertently make sure  million  people  always spell banana |   1 |
+| 315886 | german powder kill coronavirus  contact                                    |   0 |
++--------+----------------------------------------------------------------------------+-----+
+17:18:09,34 Bot INFO The shape of the data is (505676, 2)
+17:18:09,38 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:18:09,251 Bot INFO Taking 20.0% test subset.
+17:18:09,253 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:18:09,254 Bot INFO dividing data into classes
+17:18:09,314 Bot INFO Joining the series of text into one string per category
+17:18:09,568 Bot INFO Dividing those long strings into lists of words
+17:18:10,175 Bot INFO Word Cloud
+17:18:10,176 Bot INFO class 1
+17:23:31,782 Bot INFO ###################awe########################################
+17:23:31,783 Bot INFO Starting fit
+17:23:31,785 Bot INFO A data sample
+17:23:31,805 Bot INFO +--------+-----------------------------------------------------+-----+
+|        | X                                                   |   Y |
+|--------+-----------------------------------------------------+-----|
+| 430447 | mark meadow  skeleton   closet  dinosaur    precise |   0 |
+| 270515 | drive      york  pennsylvania                       |   0 |
+| 371571 | approval    convention                              |   0 |
++--------+-----------------------------------------------------+-----+
+17:23:31,807 Bot INFO The shape of the data is (505676, 2)
+17:23:31,813 Bot INFO 0    0.683711
+1    0.316289
+Name: Y, dtype: float64
+17:23:32,25 Bot INFO Taking 20.0% test subset.
+17:23:32,25 Bot INFO The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:23:32,27 Bot INFO dividing data into classes
+17:23:32,93 Bot INFO Joining the series of text into one string per category
+17:23:32,376 Bot INFO Dividing those long strings into lists of words
+17:23:33,61 Bot INFO Word Cloud
+17:23:33,62 Bot INFO class 1
