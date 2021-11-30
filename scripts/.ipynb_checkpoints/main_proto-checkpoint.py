@@ -2,11 +2,11 @@
 
 if __name__ == '__main__':
     import pandas as pd
-    from prototypical_fit import Proto
+    from prototypical_fit import ProtoFit
 
     # Read data file (2019&2020)
-    data = pd.read_feather('../data/feather_files/pretraining/data2019clean.feather')
-    data = pd.concat((data, pd.read_feather('../data/feather_files/pretraining/data2020clean.feather')))
+    data = pd.read_feather('../data/feather_files/data2019clean.feather')
+    data = pd.concat((data, pd.read_feather('../data/feather_files/data2020clean.feather')))
     # Take test data out
     test = data.query("tclass == 'test'").reset_index(drop=True).rename(columns={'text': 'X'})[['X']]
     data = data.query("tclass == 'political' or tclass=='nonpolitical'").reset_index(drop=True)
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     print('Proportions of positive (political) and negative labels:')
     print(data.Y.value_counts() / data.shape[0])
 
-    ob = Proto('REDDIT', k=1500, log_to_file=True)
+    ob = ProtoFit('REDDIT', k=1000, log_to_file=True)
     _ = ob.fit(data)

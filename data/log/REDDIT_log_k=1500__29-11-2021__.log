@@ -1,0 +1,150 @@
+20:50:10: ######################################################################################
+20:50:10: Starting fit
+20:50:10: A data sample
+20:50:10: +--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |   Y |
+|--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 156324 | quit        apology       start work     year   employment come   free       start take advantage     month   every time  bring   people tell    already   beautiful       need       waste    perfectly      convince     waste     mistake         always          throw  back    second time       realize  even though          decide     membership    core exercise give          discover  work     help         start work  different part   body      spend  hour     time  week  take    daily   depression  anxiety     posture   mood   felt like  whole      friend tell        think  join    tell      workout together     want      good      want      good   quit  quit  quit  unless       business tell |   0 |
+| 208188 | supreme court   unite state recognise prophet muhammed     great lawgiver                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   0 |
+|  58990 | dylann roof sentence   first death penalty  federal hate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   1 |
++--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+20:50:10: The shape of the data is (505676, 2)
+20:50:10: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+20:50:10: Taking 20.0% test subset.
+20:50:10: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+20:50:10: dividing data into classes
+20:50:10: Joining the series of text into one string per category
+20:50:10: Dividing those long strings into lists of words
+20:50:11: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+20:50:12: Loaded backend qtagg version unknown.
+20:50:12: Loaded backend QtAgg version unknown.
+20:50:12: Word Cloud
+20:50:12: class 1
+20:50:29: Word Cloud
+20:50:29: class 0
+20:50:56: Counting the occurrences of each word per class
+20:50:56: Total umber of words (training+validation) is:
+20:50:56: Class 1: 2527675, Class 0: 3903092
+20:50:56: Number of distinct training words for each class is
+20:50:56: 25052 and 48967
+20:50:56: Visualizing the top 15 common words in each category [latex code below]
+20:50:57: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+20:50:57: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+20:50:57: Creating a table of the number of occurrences of each word in each of the two classes.
+20:50:57: Number of distinct words is 56255
+20:50:57: Dropping words occurring less than 50 times
+20:50:57:  number of words occurring at least 50 times is 6385 words
+20:50:57: Computing proto score. Equation 1. Objective, choose top k words
+20:50:57: Removing names and other non-recognizable words.
+20:50:57: Unfortunately, some names would be detected since they hold a second meaning
+20:50:57: keeping top 1500 words in each class
+20:50:57: Number of words after keeping top 1500 words is 3000
+20:50:57: Word Cloud
+20:50:57: Top of class 1
+20:50:58: Word Cloud
+20:50:58: Top of class 0
+20:50:59: Counting the occurrence of the chosen words inside each of the posts.
+20:50:59: The resulting dataframe is of shape (number of posts)x(2k).
+20:58:54: saved as wp_in_u_1500 with the dimension of (404540, 1)
+20:58:54: Transforming the previous variable into a dataframe. saved as wp_proto_1500
+21:06:47: Computing the sum of words in each post
+21:06:48: Creating the first set of features, equation 2.
+21:06:48: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:07:07: saved as proto_1500
+21:07:07: The next feature is a score per (post,class)
+21:07:21: saving to disk
+21:07:21: +--------+-----------+-----------+-----+----------+----------------+
+|        |      sc_1 |      sc_0 |   Y | Y_pred   |   nonresp_flag |
+|--------+-----------+-----------+-----+----------+----------------|
+|  16289 | 0.0816327 | 0.0204082 |   1 | True     |              0 |
+|   9898 | 0.0740741 | 0.0123457 |   1 | True     |              0 |
+| 322323 | 0.102041  | 0.0204082 |   1 | True     |              0 |
++--------+-----------+-----------+-----+----------+----------------+
+21:07:21: Computing the probabilities of classes given proto words
+21:07:21: The Y is an assignment to the class of higher probability
+21:11:49: dataframe was created successfully. Saving to disk...
+21:11:49: +--------------+-----------+-----------+-------+--------------+
+| word         |      sc_1 |      sc_0 | Y     | word         |
+|--------------+-----------+-----------+-------+--------------|
+| acne         | 0.0241406 | 0.0840219 | False | acne         |
+| announcement | 4.9546    | 1.15721   | True  | announcement |
+| molecule     | 0.0474891 | 2.60593   | False | molecule     |
++--------------+-----------+-----------+-------+--------------+
+21:11:49: saved to disk
+21:11:49: Computing validation set predictions
+21:11:49: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+21:15:17: +-------+------------+------------+-----+----------+----------------+
+|       |       sc_1 |       sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+------------+------------+-----+----------+----------------|
+| 97539 |    1.62808 |   0.562376 |   0 | True     |              0 |
+| 97586 |  782.969   |  65.3527   |   1 | True     |              0 |
+| 20210 | 1921.86    | 208.078    |   1 | True     |              0 |
++-------+------------+------------+-----+----------+----------------+
+21:15:18: +-------------+--------------+--------------+
+|             |   Train_1500 |   Valid_1500 |
+|-------------+--------------+--------------|
+| nonresponse |    0.0335072 |    0.0596326 |
+| Accuracy    |    0.861341  |    0.841817  |
+| f1_score    |    0.897898  |    0.889132  |
+| Precision   |    0.904143  |    0.853626  |
+| Recall      |    0.891738  |    0.92772   |
+| Accuracy_a  |    0.872903  |    0.861416  |
+| f1_score_a  |    0.908481  |    0.906842  |
+| Precision_a |    0.904143  |    0.853626  |
+| Recall_a    |    0.912861  |    0.967134  |
++-------------+--------------+--------------+
+21:15:18: \begin{tabular}{lrr}
+\hline
+             &   Train_1500 &   Valid_1500 \\
+\hline
+ nonresponse &    0.0335072 &    0.0596326 \\
+ Accuracy    &    0.861341  &    0.841817  \\
+ f1_score    &    0.897898  &    0.889132  \\
+ Precision   &    0.904143  &    0.853626  \\
+ Recall      &    0.891738  &    0.92772   \\
+ Accuracy_a  &    0.872903  &    0.861416  \\
+ f1_score_a  &    0.908481  &    0.906842  \\
+ Precision_a &    0.904143  &    0.853626  \\
+ Recall_a    &    0.912861  &    0.967134  \\
+\hline
+\end{tabular}
+21:15:18: End
