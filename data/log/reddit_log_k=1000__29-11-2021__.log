@@ -1,0 +1,136 @@
+19:46:44: ######################################################################################
+19:46:56: ######################################################################################
+19:47:16: ######################################################################################
+19:48:59: ######################################################################################
+19:52:01: ######################################################################################
+19:52:12: ######################################################################################
+19:52:12: *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+19:52:12: PREDICTING DATA
+19:52:12: Reading data
+19:52:12: Starting prediction
+19:52:12: A test data sample
+19:52:12: +-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|       | X                                                                                                                                                                                                                                             |
+|-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 25383 | massive dance party   cherry beach infuriate local                                                                                                                                                                                            |
+| 28033 | rail order  electric truck                                                                                                                                                                                                                    |
+| 11437 | rcmp sert     ridiculous  suppose  government   assemble  team     thwart    would    fall   rcmp   special emergency response    canadian  force   joint task  wonder  would give   authority  operate within     preclude   operate outside |
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+19:52:12: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:52:12: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+19:52:12: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+19:52:12: Word Cloud
+19:52:12: Test data
+19:52:16: Total number of words is 332602
+19:52:16: Number of distinct words is 15191
+19:52:16: +--------------------+
+| Most common 15 words |
++--------------------+
+|       reddit       |
++--------------------+
+|       canada       |
+|      canadian      |
+|      trudeau       |
+|        news        |
+|       would        |
+|        make        |
+|        like        |
+|        want        |
+|       people       |
+|     government     |
+|        year        |
+|      ontario       |
+|        call        |
+|      liberal       |
+|        take        |
++--------------------+
+19:52:16: \begin{tabular}{c}
+reddit \\
+canada \\
+canadian \\
+trudeau \\
+news \\
+would \\
+make \\
+like \\
+want \\
+people \\
+government \\
+year \\
+ontario \\
+call \\
+liberal \\
+take \\
+\end{tabular}
+19:52:16: Computing validation set predictions
+19:52:16: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+19:54:47: ######################################################################################
+19:54:47: *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+19:54:47: PREDICTING DATA
+19:54:47: Reading data
+19:54:47: Starting prediction
+19:54:47: A test data sample
+19:54:47: +-------+--------------------------------------------------------------------------------------------------+
+|       | X                                                                                                |
+|-------+--------------------------------------------------------------------------------------------------|
+| 24810 | rare  tropical depression cristobal  central canada                                              |
+| 19723 | official seek  reassure canadian  health care system  ready  deal  surge  coronavirus case  need |
+| 21985 | quebec   summer festival  cancel                                                                 |
++-------+--------------------------------------------------------------------------------------------------+
+19:54:47: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:54:47: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+19:54:47: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+19:54:47: Word Cloud
+19:54:47: Test data
+19:54:50: Total number of words is 332602
+19:54:50: Number of distinct words is 15191
+19:54:50: +--------------------+
+| Most common 15 words |
++--------------------+
+|       reddit       |
++--------------------+
+|       canada       |
+|      canadian      |
+|      trudeau       |
+|        news        |
+|       would        |
+|        make        |
+|        like        |
+|        want        |
+|       people       |
+|     government     |
+|        year        |
+|      ontario       |
+|        call        |
+|      liberal       |
+|        take        |
++--------------------+
+19:54:50: \begin{tabular}{c}
+reddit \\
+canada \\
+canadian \\
+trudeau \\
+news \\
+would \\
+make \\
+like \\
+want \\
+people \\
+government \\
+year \\
+ontario \\
+call \\
+liberal \\
+take \\
+\end{tabular}
+19:54:50: Computing validation set predictions
+19:54:50: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+19:55:21: saving to disk
+19:55:21: saved as pred_1000
+19:55:21: +-------+---------+----------+----------+----------------+
+|       |    sc_1 |     sc_0 | Y_pred   |   nonresp_flag |
+|-------+---------+----------+----------+----------------|
+| 30275 | 144.301 |  7.91264 | True     |              0 |
+|  3084 | 426.322 | 30.1737  | True     |              0 |
+|  5772 |   0     |  0       | False    |              1 |
++-------+---------+----------+----------+----------------+

@@ -1,0 +1,229 @@
+21:07:17: ######################################################################################
+21:07:17: Starting fit
+21:07:17: A data sample
+21:07:17: +------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|      | X                                                                                                                                                                                                                                                                                                                                                                                             |   Y |
+|------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 4793 | join  today  support safe internet     good example  child  encourage everyone  talk     prevent   hope     government   teacher  student leader   recommit   make safe space  youth       make   online communication  positive  encourage       learn     visit   click    excellent resource  navigate  online world    please help  share   spread  word  others  bully   place    online |   1 |
+| 3384 | department  veteran affair   department  house  urban development announce    provide house   currently homeless    good news   progress   goal  completely  homelessness among    decline   percent since   office  commit  help veteran   support       someone  know live   district  need help obtain    please call  caseworker                                                          |   1 |
+|  103 | great       kremer    batboy                                                                                                                                                                                                                                                                                                                                                                  |   1 |
++------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+21:07:17: The shape of the data is (4934, 2)
+21:07:17: 1    0.737333
+0    0.262667
+Name: Y, dtype: float64
+21:07:17: Taking 20.0% test subset.
+21:07:17: The resulting train shape is (3947, 2) and test shape is (987, 2)
+21:07:17: dividing data into classes
+21:07:17: Joining the series of text into one string per category
+21:07:17: Dividing those long strings into lists of words
+21:07:17: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+21:07:17: Loaded backend qtagg version unknown.
+21:07:17: Loaded backend QtAgg version unknown.
+21:07:17: Word Cloud
+21:07:17: class 1
+21:07:18: Word Cloud
+21:07:18: class 0
+21:07:19: Counting the occurrences of each word per class
+21:07:19: Total umber of words (training+validation) is:
+21:07:19: Class 1: 44508, Class 0: 17420
+21:07:19: Number of distinct training words for each class is
+21:07:19: 5971 and 3092
+21:07:19: Visualizing the top 15 common words in each category [latex code below]
+21:07:19: +-------------------------------------+
+| Most common 15 words in each category  |
++----------------+--------------------+
+|    class 1     |      class 0       |
++----------------+--------------------+
+|     great      |       house        |
+|     today      |      american      |
+|     thank      |        vote        |
+|      work      |     president      |
+|     house      |        work        |
+|      make      |        bill        |
+|      meet      |      congress      |
+|      help      |        need        |
+|    american    |        make        |
+|      join      |       today        |
+|    veteran     |       health       |
+|     state      |        time        |
+|     honor      |       would        |
+|    service     |       obama        |
+|      bill      |     government     |
++----------------+--------------------+
+21:07:19: \begin{tabular}{cc}
+class 1 & class 0 \\
+great & house \\
+today & american \\
+thank & vote \\
+work & president \\
+house & work \\
+make & bill \\
+meet & congress \\
+help & need \\
+american & make \\
+join & today \\
+veteran & health \\
+state & time \\
+honor & would \\
+service & obama \\
+bill & government \\
+\end{tabular}
+21:07:19: Creating a table of the number of occurrences of each word in each of the two classes.
+21:07:19: Number of distinct words is 6850
+21:07:19: Dropping words occurring less than 50 times
+21:07:19:  number of words occurring at least 50 times is 128 words
+21:07:19: Computing proto score. Equation 1. Objective, choose top k words
+21:07:19: Removing names and other non-recognizable words.
+21:07:19: Unfortunately, some names would be detected since they hold a second meaning
+21:07:19: keeping top 200 words in each class
+21:07:19: Number of words after keeping top 200 words is 124
+21:07:19: Word Cloud
+21:07:19: Top of class 1
+21:07:20: Word Cloud
+21:07:20: Top of class 0
+21:08:49: ######################################################################################
+21:08:49: Starting fit
+21:08:49: A data sample
+21:08:49: +------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|      | X                                                                                                                                                                                         |   Y |
+|------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 4159 | hold  call    leader  discus issue face    still     work    order  achieve full                                                                                                          |   1 |
+| 4881 | veteran leader     orange county join    host chairman jeff miller   house committee   affair  share  update     ongoing effort  provide quality  timely care     woman   sacrifice  much |   1 |
+| 4604 | magnitude earthquake occur   east coast   japan   fukushima        destructive widespread tsunami threat exist   northern marianas base  historical earthquake  tsunami                   |   1 |
++------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+21:08:49: The shape of the data is (4934, 2)
+21:08:49: 1    0.737333
+0    0.262667
+Name: Y, dtype: float64
+21:08:49: Taking 20.0% test subset.
+21:08:49: The resulting train shape is (3947, 2) and test shape is (987, 2)
+21:08:49: dividing data into classes
+21:08:49: Joining the series of text into one string per category
+21:08:49: Dividing those long strings into lists of words
+21:08:49: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+21:08:49: Loaded backend qtagg version unknown.
+21:08:49: Loaded backend QtAgg version unknown.
+21:08:49: Word Cloud
+21:08:49: class 1
+21:08:50: Word Cloud
+21:08:50: class 0
+21:08:51: Counting the occurrences of each word per class
+21:08:51: Total umber of words (training+validation) is:
+21:08:51: Class 1: 44508, Class 0: 17420
+21:08:51: Number of distinct training words for each class is
+21:08:51: 5971 and 3092
+21:08:51: Visualizing the top 15 common words in each category [latex code below]
+21:08:51: +-------------------------------------+
+| Most common 15 words in each category  |
++----------------+--------------------+
+|    class 1     |      class 0       |
++----------------+--------------------+
+|     great      |       house        |
+|     today      |      american      |
+|     thank      |        vote        |
+|      work      |     president      |
+|     house      |        work        |
+|      make      |        bill        |
+|      meet      |      congress      |
+|      help      |        need        |
+|    american    |        make        |
+|      join      |       today        |
+|    veteran     |       health       |
+|     state      |        time        |
+|     honor      |       would        |
+|    service     |       obama        |
+|      bill      |     government     |
++----------------+--------------------+
+21:08:51: \begin{tabular}{cc}
+class 1 & class 0 \\
+great & house \\
+today & american \\
+thank & vote \\
+work & president \\
+house & work \\
+make & bill \\
+meet & congress \\
+help & need \\
+american & make \\
+join & today \\
+veteran & health \\
+state & time \\
+honor & would \\
+service & obama \\
+bill & government \\
+\end{tabular}
+21:08:51: Creating a table of the number of occurrences of each word in each of the two classes.
+21:08:51: Number of distinct words is 6850
+21:08:51: Dropping words occurring less than 10 times
+21:08:51:  number of words occurring at least 10 times is 784 words
+21:08:51: Computing proto score. Equation 1. Objective, choose top k words
+21:08:51: Removing names and other non-recognizable words.
+21:08:51: Unfortunately, some names would be detected since they hold a second meaning
+21:08:51: keeping top 200 words in each class
+21:08:51: Number of words after keeping top 200 words is 400
+21:08:51: Word Cloud
+21:08:51: Top of class 1
+21:08:52: Word Cloud
+21:08:52: Top of class 0
+21:08:52: Counting the occurrence of the chosen words inside each of the posts.
+21:08:52: The resulting dataframe is of shape (number of posts)x(2k).
+21:08:53: saved as wp_in_u_200 with the dimension of (3947, 1)
+21:08:53: Transforming the previous variable into a dataframe. saved as wp_proto_200
+21:08:54: Computing the sum of words in each post
+21:08:54: Creating the first set of features, equation 2.
+21:08:54: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:08:54: saved as proto_200
+21:08:54: The next feature is a score per (post,class)
+21:08:54: saving to disk
+21:08:54: saved as proto_train_200
+21:08:54: +------+------------+------------+-----+----------+----------------+
+|      |       sc_1 |       sc_0 |   Y | Y_pred   |   nonresp_flag |
+|------+------------+------------+-----+----------+----------------|
+| 2542 | 0.08       | 0          |   1 | True     |              0 |
+| 3504 | 0.00189036 | 0.00756144 |   1 | False    |              0 |
+| 1807 | 0          | 0.0578512  |   1 | False    |              0 |
++------+------------+------------+-----+----------+----------------+
+21:08:54: Computing the probabilities of classes given proto words
+21:08:54: The Y is an assignment to the class of higher probability
+21:08:55: dataframe was created successfully. Saving to disk...
+21:08:55: +------------+-----------+-----------+-------+------------+
+| word       |      sc_1 |      sc_0 | Y     | word       |
+|------------+-----------+-----------+-------+------------|
+| west       | 1.19789   | 0.0795202 | True  | west       |
+| affordable | 0.0317998 | 0.118894  | False | affordable |
+| tomorrow   | 0.205847  | 0.0368467 | True  | tomorrow   |
++------------+-----------+-----------+-------+------------+
+21:08:55: saved to disk
+21:08:55: Computing validation set predictions
+21:08:55: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+21:08:56: saving to disk
+21:08:56: saved as proto_valid_200
+21:08:56: +-----+----------+----------+-----+----------+----------------+
+|     |     sc_1 |     sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-----+----------+----------+-----+----------+----------------|
+|  89 | 1.10476  | 0.314164 |   1 | True     |              0 |
+| 141 | 0.313816 | 0.610169 |   1 | False    |              0 |
+| 577 | 0.55957  | 0.270135 |   0 | True     |              0 |
++-----+----------+----------+-----+----------+----------------+
+21:08:56: +-------------+-------------+-------------+
+|             |   Train_200 |   Valid_200 |
+|-------------+-------------+-------------|
+| nonresponse |   0.0719534 |   0.0911854 |
+| f1_score    |   0.644595  |   0.687447  |
+| f1_score_a  |   0.677717  |   0.724689  |
+| Accuracy    |   0.600203  |   0.624113  |
+| Accuracy_a  |   0.628447  |   0.654404  |
++-------------+-------------+-------------+
+21:08:56: \begin{tabular}{lrr}
+\hline
+             &   Train_200 &   Valid_200 \\
+\hline
+ nonresponse &   0.0719534 &   0.0911854 \\
+ f1_score    &   0.644595  &   0.687447  \\
+ f1_score_a  &   0.677717  &   0.724689  \\
+ Accuracy    &   0.600203  &   0.624113  \\
+ Accuracy_a  &   0.628447  &   0.654404  \\
+\hline
+\end{tabular}
+21:08:56: End

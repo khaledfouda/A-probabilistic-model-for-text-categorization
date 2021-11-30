@@ -1,0 +1,75 @@
+17:37:31,85 Bot INFO ###########################################################
+17:37:41,156 Bot INFO Taking 20.0% test subset. The resulting train shape is (3947, 7600) and test shape is (987,)
+17:39:34,457 Bot INFO Taking 20.0% test subset. The resulting train shape is (3947, 7600) and test shape is (987,)
+17:40:57,192 Bot INFO ###########################################################
+17:40:59,815 Bot INFO Taking 20.0% test subset. The resulting train shape is (3947, 7600) and test shape is (987,)
+17:58:29,198 Bot INFO ###########################################################
+17:58:33,361 Bot INFO Taking 20.0% test subset. The resulting train shape is (3947, 7600) and test shape is (987,)
+18:00:30,200 parso.cache DEBUG pickle loaded: C:\ProgramData\Anaconda3\lib\site-packages\jedi\third_party\typeshed\stdlib\2and3\builtins.pyi
+18:00:30,251 parso.cache DEBUG pickle loaded: C:\ProgramData\Anaconda3\lib\site-packages\jedi\third_party\typeshed\stdlib\3\sys.pyi
+18:00:36,852 parso.python.diff DEBUG diff parser start
+18:00:36,853 parso.python.diff DEBUG line_lengths old: 1; new: 1
+18:00:36,853 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+18:00:36,854 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+18:00:36,855 parso.python.diff DEBUG diff parser end
+18:00:39,41 parso.python.diff DEBUG diff parser start
+18:00:39,41 parso.python.diff DEBUG line_lengths old: 1; new: 1
+18:00:39,41 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+18:00:39,42 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+18:00:39,42 parso.python.diff DEBUG diff parser end
+18:00:46,588 parso.python.diff DEBUG diff parser start
+18:00:46,588 parso.python.diff DEBUG line_lengths old: 1; new: 1
+18:00:46,588 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:1]
+18:00:46,589 parso.python.diff DEBUG parse_part from 1 to 1 (to 0 in part parser)
+18:00:46,589 parso.python.diff DEBUG diff parser end
+18:00:46,735 parso.cache DEBUG pickle loaded: C:\ProgramData\Anaconda3\lib\abc.py
+18:00:46,745 parso.cache DEBUG pickle loaded: C:\ProgramData\Anaconda3\lib\site-packages\jedi\third_party\typeshed\stdlib\3\abc.pyi
+18:00:52,605 parso.python.diff DEBUG diff parser start
+18:00:52,605 parso.python.diff DEBUG line_lengths old: 1; new: 2
+18:00:52,605 parso.python.diff DEBUG -> code[replace] old[1:1] new[1:2]
+18:00:52,606 parso.python.diff DEBUG parse_part from 1 to 2 (to 1 in part parser)
+18:00:52,606 parso.python.diff DEBUG diff parser end
+18:02:01,354 parso.python.diff DEBUG diff parser start
+18:02:01,355 parso.python.diff DEBUG line_lengths old: 2; new: 5
+18:02:01,355 parso.python.diff DEBUG -> code[replace] old[1:2] new[1:5]
+18:02:01,357 parso.python.diff DEBUG parse_part from 1 to 5 (to 4 in part parser)
+18:02:01,357 parso.python.diff DEBUG diff parser end
+18:02:04,418 parso.python.diff DEBUG diff parser start
+18:02:04,418 parso.python.diff DEBUG line_lengths old: 5; new: 5
+18:02:04,419 parso.python.diff DEBUG -> code[equal] old[1:4] new[1:4]
+18:02:04,421 parso.python.diff DEBUG copy old[1:4] new[1:4]
+18:02:04,422 parso.python.diff DEBUG -> code[replace] old[5:5] new[5:5]
+18:02:04,423 parso.python.diff DEBUG parse_part from 5 to 5 (to 4 in part parser)
+18:02:04,424 parso.python.diff DEBUG diff parser end
+18:02:25,224 parso.python.diff DEBUG diff parser start
+18:02:25,224 parso.python.diff DEBUG line_lengths old: 5; new: 5
+18:02:25,224 parso.python.diff DEBUG -> code[equal] old[1:4] new[1:4]
+18:02:25,226 parso.python.diff DEBUG copy old[1:4] new[1:4]
+18:02:25,226 parso.python.diff DEBUG -> code[replace] old[5:5] new[5:5]
+18:02:25,227 parso.python.diff DEBUG parse_part from 5 to 5 (to 4 in part parser)
+18:02:25,227 parso.python.diff DEBUG diff parser end
+18:02:44,669 parso.python.diff DEBUG diff parser start
+18:02:44,669 parso.python.diff DEBUG line_lengths old: 5; new: 6
+18:02:44,669 parso.python.diff DEBUG -> code[equal] old[1:4] new[1:4]
+18:02:44,669 parso.python.diff DEBUG copy old[1:4] new[1:4]
+18:02:44,669 parso.python.diff DEBUG -> code[replace] old[5:5] new[5:6]
+18:02:44,670 parso.python.diff DEBUG parse_part from 5 to 6 (to 5 in part parser)
+18:02:44,670 parso.python.diff DEBUG diff parser end
+18:03:22,970 Bot INFO +-----------+----------+----------+
+|           |    Train |    Valid |
+|-----------+----------+----------|
+| f1_score  | 0.90466  | 0.805158 |
+| Accuracy  | 0.864201 | 0.724417 |
+| Precision | 0.937684 | 0.841317 |
+| Recall    | 0.873883 | 0.771978 |
++-----------+----------+----------+
+18:03:22,978 Bot INFO \begin{tabular}{lrr}
+\hline
+           &    Train &    Valid \\
+\hline
+ f1_score  & 0.90466  & 0.805158 \\
+ Accuracy  & 0.864201 & 0.724417 \\
+ Precision & 0.937684 & 0.841317 \\
+ Recall    & 0.873883 & 0.771978 \\
+\hline
+\end{tabular}

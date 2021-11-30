@@ -10,6 +10,7 @@ from datetime import datetime
 import logging.handlers
 
 
+
 log = logging.getLogger("bot")
 log.setLevel(logging.DEBUG)
 log.addHandler(logging.StreamHandler())

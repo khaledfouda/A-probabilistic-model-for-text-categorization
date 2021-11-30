@@ -1,0 +1,642 @@
+19:05:12: ######################################################################################
+19:05:12: Starting fit
+19:05:12: A data sample
+19:05:12: +--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                            |   Y |
+|--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 371537 | shoot dead  portland  rival protester clash  city scene  nightly unrest     month since kill  george floyd                                                   |   1 |
+| 247504 | leftist   crazy   confederate   none   care     crime  place like   despite triple police spend since  chicago still     high murder     last week    murder |   1 |
+| 487091 | currently  main battle tank     require   gallon    fuel   start   turbine                                                                                   |   0 |
++--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+19:05:12: The shape of the data is (505676, 2)
+19:05:12: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:05:12: Taking 20.0% test subset.
+19:05:12: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:05:12: dividing data into classes
+19:05:12: Joining the series of text into one string per category
+19:05:12: Dividing those long strings into lists of words
+19:05:13: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:05:14: Loaded backend qtagg version unknown.
+19:05:14: Loaded backend QtAgg version unknown.
+19:05:14: Word Cloud
+19:05:14: class 1
+19:05:31: Word Cloud
+19:05:31: class 0
+19:06:02: Counting the occurrences of each word per class
+19:06:02: Total umber of words (training+validation) is:
+19:06:02: Class 1: 2527675, Class 0: 3903092
+19:06:03: Number of distinct training words for each class is
+19:06:03: 25052 and 48967
+19:06:03: Visualizing the top 15 common words in each category [latex code below]
+19:06:03: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:06:03: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:06:04: Creating a table of the number of occurrences of each word in each of the two classes.
+19:06:04: Number of distinct words is 56255
+19:06:04: Dropping words occurring less than 50 times
+19:06:04:  number of words occurring at least 50 times is 6385 words
+19:06:04: Computing proto score. Equation 1. Objective, choose top k words
+19:06:04: Removing names and other non-recognizable words.
+19:06:04: Unfortunately, some names would be detected since they hold a second meaning
+19:06:04: keeping top 20 words in each class
+19:06:04: Number of words after keeping top 20 words is 40
+19:06:04: Word Cloud
+19:06:04: Top of class 1
+19:06:04: Word Cloud
+19:06:04: Top of class 0
+19:06:04: Counting the occurrence of the chosen words inside each of the posts.
+19:06:04: The resulting dataframe is of shape (number of posts)x(2k).
+19:06:13: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:06:13: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:06:18: ######################################################################################
+19:06:18: Starting fit
+19:06:18: A data sample
+19:06:18: ######################################################################################
+19:06:18: Starting fit
+19:06:18: A data sample
+19:06:18: +--------+--------------------------------------------------+-----+
+|        | X                                                |   Y |
+|--------+--------------------------------------------------+-----|
+| 411383 | republican        trump train                    |   1 |
+| 178144 | people  make   also  people  make                |   0 |
+| 487634 | city  toronto canada    save   year       canada |   0 |
++--------+--------------------------------------------------+-----+
+19:06:18: The shape of the data is (505676, 2)
+19:06:18: ######################################################################################
+19:06:18: Starting fit
+19:06:18: A data sample
+19:06:18: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:06:18: +--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |   Y |
+|--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 502962 | tifu  express ship     actually happen   order  fleshlight  malkova   couple    sometimes     mood  feel like  need something     something  gonna make         throw     start    addict   first time experience  pretty crazy    close     real     good      think    stop beat around  bush      girl   solo          horny fool    instead    free grind ship   ahead   extra  express     email     send   confirmation   package  ship         never     like  covid might delay       yesterday come    text    please      open  package  mistake   look   name     instantly  heart drop  work like   know  feel   throat lock   chest  numb    think   think   horny nasty mother fucker   part   think  want   nosy       like  cool       play   tell    wait   prank gift  give  buddy   bachelor  know damn well   ready    town       come  almost good  christmas    point   sound convince  well    promise   happen   home        like fuck  probably tell     leave    dinner   girlfriend  course   tell   happen   gonna spaz     need        come home late   walk   parent    couch   dead   walk       kinda ignore    want  look        shame   know  probably think    sick pervert    masturbation problem       start ramble      make  type  effort  hold   nobody  really  anything     really hope   water    best believe  crack  open last night  sleep like  baby  despite everything  happen    ship  still  best idea ever   order  fleshlight  express ship never receive    open  package     probably think   chronic masturbator     parent  look      barely want   still   worth   stress   fleshlight take |   0 |
+| 160573 | atom       turn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |   0 |
+| 372982 | request send  state  push  coronavirus vaccine delivery                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |   1 |
++--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+19:06:18: The shape of the data is (505676, 2)
+19:06:18: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:06:18: +--------+-----------------------------------------------------------------+-----+
+|        | X                                                               |   Y |
+|--------+-----------------------------------------------------------------+-----|
+|  63522 | found      could face jail time  impersonate                    |   1 |
+| 149259 | deal  good   tell court   lawsuit   state    block       want   |   1 |
+| 104434 | texas   change take effect    deadly shoot near odessa  midland |   1 |
++--------+-----------------------------------------------------------------+-----+
+19:06:18: The shape of the data is (505676, 2)
+19:06:18: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:06:18: Taking 20.0% test subset.
+19:06:18: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:06:18: dividing data into classes
+19:06:18: Taking 20.0% test subset.
+19:06:18: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:06:18: dividing data into classes
+19:06:18: Taking 20.0% test subset.
+19:06:18: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:06:18: dividing data into classes
+19:06:18: Joining the series of text into one string per category
+19:06:18: Joining the series of text into one string per category
+19:06:18: Joining the series of text into one string per category
+19:06:18: Dividing those long strings into lists of words
+19:06:18: Dividing those long strings into lists of words
+19:06:18: Dividing those long strings into lists of words
+19:06:19: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:06:19: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:06:19: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:06:20: Loaded backend qtagg version unknown.
+19:06:20: Loaded backend QtAgg version unknown.
+19:06:20: Word Cloud
+19:06:20: class 1
+19:06:20: Loaded backend qtagg version unknown.
+19:06:20: Loaded backend QtAgg version unknown.
+19:06:20: Word Cloud
+19:06:20: class 1
+19:06:20: Loaded backend qtagg version unknown.
+19:06:20: Loaded backend QtAgg version unknown.
+19:06:20: Word Cloud
+19:06:20: class 1
+19:06:40: Word Cloud
+19:06:40: class 0
+19:06:40: Word Cloud
+19:06:40: class 0
+19:06:40: Word Cloud
+19:06:40: class 0
+19:07:10: Counting the occurrences of each word per class
+19:07:10: Total umber of words (training+validation) is:
+19:07:10: Class 1: 2527675, Class 0: 3903092
+19:07:10: Counting the occurrences of each word per class
+19:07:10: Total umber of words (training+validation) is:
+19:07:10: Class 1: 2527675, Class 0: 3903092
+19:07:10: Counting the occurrences of each word per class
+19:07:10: Total umber of words (training+validation) is:
+19:07:10: Class 1: 2527675, Class 0: 3903092
+19:07:11: Number of distinct training words for each class is
+19:07:11: 25052 and 48967
+19:07:11: Visualizing the top 15 common words in each category [latex code below]
+19:07:11: Number of distinct training words for each class is
+19:07:11: 25052 and 48967
+19:07:11: Visualizing the top 15 common words in each category [latex code below]
+19:07:11: Number of distinct training words for each class is
+19:07:11: 25052 and 48967
+19:07:11: Visualizing the top 15 common words in each category [latex code below]
+19:07:12: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:07:12: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:07:12: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:07:12: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:07:12: Creating a table of the number of occurrences of each word in each of the two classes.
+19:07:12: Creating a table of the number of occurrences of each word in each of the two classes.
+19:07:12: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:07:12: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:07:12: Creating a table of the number of occurrences of each word in each of the two classes.
+19:07:12: Number of distinct words is 56255
+19:07:12: Dropping words occurring less than 50 times
+19:07:12:  number of words occurring at least 50 times is 6385 words
+19:07:12: Computing proto score. Equation 1. Objective, choose top k words
+19:07:12: Removing names and other non-recognizable words.
+19:07:12: Unfortunately, some names would be detected since they hold a second meaning
+19:07:12: Number of distinct words is 56255
+19:07:12: Dropping words occurring less than 50 times
+19:07:12:  number of words occurring at least 50 times is 6385 words
+19:07:12: Computing proto score. Equation 1. Objective, choose top k words
+19:07:12: Removing names and other non-recognizable words.
+19:07:12: Unfortunately, some names would be detected since they hold a second meaning
+19:07:12: Number of distinct words is 56255
+19:07:12: Dropping words occurring less than 50 times
+19:07:12:  number of words occurring at least 50 times is 6385 words
+19:07:12: Computing proto score. Equation 1. Objective, choose top k words
+19:07:12: Removing names and other non-recognizable words.
+19:07:12: Unfortunately, some names would be detected since they hold a second meaning
+19:07:12: keeping top 20 words in each class
+19:07:12: Number of words after keeping top 20 words is 40
+19:07:12: Word Cloud
+19:07:12: Top of class 1
+19:07:13: keeping top 20 words in each class
+19:07:13: Number of words after keeping top 20 words is 40
+19:07:13: Word Cloud
+19:07:13: Top of class 1
+19:07:13: keeping top 20 words in each class
+19:07:13: Number of words after keeping top 20 words is 40
+19:07:13: Word Cloud
+19:07:13: Top of class 1
+19:07:13: Word Cloud
+19:07:13: Top of class 0
+19:07:13: Word Cloud
+19:07:13: Top of class 0
+19:07:13: Word Cloud
+19:07:13: Top of class 0
+19:07:13: Counting the occurrence of the chosen words inside each of the posts.
+19:07:13: The resulting dataframe is of shape (number of posts)x(2k).
+19:07:13: Counting the occurrence of the chosen words inside each of the posts.
+19:07:13: The resulting dataframe is of shape (number of posts)x(2k).
+19:07:14: Counting the occurrence of the chosen words inside each of the posts.
+19:07:14: The resulting dataframe is of shape (number of posts)x(2k).
+19:07:26: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:07:26: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:07:26: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:07:26: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:07:26: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:07:26: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:15:09: ######################################################################################
+19:15:09: Starting fit
+19:15:09: A data sample
+19:15:09: +--------+-----------------------------------------------------+-----+
+|        | X                                                   |   Y |
+|--------+-----------------------------------------------------+-----|
+|  71279 | trump account mock  pushback  meghan markle  report |   1 |
+| 363205 | donald trump         last                           |   1 |
+| 465699 | snail coochie  always drag                          |   0 |
++--------+-----------------------------------------------------+-----+
+19:15:09: The shape of the data is (505676, 2)
+19:15:09: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:15:09: Taking 20.0% test subset.
+19:15:09: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:15:09: dividing data into classes
+19:15:09: Joining the series of text into one string per category
+19:15:09: Dividing those long strings into lists of words
+19:15:10: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:15:10: Loaded backend qtagg version unknown.
+19:15:10: Loaded backend QtAgg version unknown.
+19:15:10: Word Cloud
+19:15:10: class 1
+19:15:26: Word Cloud
+19:15:26: class 0
+19:15:51: Counting the occurrences of each word per class
+19:15:51: Total umber of words (training+validation) is:
+19:15:51: Class 1: 2527675, Class 0: 3903092
+19:15:52: Number of distinct training words for each class is
+19:15:52: 25052 and 48967
+19:15:52: Visualizing the top 15 common words in each category [latex code below]
+19:15:53: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:15:53: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:15:53: Creating a table of the number of occurrences of each word in each of the two classes.
+19:15:54: Number of distinct words is 56255
+19:15:54: Dropping words occurring less than 50 times
+19:15:54:  number of words occurring at least 50 times is 6385 words
+19:15:54: Computing proto score. Equation 1. Objective, choose top k words
+19:15:54: Removing names and other non-recognizable words.
+19:15:54: Unfortunately, some names would be detected since they hold a second meaning
+19:15:54: keeping top 20 words in each class
+19:15:54: Number of words after keeping top 20 words is 40
+19:15:54: Word Cloud
+19:15:54: Top of class 1
+19:15:54: Word Cloud
+19:15:54: Top of class 0
+19:15:54: Counting the occurrence of the chosen words inside each of the posts.
+19:15:54: The resulting dataframe is of shape (number of posts)x(2k).
+19:16:02: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:16:02: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:16:31: Computing the sum of words in each post
+19:16:32: Creating the first set of features, equation 2.
+19:16:32: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+19:16:32: saved as proto_20
+19:16:32: The next feature is a score per (post,class)
+19:16:32: saving to disk
+19:16:32: saved as proto_train_20
+19:16:32: +--------+--------+--------+-----+----------+----------------+
+|        |   sc_1 |   sc_0 |   Y | Y_pred   |   nonresp_flag |
+|--------+--------+--------+-----+----------+----------------|
+| 185440 |      0 |      0 |   1 | False    |              1 |
+| 355969 |      0 |      0 |   0 | False    |              1 |
+| 130235 |      0 |      0 |   1 | False    |              1 |
++--------+--------+--------+-----+----------+----------------+
+19:16:32: Computing the probabilities of classes given proto words
+19:16:32: The Y is an assignment to the class of higher probability
+19:16:38: dataframe was created successfully. Saving to disk...
+19:16:38: +----------+----------+----------+-------+----------+
+| word     |     sc_1 |     sc_0 | Y     | word     |
+|----------+----------+----------+-------+----------|
+| nether   | 0        | 0.262344 | False | nether   |
+| kremlin  | 0.589156 | 0        | True  | kremlin  |
+| oligarch | 0.830646 | 0        | True  | oligarch |
++----------+----------+----------+-------+----------+
+19:16:38: saved to disk
+19:16:38: Computing validation set predictions
+19:16:38: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+19:17:50: saving to disk
+19:17:50: saved as proto_valid_20
+19:17:50: +-------+--------+--------+-----+----------+----------------+
+|       |   sc_1 |   sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+--------+--------+-----+----------+----------------|
+| 84829 |      0 |      0 |   1 | False    |              1 |
+| 29612 |      0 |      0 |   1 | False    |              1 |
+| 59219 |      0 |      0 |   1 | False    |              1 |
++-------+--------+--------+-----+----------+----------------+
+19:17:50: +-------------+------------+------------+
+|             |   Train_20 |   Valid_20 |
+|-------------+------------+------------|
+| nonresponse |   0.989116 |  0.989934  |
+| f1_score    |   0.019682 |  0.0186233 |
+| f1_score_a  |   0.997641 |  0.989346  |
+| Accuracy    |   0.323076 |  0.322645  |
+| Accuracy_a  |   0.997047 |  0.986248  |
++-------------+------------+------------+
+19:17:50: \begin{tabular}{lrr}
+\hline
+             &   Train_20 &   Valid_20 \\
+\hline
+ nonresponse &   0.989116 &  0.989934  \\
+ f1_score    &   0.019682 &  0.0186233 \\
+ f1_score_a  &   0.997641 &  0.989346  \\
+ Accuracy    &   0.323076 &  0.322645  \\
+ Accuracy_a  &   0.997047 &  0.986248  \\
+\hline
+\end{tabular}
+19:17:50: End
+19:22:57: ######################################################################################
+19:22:57: Starting fit
+19:22:57: A data sample
+19:22:57: +--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                             |   Y |
+|--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 358445 | arnt  open  debate clearly                                                                                                                                    |   1 |
+| 185441 | human     slowly kill    spread   furthest reach     host  send  immune system  exterminate    keep come          host  slowly return back   life always find |   0 |
+| 188484 | drink milk   different specie  completely acceptable  drink milk    specie  consider disgust                                                                  |   0 |
++--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+19:22:57: The shape of the data is (505676, 2)
+19:22:57: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+19:22:57: Taking 20.0% test subset.
+19:22:57: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+19:22:57: dividing data into classes
+19:22:57: Joining the series of text into one string per category
+19:22:57: Dividing those long strings into lists of words
+19:22:58: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+19:22:58: Loaded backend qtagg version unknown.
+19:22:58: Loaded backend QtAgg version unknown.
+19:22:58: Word Cloud
+19:22:58: class 1
+19:23:12: Word Cloud
+19:23:12: class 0
+19:23:39: Counting the occurrences of each word per class
+19:23:39: Total umber of words (training+validation) is:
+19:23:39: Class 1: 2527675, Class 0: 3903092
+19:23:40: Number of distinct training words for each class is
+19:23:40: 25052 and 48967
+19:23:40: Visualizing the top 15 common words in each category [latex code below]
+19:23:41: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+19:23:41: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+19:23:41: Creating a table of the number of occurrences of each word in each of the two classes.
+19:23:42: Number of distinct words is 56255
+19:23:42: Dropping words occurring less than 50 times
+19:23:42:  number of words occurring at least 50 times is 6385 words
+19:23:42: Computing proto score. Equation 1. Objective, choose top k words
+19:23:42: Removing names and other non-recognizable words.
+19:23:42: Unfortunately, some names would be detected since they hold a second meaning
+19:23:42: keeping top 20 words in each class
+19:23:42: Number of words after keeping top 20 words is 40
+19:23:42: Word Cloud
+19:23:42: Top of class 1
+19:23:42: Word Cloud
+19:23:42: Top of class 0
+19:23:43: Counting the occurrence of the chosen words inside each of the posts.
+19:23:43: The resulting dataframe is of shape (number of posts)x(2k).
+19:23:53: saved as wp_in_u_20 with the dimension of (404540, 1)
+19:23:53: Transforming the previous variable into a dataframe. saved as wp_proto_20
+19:24:33: Computing the sum of words in each post
+19:24:35: Creating the first set of features, equation 2.
+19:24:35: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+19:24:35: saved as proto_20
+19:24:35: The next feature is a score per (post,class)
+19:24:35: saving to disk
+19:24:35: saved as proto_train_20
+19:24:35: +-------+--------+--------+-----+----------+----------------+
+|       |   sc_1 |   sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+--------+--------+-----+----------+----------------|
+| 97294 |      0 |      0 |   1 | False    |              1 |
+| 98065 |      0 |      0 |   1 | False    |              1 |
+| 75781 |      0 |      0 |   1 | False    |              1 |
++-------+--------+--------+-----+----------+----------------+
+19:24:35: Computing the probabilities of classes given proto words
+19:24:35: The Y is an assignment to the class of higher probability
+19:24:42: dataframe was created successfully. Saving to disk...
+19:24:42: +------------+----------+----------+-------+------------+
+| word       |     sc_1 |     sc_0 | Y     | word       |
+|------------+----------+----------+-------+------------|
+| pubes      | 0        | 1.55762  | False | pubes      |
+| deposition | 0.495632 | 0        | True  | deposition |
+| clitoris   | 0        | 0.223544 | False | clitoris   |
++------------+----------+----------+-------+------------+
+19:24:42: saved to disk
+19:24:42: Computing validation set predictions
+19:24:42: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+19:25:59: saving to disk
+19:25:59: saved as proto_valid_20
+19:25:59: +-------+--------+--------+-----+----------+----------------+
+|       |   sc_1 |   sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+--------+--------+-----+----------+----------------|
+| 52192 |      0 |      0 |   1 | False    |              1 |
+| 85110 |      0 |      0 |   1 | False    |              1 |
+| 21420 |      0 |      0 |   1 | False    |              1 |
++-------+--------+--------+-----+----------+----------------+
+19:26:00: +-------------+------------+------------+
+|             |   Train_20 |   Valid_20 |
+|-------------+------------+------------|
+| nonresponse |   0.989116 |  0.989934  |
+| f1_score    |   0.019682 |  0.0186233 |
+| f1_score_a  |   0.997641 |  0.989346  |
+| Accuracy    |   0.323076 |  0.322645  |
+| Accuracy_a  |   0.997047 |  0.986248  |
++-------------+------------+------------+
+19:26:00: \begin{tabular}{lrr}
+\hline
+             &   Train_20 &   Valid_20 \\
+\hline
+ nonresponse &   0.989116 &  0.989934  \\
+ f1_score    &   0.019682 &  0.0186233 \\
+ f1_score_a  &   0.997641 &  0.989346  \\
+ Accuracy    &   0.323076 &  0.322645  \\
+ Accuracy_a  &   0.997047 &  0.986248  \\
+\hline
+\end{tabular}
+19:26:00: End

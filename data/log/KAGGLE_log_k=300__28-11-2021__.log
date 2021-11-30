@@ -1,0 +1,290 @@
+21:11:04: ######################################################################################
+21:11:04: Starting fit
+21:11:04: A data sample
+21:11:04: +------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|      | X                                                                                                                                                                                                                                                                                                                                                                |   Y |
+|------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 4587 | data  like     recently   ebay   happen    citizen   trust  corporation   security system every     bolster  economy  provide   family      unfair    unprotected      daily    please  introduce  commercial privacy bill  right  senator menendez  order  protect  personal information  hold  accountable  fail  keep  information   read  full press  please |   0 |
+|   20 | great look back   idaho native american tribe                                                                                                                                                                                                                                                                                                                    |   1 |
+|  831 | preserve  beautify open space    thank    make  ribbon  possible   pawaget                                                                                                                                                                                                                                                                                       |   1 |
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+21:11:04: The shape of the data is (4934, 2)
+21:11:04: 1    0.737333
+0    0.262667
+Name: Y, dtype: float64
+21:11:04: Taking 20.0% test subset.
+21:11:04: The resulting train shape is (3947, 2) and test shape is (987, 2)
+21:11:04: dividing data into classes
+21:11:04: Joining the series of text into one string per category
+21:11:04: Dividing those long strings into lists of words
+21:11:04: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+21:11:05: Loaded backend qtagg version unknown.
+21:11:05: Loaded backend QtAgg version unknown.
+21:11:05: Word Cloud
+21:11:05: class 1
+21:11:06: Word Cloud
+21:11:06: class 0
+21:11:07: Counting the occurrences of each word per class
+21:11:07: Total umber of words (training+validation) is:
+21:11:07: Class 1: 44508, Class 0: 17420
+21:11:07: Number of distinct training words for each class is
+21:11:07: 5971 and 3092
+21:11:07: Visualizing the top 15 common words in each category [latex code below]
+21:11:07: +-------------------------------------+
+| Most common 15 words in each category  |
++----------------+--------------------+
+|    class 1     |      class 0       |
++----------------+--------------------+
+|     great      |       house        |
+|     today      |      american      |
+|     thank      |        vote        |
+|      work      |     president      |
+|     house      |        work        |
+|      make      |        bill        |
+|      meet      |      congress      |
+|      help      |        need        |
+|    american    |        make        |
+|      join      |       today        |
+|    veteran     |       health       |
+|     state      |        time        |
+|     honor      |       would        |
+|    service     |       obama        |
+|      bill      |     government     |
++----------------+--------------------+
+21:11:07: \begin{tabular}{cc}
+class 1 & class 0 \\
+great & house \\
+today & american \\
+thank & vote \\
+work & president \\
+house & work \\
+make & bill \\
+meet & congress \\
+help & need \\
+american & make \\
+join & today \\
+veteran & health \\
+state & time \\
+honor & would \\
+service & obama \\
+bill & government \\
+\end{tabular}
+21:11:07: Creating a table of the number of occurrences of each word in each of the two classes.
+21:11:07: Number of distinct words is 6850
+21:11:07: Dropping words occurring less than 10 times
+21:11:07:  number of words occurring at least 10 times is 784 words
+21:11:07: Computing proto score. Equation 1. Objective, choose top k words
+21:11:07: Removing names and other non-recognizable words.
+21:11:07: Unfortunately, some names would be detected since they hold a second meaning
+21:11:07: keeping top 300 words in each class
+21:11:07: Number of words after keeping top 300 words is 600
+21:11:07: Word Cloud
+21:11:07: Top of class 1
+21:11:08: Word Cloud
+21:11:08: Top of class 0
+21:11:08: Counting the occurrence of the chosen words inside each of the posts.
+21:11:08: The resulting dataframe is of shape (number of posts)x(2k).
+21:11:09: saved as wp_in_u_300 with the dimension of (3947, 1)
+21:11:09: Transforming the previous variable into a dataframe. saved as wp_proto_300
+21:11:10: Computing the sum of words in each post
+21:11:10: Creating the first set of features, equation 2.
+21:11:10: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:11:10: saved as proto_300
+21:11:10: The next feature is a score per (post,class)
+21:11:10: saving to disk
+21:11:10: saved as proto_train_300
+21:11:10: +------+-----------+------------+-----+----------+----------------+
+|      |      sc_1 |       sc_0 |   Y | Y_pred   |   nonresp_flag |
+|------+-----------+------------+-----+----------+----------------|
+| 1489 | 0.0107015 | 0.00832342 |   1 | True     |              0 |
+|  782 | 0.0625    | 0.0625     |   0 | False    |              0 |
+|  808 | 0.046875  | 0.046875   |   1 | False    |              0 |
++------+-----------+------------+-----+----------+----------------+
+21:11:10: Computing the probabilities of classes given proto words
+21:11:10: The Y is an assignment to the class of higher probability
+21:11:12: dataframe was created successfully. Saving to disk...
+21:11:12: +----------+-----------+----------+-------+----------+
+| word     |      sc_1 |     sc_0 | Y     | word     |
+|----------+-----------+----------+-------+----------|
+| invest   | 0.221263  | 0.146088 | True  | invest   |
+| school   | 0.571585  | 0.223934 | True  | school   |
+| progress | 0.0984183 | 0.130065 | False | progress |
++----------+-----------+----------+-------+----------+
+21:11:12: saved to disk
+21:11:12: Computing validation set predictions
+21:11:12: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+21:11:13: saving to disk
+21:11:13: saved as proto_valid_300
+21:11:13: +-----+----------+---------+-----+----------+----------------+
+|     |     sc_1 |    sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-----+----------+---------+-----+----------+----------------|
+| 738 | 0        | 0       |   0 | False    |              1 |
+| 700 | 4.28832  | 3.25392 |   1 | True     |              0 |
+| 855 | 0.850983 | 6.05799 |   0 | False    |              0 |
++-----+----------+---------+-----+----------+----------------+
+21:11:13: +-------------+-------------+-------------+
+|             |   Train_300 |   Valid_300 |
+|-------------+-------------+-------------|
+| nonresponse |   0.0281226 |   0.0273556 |
+| f1_score    |   0.635726  |   0.674119  |
+| f1_score_a  |   0.648349  |   0.684119  |
+| Accuracy    |   0.592349  |   0.616008  |
+| Accuracy_a  |   0.602972  |   0.622917  |
++-------------+-------------+-------------+
+21:11:13: \begin{tabular}{lrr}
+\hline
+             &   Train_300 &   Valid_300 \\
+\hline
+ nonresponse &   0.0281226 &   0.0273556 \\
+ f1_score    &   0.635726  &   0.674119  \\
+ f1_score_a  &   0.648349  &   0.684119  \\
+ Accuracy    &   0.592349  &   0.616008  \\
+ Accuracy_a  &   0.602972  &   0.622917  \\
+\hline
+\end{tabular}
+21:11:13: End
+21:11:46: ######################################################################################
+21:11:46: Starting fit
+21:11:46: A data sample
+21:11:46: +------+-----------------------------------------------------+-----+
+|      | X                                                   |   Y |
+|------+-----------------------------------------------------+-----|
+|  373 | griffin call  exxon  relocate pipeline              |   1 |
+|  111 | fail  tell congress   provide lerner   speech  need |   0 |
+| 1029 | introduce  path  prosperity board game      hard    |   0 |
++------+-----------------------------------------------------+-----+
+21:11:46: The shape of the data is (4934, 2)
+21:11:46: 1    0.737333
+0    0.262667
+Name: Y, dtype: float64
+21:11:46: Taking 20.0% test subset.
+21:11:46: The resulting train shape is (4440, 2) and test shape is (494, 2)
+21:11:46: dividing data into classes
+21:11:46: Joining the series of text into one string per category
+21:11:46: Dividing those long strings into lists of words
+21:11:46: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+21:11:47: Loaded backend qtagg version unknown.
+21:11:47: Loaded backend QtAgg version unknown.
+21:11:47: Word Cloud
+21:11:47: class 1
+21:11:48: Word Cloud
+21:11:48: class 0
+21:11:48: Counting the occurrences of each word per class
+21:11:48: Total umber of words (training+validation) is:
+21:11:48: Class 1: 44508, Class 0: 17420
+21:11:48: Number of distinct training words for each class is
+21:11:48: 6348 and 3258
+21:11:48: Visualizing the top 15 common words in each category [latex code below]
+21:11:48: +-------------------------------------+
+| Most common 15 words in each category  |
++----------------+--------------------+
+|    class 1     |      class 0       |
++----------------+--------------------+
+|     great      |       house        |
+|     today      |      american      |
+|     thank      |        vote        |
+|      work      |     president      |
+|     house      |        work        |
+|      make      |        bill        |
+|      meet      |      congress      |
+|      help      |        need        |
+|    american    |        make        |
+|      join      |       today        |
+|    veteran     |       health       |
+|     state      |        time        |
+|     honor      |       would        |
+|    service     |       obama        |
+|      bill      |     government     |
++----------------+--------------------+
+21:11:48: \begin{tabular}{cc}
+class 1 & class 0 \\
+great & house \\
+today & american \\
+thank & vote \\
+work & president \\
+house & work \\
+make & bill \\
+meet & congress \\
+help & need \\
+american & make \\
+join & today \\
+veteran & health \\
+state & time \\
+honor & would \\
+service & obama \\
+bill & government \\
+\end{tabular}
+21:11:48: Creating a table of the number of occurrences of each word in each of the two classes.
+21:11:48: Number of distinct words is 7236
+21:11:48: Dropping words occurring less than 10 times
+21:11:48:  number of words occurring at least 10 times is 869 words
+21:11:48: Computing proto score. Equation 1. Objective, choose top k words
+21:11:48: Removing names and other non-recognizable words.
+21:11:48: Unfortunately, some names would be detected since they hold a second meaning
+21:11:49: keeping top 300 words in each class
+21:11:49: Number of words after keeping top 300 words is 600
+21:11:49: Word Cloud
+21:11:49: Top of class 1
+21:11:49: Word Cloud
+21:11:49: Top of class 0
+21:11:50: Counting the occurrence of the chosen words inside each of the posts.
+21:11:50: The resulting dataframe is of shape (number of posts)x(2k).
+21:11:51: saved as wp_in_u_300 with the dimension of (4440, 1)
+21:11:51: Transforming the previous variable into a dataframe. saved as wp_proto_300
+21:11:52: Computing the sum of words in each post
+21:11:52: Creating the first set of features, equation 2.
+21:11:52: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:11:52: saved as proto_300
+21:11:52: The next feature is a score per (post,class)
+21:11:52: saving to disk
+21:11:52: saved as proto_train_300
+21:11:52: +------+-----------+-----------+-----+----------+----------------+
+|      |      sc_1 |      sc_0 |   Y | Y_pred   |   nonresp_flag |
+|------+-----------+-----------+-----+----------+----------------|
+|  198 | 0.111111  | 0         |   1 | True     |              0 |
+|  172 | 0.0277778 | 0.0833333 |   1 | False    |              0 |
+| 2817 | 0.25      | 0         |   1 | True     |              0 |
++------+-----------+-----------+-----+----------+----------------+
+21:11:52: Computing the probabilities of classes given proto words
+21:11:52: The Y is an assignment to the class of higher probability
+21:11:55: dataframe was created successfully. Saving to disk...
+21:11:55: +------------+-----------+-----------+-------+------------+
+| word       |      sc_1 |      sc_0 | Y     | word       |
+|------------+-----------+-----------+-------+------------|
+| affordable | 0.0526701 | 0.188921  | False | affordable |
+| fight      | 0.330489  | 0.62114   | False | fight      |
+| moment     | 0.0568495 | 0.0441994 | True  | moment     |
++------------+-----------+-----------+-------+------------+
+21:11:55: saved to disk
+21:11:55: Computing validation set predictions
+21:11:55: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+21:11:56: saving to disk
+21:11:56: saved as proto_valid_300
+21:11:56: +-----+----------+----------+-----+----------+----------------+
+|     |     sc_1 |     sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-----+----------+----------+-----+----------+----------------|
+| 452 | 3.10042  | 1.23008  |   1 | True     |              0 |
+| 105 | 0.132337 | 1.74658  |   0 | False    |              0 |
+| 259 | 1.47764  | 0.684765 |   1 | True     |              0 |
++-----+----------+----------+-----+----------+----------------+
+21:11:56: +-------------+-------------+-------------+
+|             |   Train_300 |   Valid_300 |
+|-------------+-------------+-------------|
+| nonresponse |   0.0324324 |   0.0404858 |
+| f1_score    |   0.647668  |   0.666667  |
+| f1_score_a  |   0.662184  |   0.682927  |
+| Accuracy    |   0.601802  |   0.603239  |
+| Accuracy_a  |   0.61406   |   0.616034  |
++-------------+-------------+-------------+
+21:11:56: \begin{tabular}{lrr}
+\hline
+             &   Train_300 &   Valid_300 \\
+\hline
+ nonresponse &   0.0324324 &   0.0404858 \\
+ f1_score    &   0.647668  &   0.666667  \\
+ f1_score_a  &   0.662184  &   0.682927  \\
+ Accuracy    &   0.601802  &   0.603239  \\
+ Accuracy_a  &   0.61406   &   0.616034  \\
+\hline
+\end{tabular}
+21:11:56: End
