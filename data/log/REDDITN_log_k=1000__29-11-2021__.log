@@ -1,0 +1,150 @@
+21:48:19: ######################################################################################
+21:48:19: Starting fit
+21:48:19: A data sample
+21:48:19: +--------+-------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                 |   Y |
+|--------+-------------------------------------------------------------------------------------------------------------------+-----|
+| 450376 | animal                                                                                                            |   0 |
+| 334419 | donald  chaos  cruelty   tone   nation         racist reactionary   white   almost surprise  explosion take  long |   1 |
+|  62197 | sure  seriously  take  suggestion    extra year  office                                                           |   1 |
++--------+-------------------------------------------------------------------------------------------------------------------+-----+
+21:48:19: The shape of the data is (505676, 2)
+21:48:19: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+21:48:20: Taking 20.0% test subset.
+21:48:20: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+21:48:20: dividing data into classes
+21:48:20: Joining the series of text into one string per category
+21:48:20: Dividing those long strings into lists of words
+21:48:21: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+21:48:21: Loaded backend qtagg version unknown.
+21:48:21: Loaded backend QtAgg version unknown.
+21:48:21: Word Cloud
+21:48:21: class 1
+21:48:37: Word Cloud
+21:48:37: class 0
+21:49:00: Counting the occurrences of each word per class
+21:49:00: Total umber of words (training+validation) is:
+21:49:00: Class 1: 2527675, Class 0: 3903092
+21:49:00: Number of distinct training words for each class is
+21:49:00: 25052 and 48967
+21:49:00: Visualizing the top 15 common words in each category [latex code below]
+21:49:01: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+21:49:01: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+21:49:01: Creating a table of the number of occurrences of each word in each of the two classes.
+21:49:01: Number of distinct words is 56255
+21:49:01: Dropping words occurring less than 50 times
+21:49:01:  number of words occurring at least 50 times is 6385 words
+21:49:01: Computing proto score. Equation 1. Objective, choose top k words
+21:49:01: Removing names and other non-recognizable words.
+21:49:01: Unfortunately, some names would be detected since they hold a second meaning
+21:49:02: keeping top 1000 words in each class
+21:49:02: Number of words after keeping top 1000 words is 2000
+21:49:02: Word Cloud
+21:49:02: Top of class 1
+21:49:02: Word Cloud
+21:49:02: Top of class 0
+21:49:03: Counting the occurrence of the chosen words inside each of the posts.
+21:49:03: The resulting dataframe is of shape (number of posts)x(2k).
+21:54:26: saved as wp_in_u_1000 with the dimension of (404540, 1)
+21:54:26: Transforming the previous variable into a dataframe. saved as wp_proto_1000
+21:58:20: Computing the sum of words in each post
+21:58:22: Creating the first set of features, equation 2.
+21:58:22: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+21:58:26: saved as proto_1000
+21:58:26: The next feature is a score per (post,class)
+21:58:31: saving to disk
+21:58:31: +--------+-------------+------------+-----+----------+----------------+
+|        |        sc_1 |       sc_0 |   Y | Y_pred   |   nonresp_flag |
+|--------+-------------+------------+-----+----------+----------------|
+| 249922 | 0           | 3.7037e-05 |   0 | False    |              0 |
+|  37717 | 0.000111111 | 0          |   1 | True     |              0 |
+| 284058 | 6.12245e-05 | 0          |   1 | True     |              0 |
++--------+-------------+------------+-----+----------+----------------+
+21:58:31: Computing the probabilities of classes given proto words
+21:58:31: The Y is an assignment to the class of higher probability
+22:02:06: dataframe was created successfully. Saving to disk...
+22:02:06: +------------+-------------+-------------+-------+------------+
+| word       |        sc_1 |        sc_0 | Y     | word       |
+|------------+-------------+-------------+-------+------------|
+| childbirth | 4.50128e-05 | 0.000115239 | False | childbirth |
+| scissor    | 8.68591e-05 | 0.00186267  | False | scissor    |
+| democratic | 0.151548    | 0.00724758  | True  | democratic |
++------------+-------------+-------------+-------+------------+
+22:02:06: saved to disk
+22:02:06: Computing validation set predictions
+22:02:06: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+22:04:05: +-------+-------------+------------+-----+----------+----------------+
+|       |        sc_1 |       sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+-------------+------------+-----+----------+----------------|
+| 49979 | 0           | 0          |   0 | False    |              1 |
+| 90693 | 7.62562e-05 | 0.00465411 |   1 | False    |              0 |
+| 94379 | 1.72699     | 0.0921827  |   1 | True     |              0 |
++-------+-------------+------------+-----+----------+----------------+
+22:04:06: +-------------+--------------+--------------+
+|             |   Train_1000 |   Valid_1000 |
+|-------------+--------------+--------------|
+| nonresponse |    0.0990137 |     0.16022  |
+| Accuracy    |    0.852638  |     0.845456 |
+| f1_score    |    0.890104  |     0.887452 |
+| Precision   |    0.908048  |     0.883774 |
+| Recall      |    0.872854  |     0.891161 |
+| Accuracy_a  |    0.882999  |     0.89534  |
+| f1_score_a  |    0.918847  |     0.932727 |
+| Precision_a |    0.908048  |     0.883774 |
+| Recall_a    |    0.929905  |     0.987421 |
++-------------+--------------+--------------+
+22:04:06: \begin{tabular}{lrr}
+\hline
+             &   Train_1000 &   Valid_1000 \\
+\hline
+ nonresponse &    0.0990137 &     0.16022  \\
+ Accuracy    &    0.852638  &     0.845456 \\
+ f1_score    &    0.890104  &     0.887452 \\
+ Precision   &    0.908048  &     0.883774 \\
+ Recall      &    0.872854  &     0.891161 \\
+ Accuracy_a  &    0.882999  &     0.89534  \\
+ f1_score_a  &    0.918847  &     0.932727 \\
+ Precision_a &    0.908048  &     0.883774 \\
+ Recall_a    &    0.929905  &     0.987421 \\
+\hline
+\end{tabular}
+22:04:06: End

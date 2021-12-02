@@ -1,0 +1,150 @@
+18:50:13: ######################################################################################
+18:50:13: Starting fit
+18:50:13: A data sample
+18:50:13: +--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |   Y |
+|--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+|  58536 | trump claim  never tell mcgahn  fire   mcgahn  mueller     interview   mcgahn recall trump tell         back   tell  deputy attorney                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |   1 |
+| 311404 | fauci estimate     american could    coronavirus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   1 |
+| 159597 | sick  people claim  pant        wear skirt  woman wear   division  cultural    talk  traditional clothe style    follow   many   family    eastern side       confirm     home country  well   neighbor   wear skirt  woman wear         nature   climate   prevail   make sense  wear loose clothe   gender wear  dress   long tunic       layer    wear look      dress casually       make  formal   effectively   clothe item  formal occasion  call  thoub instead  choose different    wear pant   underwear   shirt   cotton wrap skirt call  wizar  look like        wear anything   whenever    wear  layer       outfit    often  publicly     near   wherever  find retire    layer   clothe     dress  take many form helpfully represent   girl         note  little       photo    also   tunic  pant like      even  wear  woman wear pant   short   underwear        like    wear  woman  look  chance  wear   layer  clothe  possible   make   large   silk   cover   need    standard     might    also wear        fashion statement wear  special     large scarf   opaque  often color  pastel  wear     woman  clothe mean  inside  house       quick thing     point    division   wear pant   wear skirt   determine         insist    wear pant     would tell   couple   joke make   saudi     fact wear pant       illustrate   wear skirt   limit        masafi    farm region    khaimah    near         historical political         important  wear wizars  modern   stop  search    feel like  pervert  spend  time look  visible |   0 |
++--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+18:50:13: The shape of the data is (505676, 2)
+18:50:13: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:50:13: Taking 20.0% test subset.
+18:50:13: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:50:13: dividing data into classes
+18:50:13: Joining the series of text into one string per category
+18:50:14: Dividing those long strings into lists of words
+18:50:14: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:50:15: Loaded backend qtagg version unknown.
+18:50:15: Loaded backend QtAgg version unknown.
+18:50:15: Word Cloud
+18:50:15: class 1
+18:50:32: Word Cloud
+18:50:32: class 0
+18:50:58: Counting the occurrences of each word per class
+18:50:58: Total umber of words (training+validation) is:
+18:50:58: Class 1: 2527675, Class 0: 3903092
+18:50:59: Number of distinct training words for each class is
+18:50:59: 25052 and 48967
+18:50:59: Visualizing the top 15 common words in each category [latex code below]
+18:51:00: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:51:00: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:51:00: Creating a table of the number of occurrences of each word in each of the two classes.
+18:51:00: Number of distinct words is 56255
+18:51:00: Dropping words occurring less than 50 times
+18:51:00:  number of words occurring at least 50 times is 6385 words
+18:51:00: Computing proto score. Equation 1. Objective, choose top k words
+18:51:00: Removing names and other non-recognizable words.
+18:51:00: Unfortunately, some names would be detected since they hold a second meaning
+18:51:00: keeping top 1000 words in each class
+18:51:00: Number of words after keeping top 1000 words is 2000
+18:51:00: Word Cloud
+18:51:00: Top of class 1
+18:51:01: Word Cloud
+18:51:01: Top of class 0
+18:51:02: Counting the occurrence of the chosen words inside each of the posts.
+18:51:02: The resulting dataframe is of shape (number of posts)x(2k).
+18:55:58: saved as wp_in_u_1000 with the dimension of (404540, 1)
+18:55:58: Transforming the previous variable into a dataframe. saved as wp_proto_1000
+18:59:31: Computing the sum of words in each post
+18:59:33: Creating the first set of features, equation 2.
+18:59:33: (#occurence of wp in u)/(#words in u). A table of (#posts)x(2k)
+18:59:37: saved as proto_1000
+18:59:37: The next feature is a score per (post,class)
+18:59:42: saving to disk
+18:59:42: +--------+-------------+-------------+-----+----------+----------------+
+|        |        sc_1 |        sc_0 |   Y | Y_pred   |   nonresp_flag |
+|--------+-------------+-------------+-----+----------+----------------|
+| 101552 | 0.00012     | 0           |   1 | True     |              0 |
+| 243984 | 8e-05       | 4e-05       |   1 | True     |              0 |
+|  23548 | 4.08163e-05 | 2.04082e-05 |   0 | True     |              0 |
++--------+-------------+-------------+-----+----------+----------------+
+18:59:42: Computing the probabilities of classes given proto words
+18:59:42: The Y is an assignment to the class of higher probability
+19:02:52: dataframe was created successfully. Saving to disk...
+19:02:52: +--------------+----------+-----------+------+--------------+
+| word         |     sc_1 |      sc_0 | Y    | word         |
+|--------------+----------+-----------+------+--------------|
+| disinfectant | 0.950411 | 0.049589  | True | disinfectant |
+| pundit       | 0.942087 | 0.0579128 | True | pundit       |
+| pete         | 0.797476 | 0.202524  | True | pete         |
++--------------+----------+-----------+------+--------------+
+19:02:53: saved to disk
+19:02:53: Computing validation set predictions
+19:02:53: The class prob of a post is the sum of class|word probabilities for all proto word in class and in post
+19:04:48: +-------+----------+-----------+-----+----------+----------------+
+|       |     sc_1 |      sc_0 |   Y | Y_pred   |   nonresp_flag |
+|-------+----------+-----------+-----+----------+----------------|
+| 66289 | 0.937874 | 0.0621257 |   1 | True     |              0 |
+| 36219 | 1.64265  | 0.357352  |   1 | True     |              0 |
+| 83536 | 0        | 0         |   1 | False    |              1 |
++-------+----------+-----------+-----+----------+----------------+
+19:04:49: +-------------+--------------+--------------+
+|             |   Train_1000 |   Valid_1000 |
+|-------------+--------------+--------------|
+| nonresponse |    0.0990137 |     0.16022  |
+| Accuracy    |    0.852638  |     0.862344 |
+| f1_score    |    0.890104  |     0.898557 |
+| Precision   |    0.908048  |     0.905525 |
+| Recall      |    0.872854  |     0.891696 |
+| Accuracy_a  |    0.882999  |     0.91545  |
+| f1_score_a  |    0.918847  |     0.944973 |
+| Precision_a |    0.908048  |     0.905525 |
+| Recall_a    |    0.929905  |     0.988014 |
++-------------+--------------+--------------+
+19:04:49: \begin{tabular}{lrr}
+\hline
+             &   Train_1000 &   Valid_1000 \\
+\hline
+ nonresponse &    0.0990137 &     0.16022  \\
+ Accuracy    &    0.852638  &     0.862344 \\
+ f1_score    &    0.890104  &     0.898557 \\
+ Precision   &    0.908048  &     0.905525 \\
+ Recall      &    0.872854  &     0.891696 \\
+ Accuracy_a  &    0.882999  &     0.91545  \\
+ f1_score_a  &    0.918847  &     0.944973 \\
+ Precision_a &    0.908048  &     0.905525 \\
+ Recall_a    &    0.929905  &     0.988014 \\
+\hline
+\end{tabular}
+19:04:49: End

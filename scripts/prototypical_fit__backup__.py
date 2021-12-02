@@ -246,10 +246,8 @@ class Proto:
         self.log.info("The next feature is a score per (post,class)")
         self.proto_train = pd.DataFrame()
         # The numerator
-        self.proto_train['sc_1'] = self.proto[self.worddict.query("Y == 1").word].sum(axis=1) /\
-            len(self.worddict.query("Y == 1"))
-        self.proto_train['sc_0'] = self.proto[self.worddict.query("Y == 0").word].sum(axis=1) /\
-            len(self.worddict.query("Y == 0"))
+        self.proto_train['sc_1'] = self.proto[self.worddict.query("Y == 1").word].sum(axis=1)
+        self.proto_train['sc_0'] = self.proto[self.worddict.query("Y == 0").word].sum(axis=1)
         # Divide by the denominator (same as the previous score)
         self.proto_train = self.proto_train.divide(self.sum_proto, axis=0)
         self.proto_train['Y'] = self.train.Y
@@ -274,9 +272,6 @@ class Proto:
         self.proto_cwp = pd.DataFrame()
         self.proto_cwp['sc_1'] = self.proto.swifter.apply(lambda d: d.mul(self.proto_train.sc_1).sum())
         self.proto_cwp['sc_0'] = self.proto.swifter.apply(lambda d: d.mul(self.proto_train.sc_0).sum())
-        score_sum = self.proto_cwp.sc_1 + self.proto_cwp.sc_0
-        self.proto_cwp.sc_1 = self.proto_cwp.sc_1 / score_sum
-        self.proto_cwp.sc_0 = self.proto_cwp.sc_0 / score_sum
         self.proto_cwp['Y'] = self.proto_cwp.swifter.apply(lambda d: d.sc_1 > d.sc_0, axis=1)
         self.proto_cwp['word'] = self.proto.columns
         self.log.info("dataframe was created successfully. Saving to disk...")

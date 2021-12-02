@@ -19,5 +19,5 @@ if __name__ == '__main__':
     print('Proportions of positive (political) and negative labels:')
     print(data.Y.value_counts() / data.shape[0])
 
-    ob = Proto('REDDIT', k=1500, log_to_file=True)
+    ob = Proto('REDDIT', k=1000, log_to_file=True)
     _ = ob.fit(data)
