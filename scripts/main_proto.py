@@ -2,7 +2,8 @@
 
 if __name__ == '__main__':
     import pandas as pd
-    from prototypical_fit import Proto
+    import numpy as np
+    from prototypical_fit_new import Proto
 
     # Read data file (2019&2020)
     data = pd.read_feather('../data/feather_files/pretraining/data2019clean.feather')
@@ -19,5 +20,5 @@ if __name__ == '__main__':
     print('Proportions of positive (political) and negative labels:')
     print(data.Y.value_counts() / data.shape[0])
 
-    ob = Proto('REDDIT', k=1000, log_to_file=True)
-    _ = ob.fit(data)
+    ob = Proto('REDDIT_CV', k=123, harmonic_pscore=True, log_to_file=True)
+    _ = ob.fit_CV(data)

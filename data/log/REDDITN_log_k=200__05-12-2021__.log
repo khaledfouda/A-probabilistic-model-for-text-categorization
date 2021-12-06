@@ -1,0 +1,606 @@
+13:31:29: ######################################################################################
+13:31:29: Starting fit
+13:31:29: Hyperparameters: k=200, alpha=0.5, harmonic pscore=True
+13:31:29: A data sample
+13:31:29: +--------+----------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                |   Y |
+|--------+----------------------------------------------------------------------------------------------------------------------------------+-----|
+|  52278 | herman cain admit   sure    background check                                                                                     |   1 |
+| 223941 | leno  never spend  penny    tonight     always work    spend  less         save every penny   time          build      secondary |   0 |
+| 411045 | donation    trump   instead                                                                                                      |   1 |
++--------+----------------------------------------------------------------------------------------------------------------------------------+-----+
+13:31:29: The shape of the data is (505676, 2)
+13:31:29: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+13:31:29: Taking 20.0% test subset.
+13:31:29: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+13:31:29: dividing data into classes
+13:31:29: Joining the series of text into one string per category
+13:31:30: Dividing those long strings into lists of words
+13:31:30: Counting the occurrences of each word per class
+13:31:30: Total umber of words (training+validation) is:
+13:31:30: Class 1: 2527675, Class 0: 3903092
+13:31:31: Number of distinct training words for each class is
+13:31:31: 25052 and 48967
+13:31:31: Visualizing the top 15 common words in each category [latex code below]
+13:31:32: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+13:31:32: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+13:31:32: *_* Inside GetWP()
+13:31:34: WP created. Number of WP words are 332
+13:31:34: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+13:31:35: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+13:31:35: Loaded backend qtagg version unknown.
+13:31:35: Loaded backend QtAgg version unknown.
+13:31:35: Word Cloud
+13:31:35: Top of class 1
+13:31:36: Word Cloud
+13:31:36: Top of class 0
+13:31:36: *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+13:31:36: PREDICTING DATA
+13:31:36: Reading data
+13:32:32: ######################################################################################
+13:32:32: Starting fit
+13:32:32: Hyperparameters: k=200, alpha=0.5, harmonic pscore=True
+13:32:32: A data sample
+13:32:32: +--------+-------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                               |   Y |
+|--------+-------------------------------------------------------------------------------------------------+-----|
+| 272616 | leave  question mitch  vote total  kentucky                                                     |   1 |
+| 182688 | someone     think   center      correct answer      universe  infinite  every point             |   0 |
+| 494107 | international gang   reponsible  steal almost  billion      active        tear   even speedboat |   0 |
++--------+-------------------------------------------------------------------------------------------------+-----+
+13:32:32: The shape of the data is (505676, 2)
+13:32:32: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+13:32:32: Taking 20.0% test subset.
+13:32:32: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+13:32:32: dividing data into classes
+13:32:32: Joining the series of text into one string per category
+13:32:32: Dividing those long strings into lists of words
+13:32:33: Counting the occurrences of each word per class
+13:32:33: Total umber of words (training+validation) is:
+13:32:33: Class 1: 2527675, Class 0: 3903092
+13:32:33: Number of distinct training words for each class is
+13:32:33: 25052 and 48967
+13:32:33: Visualizing the top 15 common words in each category [latex code below]
+13:32:34: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+13:32:34: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+13:32:34: *_* Inside GetWP()
+13:32:37: WP created. Number of WP words are 332
+13:32:37: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+13:32:37: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+13:32:37: Loaded backend qtagg version unknown.
+13:32:37: Loaded backend QtAgg version unknown.
+13:32:37: Word Cloud
+13:32:37: Top of class 1
+13:32:38: Word Cloud
+13:32:38: Top of class 0
+13:46:57: ######################################################################################
+13:46:57: Starting fit
+13:46:57: Hyperparameters: k=200, alpha=0.5, harmonic pscore=True
+13:46:57: A data sample
+13:46:57: +--------+---------------------------------------------+-----+
+|        | X                                           |   Y |
+|--------+---------------------------------------------+-----|
+| 375473 | russian hacker target  election   microsoft |   1 |
+| 408629 | third term   obama presidency               |   1 |
+| 127901 | trump call chicago                          |   1 |
++--------+---------------------------------------------+-----+
+13:46:57: The shape of the data is (505676, 2)
+13:46:57: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+13:46:57: Taking 20.0% test subset.
+13:46:57: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+13:46:57: dividing data into classes
+13:46:57: Joining the series of text into one string per category
+13:46:57: Dividing those long strings into lists of words
+13:46:58: Counting the occurrences of each word per class
+13:46:58: Total umber of words (training+validation) is:
+13:46:58: Class 1: 2527675, Class 0: 3903092
+13:46:58: Number of distinct training words for each class is
+13:46:58: 25052 and 48967
+13:46:58: Visualizing the top 15 common words in each category [latex code below]
+13:46:59: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+13:46:59: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+13:46:59: *_* Inside GetWP()
+13:47:02: WP created. Number of WP words are 332
+13:47:02: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+13:47:03: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+13:47:03: Loaded backend qtagg version unknown.
+13:47:03: Loaded backend QtAgg version unknown.
+13:47:03: Word Cloud
+13:47:03: Top of class 1
+13:47:04: Word Cloud
+13:47:04: Top of class 0
+14:16:37: ######################################################################################
+14:16:37: Starting fit
+14:16:37: Hyperparameters: k=200, alpha=0.5, harmonic pscore=True
+14:16:37: A data sample
+14:16:37: +--------+---------------------------------------------------------+-----+
+|        | X                                                       |   Y |
+|--------+---------------------------------------------------------+-----|
+| 385327 | president really  misinformation circulate    diagnosis |   1 |
+|  53034 | trump     release   return                              |   1 |
+|  18288 | devin nunes  trouble                                    |   1 |
++--------+---------------------------------------------------------+-----+
+14:16:37: The shape of the data is (505676, 2)
+14:16:37: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+14:16:38: Taking 20.0% test subset.
+14:16:38: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+14:16:38: dividing data into classes
+14:16:38: Joining the series of text into one string per category
+14:16:38: Dividing those long strings into lists of words
+14:16:38: Counting the occurrences of each word per class
+14:16:38: Total umber of words (training+validation) is:
+14:16:38: Class 1: 2527675, Class 0: 3903092
+14:16:39: Number of distinct training words for each class is
+14:16:39: 25052 and 48967
+14:16:39: Visualizing the top 15 common words in each category [latex code below]
+14:16:40: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+14:16:40: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+14:16:40: *_* Inside GetWP()
+14:16:42: WP created. Number of WP words are 332
+14:16:42: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+14:16:42: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+14:16:43: Loaded backend qtagg version unknown.
+14:16:43: Loaded backend QtAgg version unknown.
+14:16:43: Word Cloud
+14:16:43: Top of class 1
+14:16:43: Word Cloud
+14:16:43: Top of class 0
+14:27:07: +-------------+-------------+-------------+
+|             |   Train_200 |   Valid_200 |
+|-------------+-------------+-------------|
+| nonresponse |   0.0657586 |   0.0652883 |
+| Accuracy    |   0.812043  |   0.813598  |
+| f1_score    |   0.845568  |   0.847134  |
+| Precision   |   0.964731  |   0.964191  |
+| Recall      |   0.752607  |   0.755423  |
+| Accuracy_a  |   0.84076   |   0.841473  |
+| f1_score_a  |   0.8737    |   0.87455   |
+| Precision_a |   0.964731  |   0.964191  |
+| Recall_a    |   0.798366  |   0.800159  |
++-------------+-------------+-------------+
+14:27:07: \begin{tabular}{lrr}
+\hline
+             &   Train_200 &   Valid_200 \\
+\hline
+ nonresponse &   0.0657586 &   0.0652883 \\
+ Accuracy    &   0.812043  &   0.813598  \\
+ f1_score    &   0.845568  &   0.847134  \\
+ Precision   &   0.964731  &   0.964191  \\
+ Recall      &   0.752607  &   0.755423  \\
+ Accuracy_a  &   0.84076   &   0.841473  \\
+ f1_score_a  &   0.8737    &   0.87455   \\
+ Precision_a &   0.964731  &   0.964191  \\
+ Recall_a    &   0.798366  &   0.800159  \\
+\hline
+\end{tabular}
+14:27:07: End
+14:27:07: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+14:27:07: Starting fit
+14:27:07: Hyperparameters: k=200, alpha=0.2, harmonic pscore=False
+14:27:07: A data sample
+14:27:07: +--------+--------------------------------------------------------------------+-----+
+|        | X                                                                  |   Y |
+|--------+--------------------------------------------------------------------+-----|
+| 336081 | antifa mark richmond federal courthouse  potential   document warn |   1 |
+| 127828 | sander official  rule  cover medical marijuana                     |   1 |
+| 416721 | national  seek  delay certification  election result               |   1 |
++--------+--------------------------------------------------------------------+-----+
+14:27:07: The shape of the data is (505676, 2)
+14:27:07: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+14:27:07: Taking 20.0% test subset.
+14:27:07: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+14:27:07: dividing data into classes
+14:27:07: Joining the series of text into one string per category
+14:27:07: Dividing those long strings into lists of words
+14:27:08: Counting the occurrences of each word per class
+14:27:08: Total umber of words (training+validation) is:
+14:27:08: Class 1: 2527675, Class 0: 3903092
+14:27:08: Number of distinct training words for each class is
+14:27:08: 25052 and 48967
+14:27:08: Visualizing the top 15 common words in each category [latex code below]
+14:27:09: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+14:27:09: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+14:27:09: *_* Inside GetWP()
+14:27:11: WP created. Number of WP words are 204
+14:27:11: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+14:27:11: Word Cloud
+14:27:11: Top of class 1
+14:27:12: Word Cloud
+14:27:12: Top of class 0
+14:37:44: +-------------+-------------+-------------+
+|             |   Train_200 |   Valid_200 |
+|-------------+-------------+-------------|
+| nonresponse |    0.111106 |    0.110811 |
+| Accuracy    |    0.746757 |    0.748467 |
+| f1_score    |    0.778428 |    0.780401 |
+| Precision   |    0.968683 |    0.968027 |
+| Recall      |    0.650639 |    0.653699 |
+| Accuracy_a  |    0.800027 |    0.800921 |
+| f1_score_a  |    0.833477 |    0.834701 |
+| Precision_a |    0.968683 |    0.968027 |
+| Recall_a    |    0.731392 |    0.733656 |
++-------------+-------------+-------------+
+14:37:44: \begin{tabular}{lrr}
+\hline
+             &   Train_200 &   Valid_200 \\
+\hline
+ nonresponse &    0.111106 &    0.110811 \\
+ Accuracy    &    0.746757 &    0.748467 \\
+ f1_score    &    0.778428 &    0.780401 \\
+ Precision   &    0.968683 &    0.968027 \\
+ Recall      &    0.650639 &    0.653699 \\
+ Accuracy_a  &    0.800027 &    0.800921 \\
+ f1_score_a  &    0.833477 &    0.834701 \\
+ Precision_a &    0.968683 &    0.968027 \\
+ Recall_a    &    0.731392 &    0.733656 \\
+\hline
+\end{tabular}
+14:37:44: End
+14:37:44: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+14:37:44: Starting fit
+14:37:44: Hyperparameters: k=200, alpha=0.4, harmonic pscore=False
+14:37:44: A data sample
+14:37:44: +--------+-------------------------------------------------------------------+-----+
+|        | X                                                                 |   Y |
+|--------+-------------------------------------------------------------------+-----|
+|   9894 | michelle obama claim    still flee  minority                      |   1 |
+| 313513 | mitch mcconnell admit  trump mishandle coronavirus response       |   1 |
+| 137487 | resign     barr slam  several front  explosive sondland testimony |   1 |
++--------+-------------------------------------------------------------------+-----+
+14:37:44: The shape of the data is (505676, 2)
+14:37:44: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+14:37:44: Taking 20.0% test subset.
+14:37:44: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+14:37:44: dividing data into classes
+14:37:44: Joining the series of text into one string per category
+14:37:45: Dividing those long strings into lists of words
+14:37:45: Counting the occurrences of each word per class
+14:37:45: Total umber of words (training+validation) is:
+14:37:45: Class 1: 2527675, Class 0: 3903092
+14:37:46: Number of distinct training words for each class is
+14:37:46: 25052 and 48967
+14:37:46: Visualizing the top 15 common words in each category [latex code below]
+14:37:47: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+14:37:47: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+14:37:47: *_* Inside GetWP()
+14:37:51: WP created. Number of WP words are 207
+14:37:51: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+14:37:51: Word Cloud
+14:37:51: Top of class 1
+14:37:52: Word Cloud
+14:37:52: Top of class 0
+14:49:55: +-------------+-------------+-------------+
+|             |   Train_200 |   Valid_200 |
+|-------------+-------------+-------------|
+| nonresponse |    0.109621 |    0.109269 |
+| Accuracy    |    0.748855 |    0.750465 |
+| f1_score    |    0.780635 |    0.782479 |
+| Precision   |    0.968996 |    0.968404 |
+| Recall      |    0.653586 |    0.656447 |
+| Accuracy_a  |    0.801279 |    0.802154 |
+| f1_score_a  |    0.834741 |    0.835895 |
+| Precision_a |    0.968996 |    0.968404 |
+| Recall_a    |    0.733161 |    0.735284 |
++-------------+-------------+-------------+
+14:49:55: \begin{tabular}{lrr}
+\hline
+             &   Train_200 &   Valid_200 \\
+\hline
+ nonresponse &    0.109621 &    0.109269 \\
+ Accuracy    &    0.748855 &    0.750465 \\
+ f1_score    &    0.780635 &    0.782479 \\
+ Precision   &    0.968996 &    0.968404 \\
+ Recall      &    0.653586 &    0.656447 \\
+ Accuracy_a  &    0.801279 &    0.802154 \\
+ f1_score_a  &    0.834741 &    0.835895 \\
+ Precision_a &    0.968996 &    0.968404 \\
+ Recall_a    &    0.733161 &    0.735284 \\
+\hline
+\end{tabular}
+14:49:55: End
+14:49:55: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+14:49:55: Starting fit
+14:49:55: Hyperparameters: k=200, alpha=0.5, harmonic pscore=False
+14:49:55: A data sample
+14:49:55: +--------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+|        | X                                                                                                                                                 |   Y |
+|--------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----|
+| 378769 | mark kelly    senate race could spoil  plan  replace ginsburg    victorious     former astronaut  husband  gabby giffords might take office  time |   1 |
+| 492537 | white base pigment     also sunblocker                                                                                                            |   0 |
+|  36680 | republican need  time  review   bill  would   national emergency                                                                                  |   1 |
++--------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----+
+14:49:55: The shape of the data is (505676, 2)
+14:49:55: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+14:49:56: Taking 20.0% test subset.
+14:49:56: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+14:49:56: dividing data into classes
+14:49:56: Joining the series of text into one string per category
+14:49:56: Dividing those long strings into lists of words
+14:49:57: Counting the occurrences of each word per class
+14:49:57: Total umber of words (training+validation) is:
+14:49:57: Class 1: 2527675, Class 0: 3903092
+14:49:58: Number of distinct training words for each class is
+14:49:58: 25052 and 48967
+14:49:58: Visualizing the top 15 common words in each category [latex code below]
+14:49:59: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+14:49:59: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+14:49:59: *_* Inside GetWP()
+14:50:01: WP created. Number of WP words are 211
+14:50:01: P(y|wp) is calculated and saved to disk as REDDITN_pywp_200.feather
+14:50:02: Word Cloud
+14:50:02: Top of class 1
+14:50:03: Word Cloud
+14:50:03: Top of class 0
