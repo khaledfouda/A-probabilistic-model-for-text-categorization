@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import modin
 import swifter
 import collections
 from importlib import reload
@@ -10,6 +11,7 @@ from prettytable import PrettyTable
 from datetime import date
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 from tabulate import tabulate
+import time
 pd.options.display.max_colwidth = 5000  # to accommodate long strings
 # ---------------------------------------------
 
@@ -87,19 +89,6 @@ class Proto:
         self.WordCloudGen(' '.join(self.WP.query("y0 == 1").word), 'Top of class 0',
                           f'../data/images/{self.label}_top_class0_k={self.k}.png')
         # -------------------------------------------------------------------
-        self.train.Y_pred, self.train.nonresp_flag = self.predict(self.train.X)
-        self.valid.Y_pred, self.valid.nonresp_flag = self.predict(self.valid.X)
-        # ----------------------------------------------------------------------
-        # Evaluating the model
-        self.scores = pd.DataFrame()
-        self.scores[f'Train_{self.k}'] = SCORER(self.train.Y, self.train.Y_pred,
-                                                self.train.nonresp_flag)
-        self.scores[f'Valid_{self.k}'] = SCORER(self.valid.Y, self.valid.Y_pred,
-                                                self.valid.nonresp_flag)
-        self.scores.reset_index().to_feather(f'../data/feather_files/{self.label}_scores_k={self.k}.feather')
-        self.log.info(tabulate(self.scores, headers='keys', tablefmt='psql'))
-        self.log.info(tabulate(self.scores, headers='keys', tablefmt='latex_raw'))
-        # -------------------------------------------------------------------------------
         self.log.info("End")
         self.log.info("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
     # ----------------------------------------
@@ -268,8 +257,8 @@ class Proto:
         tokens_0_v = long_str_0_v.split()
         # --------------------------------------------------
         # Generate wordclouds
-        self.WordCloudGen(long_str_1 + long_str_1_v, 'class 1', f'../data/images/{self.label}_class1_k={self.k}.png')
-        self.WordCloudGen(long_str_0 + long_str_0_v, 'class 0', f'../data/images/{self.label}_class0_k={self.k}.png')
+        #self.WordCloudGen(long_str_1 + long_str_1_v, 'class 1', f'../data/images/{self.label}_class1_k={self.k}.png')
+        #self.WordCloudGen(long_str_0 + long_str_0_v, 'class 0', f'../data/images/{self.label}_class0_k={self.k}.png')
         # ----------------------------------------------
         # Counting the occurrences of each of the words. Output: list (word, #occurences)
         self.log.info("Counting the occurrences of each word per class")
@@ -327,14 +316,30 @@ class Proto:
         self.WP.loc[t0, 'y0'] = 1
         self.WP.loc[t1, 'y1'] = 1
         self.log.info(f"WP created. Number of WP words are {len(self.WP)}")
-        self.log.info(tabulate(self.WP.head(15), headers='keys', tablefmt='psql'))
-        self.log.info(tabulate(self.WP.head(15), headers='keys', tablefmt='latex_raw'))
+        self.log.info(tabulate(self.WP.head(15), headers='keys', tablefmt='psql', showindex=False))
+        self.log.info(tabulate(self.WP.head(15), headers='keys', tablefmt='latex_raw', showindex=False))
         # 5.  computing p(y|wp)
         self.p_y_wp = self.p_y_wp.loc[self.WP.index, ]
         sum_p = self.p_y_wp[0] + self.p_y_wp[1]
         self.p_y_wp = self.p_y_wp.divide(sum_p, axis=0)
         return
     # --------------------------------------------------------------------------------
+
+    def train_valid_predict(self):
+        self.train.Y_pred, self.train.nonresp_flag = self.predict(self.train.X)
+        self.valid.Y_pred, self.valid.nonresp_flag = self.predict(self.valid.X)
+        # ----------------------------------------------------------------------
+        # Evaluating the model
+        self.scores = pd.DataFrame()
+        self.scores[f'Train_{self.k}'] = SCORER(self.train.Y, self.train.Y_pred,
+                                                self.train.nonresp_flag)
+        self.scores[f'Valid_{self.k}'] = SCORER(self.valid.Y, self.valid.Y_pred,
+                                                self.valid.nonresp_flag)
+        self.scores.reset_index().to_feather(f'../data/feather_files/{self.label}_scores_k={self.k}.feather')
+        self.log.info(tabulate(self.scores, headers='keys', tablefmt='psql'))
+        self.log.info(tabulate(self.scores, headers='keys', tablefmt='latex_raw'))
+        return
+    # ------------------------------------------------------
 
     def predict(self, x=pd.Series()):
         """

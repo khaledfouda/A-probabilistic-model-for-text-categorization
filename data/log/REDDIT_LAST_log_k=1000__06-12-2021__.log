@@ -1,0 +1,620 @@
+17:50:04: ********** START OF LOG ****************
+17:50:04: Taking 20.0% test subset.
+17:50:04: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:50:04: dividing data into classes
+17:50:05: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+17:50:06: Loaded backend qtagg version unknown.
+17:50:06: Loaded backend QtAgg version unknown.
+17:50:06: Word Cloud
+17:50:06: class 1
+17:50:19: Word Cloud
+17:50:19: class 0
+17:50:44: Counting the occurrences of each word per class
+17:50:44: Total umber of words (training+validation) is:
+17:50:44: Class 1: 2527675,Class 0: 3903092
+17:50:45: Number of distinct training words for each class is
+17:50:45: 25052 and 48967
+17:50:45: Visualizing the top 15 common words in each category [latex code below]
+17:50:45: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+17:50:45: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+17:50:45: Starting CV fit step
+17:50:45: Hyperparameters: k=200, alpha=0.5, harmonic pscore=True
+17:50:45: *_* Inside GetWP()
+17:50:48: WP created. Number of WP words are 332
+17:50:48: +---------+---------+------+------+
+| word    | word    |   y0 |   y1 |
+|---------+---------+------+------|
+| meet    | meet    |    1 |    1 |
+| deal    | deal    |    0 |    1 |
+| think   | think   |    1 |    1 |
+| fire    | fire    |    0 |    1 |
+| realize | realize |    1 |    0 |
+| rule    | rule    |    0 |    1 |
+| worker  | worker  |    0 |    1 |
+| shit    | shit    |    1 |    0 |
+| still   | still   |    1 |    1 |
+| primary | primary |    0 |    1 |
+| even    | even    |    1 |    1 |
+| plan    | plan    |    1 |    1 |
+| feel    | feel    |    1 |    0 |
+| forget  | forget  |    1 |    0 |
+| date    | date    |    1 |    0 |
++---------+---------+------+------+
+17:50:48: \begin{tabular}{llrr}
+\hline
+ word    & word    &   y0 &   y1 \\
+\hline
+ meet    & meet    &    1 &    1 \\
+ deal    & deal    &    0 &    1 \\
+ think   & think   &    1 &    1 \\
+ fire    & fire    &    0 &    1 \\
+ realize & realize &    1 &    0 \\
+ rule    & rule    &    0 &    1 \\
+ worker  & worker  &    0 &    1 \\
+ shit    & shit    &    1 &    0 \\
+ still   & still   &    1 &    1 \\
+ primary & primary &    0 &    1 \\
+ even    & even    &    1 &    1 \\
+ plan    & plan    &    1 &    1 \\
+ feel    & feel    &    1 &    0 \\
+ forget  & forget  &    1 &    0 \\
+ date    & date    &    1 &    0 \\
+\hline
+\end{tabular}
+17:50:48: Word Cloud
+17:50:48: Top of class 1
+17:50:49: Word Cloud
+17:50:49: Top of class 0
+17:55:30: +-------------+-----------+
+|             |     valid |
+|-------------+-----------|
+| nonresponse | 0.0652883 |
+| Accuracy    | 0.813598  |
+| f1_score    | 0.847134  |
+| Precision   | 0.964191  |
+| Recall      | 0.755423  |
+| Accuracy_a  | 0.841473  |
+| f1_score_a  | 0.87455   |
+| Precision_a | 0.964191  |
+| Recall_a    | 0.800159  |
++-------------+-----------+
+17:55:30: \begin{tabular}{lr}
+\hline
+             &     valid \\
+\hline
+ nonresponse & 0.0652883 \\
+ Accuracy    & 0.813598  \\
+ f1_score    & 0.847134  \\
+ Precision   & 0.964191  \\
+ Recall      & 0.755423  \\
+ Accuracy_a  & 0.841473  \\
+ f1_score_a  & 0.87455   \\
+ Precision_a & 0.964191  \\
+ Recall_a    & 0.800159  \\
+\hline
+\end{tabular}
+17:55:30: @@@ Better score achieved at  k=200, harmonic pscore=True
+17:55:30: current best score is 0.8471343777366936
+17:55:30: Starting CV fit step
+17:55:30: Hyperparameters: k=200, alpha=0.5, harmonic pscore=False
+17:55:30: *_* Inside GetWP()
+17:55:33: WP created. Number of WP words are 211
+17:55:33: +------------+------------+------+------+
+| word       | word       |   y0 |   y1 |
+|------------+------------+------+------|
+| meet       | meet       |    1 |    1 |
+| deal       | deal       |    1 |    1 |
+| think      | think      |    1 |    1 |
+| fire       | fire       |    1 |    1 |
+| realize    | realize    |    1 |    1 |
+| rule       | rule       |    0 |    1 |
+| still      | still      |    1 |    1 |
+| even       | even       |    1 |    1 |
+| plan       | plan       |    1 |    1 |
+| feel       | feel       |    1 |    1 |
+| mean       | mean       |    1 |    1 |
+| want       | want       |    1 |    1 |
+| help       | help       |    1 |    1 |
+| republican | republican |    1 |    1 |
+| ever       | ever       |    1 |    1 |
++------------+------------+------+------+
+17:55:33: \begin{tabular}{llrr}
+\hline
+ word       & word       &   y0 &   y1 \\
+\hline
+ meet       & meet       &    1 &    1 \\
+ deal       & deal       &    1 &    1 \\
+ think      & think      &    1 &    1 \\
+ fire       & fire       &    1 &    1 \\
+ realize    & realize    &    1 &    1 \\
+ rule       & rule       &    0 &    1 \\
+ still      & still      &    1 &    1 \\
+ even       & even       &    1 &    1 \\
+ plan       & plan       &    1 &    1 \\
+ feel       & feel       &    1 &    1 \\
+ mean       & mean       &    1 &    1 \\
+ want       & want       &    1 &    1 \\
+ help       & help       &    1 &    1 \\
+ republican & republican &    1 &    1 \\
+ ever       & ever       &    1 &    1 \\
+\hline
+\end{tabular}
+17:55:34: Word Cloud
+17:55:34: Top of class 1
+17:55:34: Word Cloud
+17:55:34: Top of class 0
+17:58:28: ********** START OF LOG ****************
+17:58:28: Starting fit
+17:58:28: Hyperparameters: k=1000, alpha=0.5, harmonic pscore=True
+17:58:28: A data sample
+17:58:28: +--------+-----------------------------------------------------------------+-----+
+|        | X                                                               |   Y |
+|--------+-----------------------------------------------------------------+-----|
+| 163351 | bagel   sugar free donut                                        |   0 |
+| 341419 | officer       killer       peaceful march                       |   1 |
+|  55792 | house dems demand barr cancel  press conference  mueller report |   1 |
++--------+-----------------------------------------------------------------+-----+
+17:58:28: \begin{tabular}{rlr}
+\hline
+        & X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              &   Y \\
+\hline
+ 369032 & kellyanne conway  quit    resource  care    many                                                                                                                                                                                                                                                                                                                                                                                                                                                               &   1 \\
+  35213 & president trump comment  patriot owner robert  solicit prostitution charge                                                                                                                                                                                                                                                                                                                                                                                                                                     &   1 \\
+ 432301 & real woman   standard  others   bear      issue since  feel like       come  term crazy   feel like   always expect  feel  certain  since  turn      always      girl fall   nothing wrong         sense       suppose     late elementary school   middle school come   felt separate cause   girl talk            make girl think      awkward    also know   expect      really  even  come   always  implication     real   also  like    talk   since  might    idea   defective    anyone else feel like &   0 \\
+\hline
+\end{tabular}
+17:58:28: The shape of the data is (505676, 2)
+17:58:28: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+17:58:28: Taking 20.0% test subset.
+17:58:28: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+17:58:28: dividing data into classes
+17:58:29: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+17:58:30: Loaded backend qtagg version unknown.
+17:58:30: Loaded backend QtAgg version unknown.
+17:58:30: Word Cloud
+17:58:30: class 1
+17:58:44: Word Cloud
+17:58:44: class 0
+17:59:08: Counting the occurrences of each word per class
+18:01:11: Total umber of words (training+validation) is:
+18:01:11: Class 1: 2527675,Class 0: 3903092
+18:01:12: Number of distinct training words for each class is
+18:01:12: 25052 and 48967
+18:01:12: Visualizing the top 15 common words in each category [latex code below]
+18:01:12: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:01:12: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:01:12: *_* Inside GetWP()
+18:01:15: WP created. Number of WP words are 1490
+18:01:15: +-----------+------+------+
+| word      |   y0 |   y1 |
+|-----------+------+------|
+| angry     |    1 |    0 |
+| secretary |    0 |    1 |
+| georgia   |    0 |    1 |
+| come      |    1 |    1 |
+| super     |    1 |    1 |
+| inside    |    1 |    1 |
+| disgust   |    1 |    0 |
+| toward    |    0 |    1 |
+| mayor     |    0 |    1 |
+| endorse   |    0 |    1 |
+| surprise  |    1 |    1 |
+| appear    |    1 |    1 |
+| character |    1 |    0 |
+| half      |    1 |    1 |
+| didnt     |    1 |    0 |
++-----------+------+------+
+18:01:15: \begin{tabular}{lrr}
+\hline
+ word      &   y0 &   y1 \\
+\hline
+ angry     &    1 &    0 \\
+ secretary &    0 &    1 \\
+ georgia   &    0 &    1 \\
+ come      &    1 &    1 \\
+ super     &    1 &    1 \\
+ inside    &    1 &    1 \\
+ disgust   &    1 &    0 \\
+ toward    &    0 &    1 \\
+ mayor     &    0 &    1 \\
+ endorse   &    0 &    1 \\
+ surprise  &    1 &    1 \\
+ appear    &    1 &    1 \\
+ character &    1 &    0 \\
+ half      &    1 &    1 \\
+ didnt     &    1 &    0 \\
+\hline
+\end{tabular}
+18:01:15: training time 167.3499619960785
+18:01:15: Word Cloud
+18:01:15: Top of class 1
+18:01:16: Word Cloud
+18:01:16: Top of class 0
+18:08:15: pred train time 418.6734721660614
+18:12:35: pred valid time 259.99623012542725
+18:12:36: +-------------+--------------+--------------+
+|             |   Train_1000 |   Valid_1000 |
+|-------------+--------------+--------------|
+| nonresponse |     0.010046 |    0.0104216 |
+| Accuracy    |     0.86936  |    0.870995  |
+| f1_score    |     0.897094 |    0.898476  |
+| Precision   |     0.972065 |    0.972525  |
+| Recall      |     0.83286  |    0.834905  |
+| Accuracy_a  |     0.872542 |    0.874033  |
+| f1_score_a  |     0.900258 |    0.901562  |
+| Precision_a |     0.972065 |    0.972525  |
+| Recall_a    |     0.838331 |    0.840251  |
++-------------+--------------+--------------+
+18:12:36: \begin{tabular}{lrr}
+\hline
+             &   Train_1000 &   Valid_1000 \\
+\hline
+ nonresponse &     0.010046 &    0.0104216 \\
+ Accuracy    &     0.86936  &    0.870995  \\
+ f1_score    &     0.897094 &    0.898476  \\
+ Precision   &     0.972065 &    0.972525  \\
+ Recall      &     0.83286  &    0.834905  \\
+ Accuracy_a  &     0.872542 &    0.874033  \\
+ f1_score_a  &     0.900258 &    0.901562  \\
+ Precision_a &     0.972065 &    0.972525  \\
+ Recall_a    &     0.838331 &    0.840251  \\
+\hline
+\end{tabular}
+18:12:36: End
+18:12:36: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+18:16:35: ********** START OF LOG ****************
+18:16:54: ********** START OF LOG ****************
+18:17:10: ********** START OF LOG ****************
+18:17:35: ********** START OF LOG ****************
+18:17:35: Starting fit
+18:17:35: Hyperparameters: k=1000, alpha=0.5, harmonic pscore=True
+18:17:35: A data sample
+18:17:35: +--------+------------------------------------------------------------+-----+
+|        | X                                                          |   Y |
+|--------+------------------------------------------------------------+-----|
+| 164297 | possible  creator    format pronounce      start  internet |   0 |
+| 289548 | film    best documentary oscar                             |   1 |
+| 350180 | civil right group denounce facebook  hate speech           |   1 |
++--------+------------------------------------------------------------+-----+
+18:17:35: \begin{tabular}{rlr}
+\hline
+        & X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      &   Y \\
+\hline
+ 180913 & high five   assist clap                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &   0 \\
+ 409651 & brace   next donald trump could  much   bhaskar sunkara                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &   1 \\
+ 231138 & tifu  pepper cream  dick   happen  couple hour    think thing  finally start  feel normal     stomach problem  result   wake  violently  painfully  result  hospitalization many      find solution  help manage  symptom  help give    normal      every     sometimes    month feel     recommend solution   apply capsaicin cream   stomach   feel  symptom start  present  decide  would finally give   show      wake  slather  stuff   belly  crawl back      minute  feel  start  warm   decide  roll onto  belly        also sleep          cause   fuck       notice  start   really         dick      seem    turn around         penis feel like   throw   cast iron   burn      stomach      realize        capsaicin cream       roll onto  stomach    excess onto   flame   sure      kind curl    ball wait      little   know  would make      concentrate ball  heat wrap     start    help  spread  capsaicin     initially limit       envelop  whole frank    decide   crank   ceiling          pain  meanwhile   star   silently judge  laugh   plus side  stomach felt    think  cream   accidentally  capsaicin cream    jiggly &   0 \\
+\hline
+\end{tabular}
+18:17:35: The shape of the data is (505676, 2)
+18:17:35: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:17:35: Taking 20.0% test subset.
+18:17:35: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:17:35: dividing data into classes
+18:17:36: Counting the occurrences of each word per class
+18:17:36: Total umber of words (training+validation) is:
+18:17:36: Class 1: 2527675,Class 0: 3903092
+18:17:36: Number of distinct training words for each class is
+18:17:36: 25052 and 48967
+18:17:36: Visualizing the top 15 common words in each category [latex code below]
+18:17:37: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:17:37: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:17:37: *_* Inside GetWP()
+18:17:40: WP created. Number of WP words are 1490
+18:17:40: +------------+------+------+
+| word       |   y0 |   y1 |
+|------------+------+------|
+| four       |    1 |    1 |
+| name       |    1 |    1 |
+| front      |    1 |    1 |
+| response   |    1 |    1 |
+| pardon     |    0 |    1 |
+| industry   |    0 |    1 |
+| report     |    1 |    1 |
+| never      |    1 |    1 |
+| probably   |    1 |    1 |
+| barrett    |    0 |    1 |
+| yang       |    0 |    1 |
+| promise    |    0 |    1 |
+| detail     |    1 |    1 |
+| transcript |    0 |    1 |
+| minute     |    1 |    1 |
++------------+------+------+
+18:17:40: \begin{tabular}{lrr}
+\hline
+ word       &   y0 &   y1 \\
+\hline
+ four       &    1 &    1 \\
+ name       &    1 &    1 \\
+ front      &    1 &    1 \\
+ response   &    1 &    1 \\
+ pardon     &    0 &    1 \\
+ industry   &    0 &    1 \\
+ report     &    1 &    1 \\
+ never      &    1 &    1 \\
+ probably   &    1 &    1 \\
+ barrett    &    0 &    1 \\
+ yang       &    0 &    1 \\
+ promise    &    0 &    1 \\
+ detail     &    1 &    1 \\
+ transcript &    0 &    1 \\
+ minute     &    1 &    1 \\
+\hline
+\end{tabular}
+18:17:40: training time 5.236851692199707
+18:17:40: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:17:41: Loaded backend qtagg version unknown.
+18:17:41: Loaded backend QtAgg version unknown.
+18:17:41: Word Cloud
+18:17:41: Top of class 1
+18:17:41: Word Cloud
+18:17:41: Top of class 0
+18:22:36: pred valid time 293.86348056793213
+18:27:49: pred valid time 153.39999532699585
+18:29:47: +-------------+--------------+--------------+
+|             |   Train_1000 |   Valid_1000 |
+|-------------+--------------+--------------|
+| nonresponse |     0.010046 |    0.0104216 |
+| Accuracy    |     0.86936  |    0.870995  |
+| f1_score    |     0.897094 |    0.898476  |
+| Precision   |     0.972065 |    0.972525  |
+| Recall      |     0.83286  |    0.834905  |
+| Accuracy_a  |     0.872542 |    0.874033  |
+| f1_score_a  |     0.900258 |    0.901562  |
+| Precision_a |     0.972065 |    0.972525  |
+| Recall_a    |     0.838331 |    0.840251  |
++-------------+--------------+--------------+
+18:29:47: \begin{tabular}{lrr}
+\hline
+             &   Train_1000 &   Valid_1000 \\
+\hline
+ nonresponse &     0.010046 &    0.0104216 \\
+ Accuracy    &     0.86936  &    0.870995  \\
+ f1_score    &     0.897094 &    0.898476  \\
+ Precision   &     0.972065 &    0.972525  \\
+ Recall      &     0.83286  &    0.834905  \\
+ Accuracy_a  &     0.872542 &    0.874033  \\
+ f1_score_a  &     0.900258 &    0.901562  \\
+ Precision_a &     0.972065 &    0.972525  \\
+ Recall_a    &     0.838331 &    0.840251  \\
+\hline
+\end{tabular}
+18:29:47: End
+18:29:47: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+18:29:58: ********** START OF LOG ****************
+18:29:58: Starting fit
+18:29:58: Hyperparameters: k=1000, alpha=0.5, harmonic pscore=True
+18:29:58: A data sample
+18:29:58: +--------+----------------------------------------------------------------------+-----+
+|        | X                                                                    |   Y |
+|--------+----------------------------------------------------------------------+-----|
+| 448805 | within  month   suspicious  people  nice                             |   0 |
+|  20828 | covington  long video show start   incident  indigenous people march |   1 |
+| 453263 | people      would  hate tuesday                                      |   0 |
++--------+----------------------------------------------------------------------+-----+
+18:29:58: \begin{tabular}{rlr}
+\hline
+        & X                                                                                                                               &   Y \\
+\hline
+ 271781 & police investigate possible hate crime  proud  take   burn black live matter sign  historically black church                    &   1 \\
+ 175439 & modern belief  gender   attribute  biological  would allow sentient   claim membership   gender      foundation  defend   civil &   0 \\
+ 467545 & phone collect  data     implant microchip would                                                                                 &   0 \\
+\hline
+\end{tabular}
+18:29:58: The shape of the data is (505676, 2)
+18:29:58: 1    0.683711
+0    0.316289
+Name: Y, dtype: float64
+18:29:59: Taking 20.0% test subset.
+18:29:59: The resulting train shape is (404540, 2) and test shape is (101136, 2)
+18:29:59: dividing data into classes
+18:29:59: Counting the occurrences of each word per class
+18:29:59: Total umber of words (training+validation) is:
+18:29:59: Class 1: 2527675,Class 0: 3903092
+18:30:00: Number of distinct training words for each class is
+18:30:00: 25052 and 48967
+18:30:00: Visualizing the top 15 common words in each category [latex code below]
+18:30:01: +--------------------------------------+
+| Most common 15 words in each category  |
++----------------------+---------------+
+|       class 1        |    class 0    |
++----------------------+---------------+
+|        trump         |      like     |
+|        biden         |      make     |
+|        house         |      know     |
+|     coronavirus      |     think     |
+|         call         |      tell     |
+|       democrat       |     would     |
+|      president       |      want     |
+|        white         |      take     |
+|       election       |      time     |
+|         vote         |     people    |
+|      republican      |      feel     |
+|        sander        |     start     |
+|        state         |      year     |
+|        donald        |      come     |
+|       campaign       |      look     |
++----------------------+---------------+
+18:30:01: \begin{tabular}{cc}
+class 1 & class 0 \\
+trump & like \\
+biden & make \\
+house & know \\
+coronavirus & think \\
+call & tell \\
+democrat & would \\
+president & want \\
+white & take \\
+election & time \\
+vote & people \\
+republican & feel \\
+sander & start \\
+state & year \\
+donald & come \\
+campaign & look \\
+\end{tabular}
+18:30:01: *_* Inside GetWP()
+18:30:03: WP created. Number of WP words are 1490
+18:30:03: +--------------+------+------+
+| word         |   y0 |   y1 |
+|--------------+------+------|
+| governor     |    0 |    1 |
+| know         |    1 |    1 |
+| safe         |    1 |    1 |
+| george       |    0 |    1 |
+| proud        |    1 |    1 |
+| trouble      |    1 |    1 |
+| professional |    1 |    0 |
+| migrant      |    0 |    1 |
+| ancient      |    1 |    0 |
+| office       |    1 |    1 |
+| lindsey      |    0 |    1 |
+| often        |    1 |    0 |
+| language     |    1 |    0 |
+| open         |    1 |    1 |
+| today        |    1 |    1 |
++--------------+------+------+
+18:30:03: \begin{tabular}{lrr}
+\hline
+ word         &   y0 &   y1 \\
+\hline
+ governor     &    0 &    1 \\
+ know         &    1 &    1 \\
+ safe         &    1 &    1 \\
+ george       &    0 &    1 \\
+ proud        &    1 &    1 \\
+ trouble      &    1 &    1 \\
+ professional &    1 &    0 \\
+ migrant      &    0 &    1 \\
+ ancient      &    1 &    0 \\
+ office       &    1 &    1 \\
+ lindsey      &    0 &    1 \\
+ often        &    1 &    0 \\
+ language     &    1 &    0 \\
+ open         &    1 &    1 \\
+ today        &    1 &    1 \\
+\hline
+\end{tabular}
+18:30:04: Using fontManager instance from C:\Users\Khaled\.matplotlib\fontlist-v330.json
+18:30:04: Loaded backend qtagg version unknown.
+18:30:04: Loaded backend QtAgg version unknown.
+18:30:04: Word Cloud
+18:30:04: Top of class 1
+18:30:05: Word Cloud
+18:30:05: Top of class 0
+18:30:05: End
+18:30:05: -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
