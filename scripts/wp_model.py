@@ -322,6 +322,10 @@ class Proto:
         self.p_y_wp = self.p_y_wp.loc[self.WP.index, ]
         sum_p = self.p_y_wp[0] + self.p_y_wp[1]
         self.p_y_wp = self.p_y_wp.divide(sum_p, axis=0)
+        temp = pd.concat((self.p_y_wp.sort_values(by=1, axis=0, ascending=False).iloc[:7, :],
+                          self.p_y_wp.sort_values(by=0, axis=0, ascending=False).iloc[:7, :]))
+        self.log.info(tabulate(self.p_y_wp.sample(20), headers='keys', tablefmt='psql', showindex=True))
+        self.log.info(tabulate(self.p_y_wp.sample(20), headers='keys', tablefmt='latex_raw', showindex=True))
         return
     # --------------------------------------------------------------------------------
 
@@ -365,8 +369,8 @@ class Proto:
         pred, flag = self.predict(x)
         nonresp = flag.value_counts().loc[1] / len(flag)
         self.log.info(f"Percentage of non-responses is {round(nonresp*100,2)}%")
-        pred = pd.Series(pred).map(lambda d: 'political' if d else 'non-political')
-        test_df = pd.DataFrame({'text': x, 'class': pred})
+        pred_t = pd.Series(pred).map(lambda d: 'political' if d else 'non-political')
+        test_df = pd.DataFrame({'text': x, 'class': pred_t})
         self.log.info(tabulate(test_df.sample(15), headers='keys', tablefmt='psql'))
         self.log.info(tabulate(test_df.sample(15), headers='keys', tablefmt='latex_raw'))
         self.WordCloudGen(' '.join(test_df[pred == 1].text), 'Predicted class 1',

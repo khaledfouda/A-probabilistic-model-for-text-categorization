@@ -22,5 +22,5 @@ if __name__ == '__main__':
 
     ob = Proto('REDDIT_last', k=1000, harmonic_pscore=True, log_to_file=True)
     _ = ob.fit(data)
-    _ = ob.train_valid_predict()
-    _ = ob.test_predict(test.X)
+    # _ = ob.train_valid_predict()
+    # _ = ob.test_predict(test.X)
