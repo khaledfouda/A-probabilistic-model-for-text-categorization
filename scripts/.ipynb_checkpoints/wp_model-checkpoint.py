@@ -11,6 +11,7 @@ from prettytable import PrettyTable
 from datetime import date
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 from tabulate import tabulate
+import time
 pd.options.display.max_colwidth = 5000  # to accommodate long strings
 # ---------------------------------------------
 
