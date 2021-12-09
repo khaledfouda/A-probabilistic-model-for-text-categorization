@@ -20,5 +20,7 @@ Our model achieves a precision of 97% and takes only a few seconds to fit over 5
 -------------------
 For full report: [A probabilistic model for text categorization](https://github.com/khaledfouda/A-probabilistic-model-for-text-categorization/blob/main/A_probabilistic_model_for_text_categorization.pdf)
   
-For code structure and how to use the library check [In Progress]()
+For code structure and how to use the library check [code structure](https://github.com/khaledfouda/A-probabilistic-model-for-text-categorization/blob/main/code_structure.md)
+
+
 
