@@ -1,2 +1,15 @@
-# Plitical changes on R/canada (Reddit)
- Studing the changes of the dominant political views on the sub-reddit r/canada. The work is still in progress. Honours research project - Concordia University - BA. Statistics
+ <h1 align="center">
+ A probabilistic model for text categorization
+</h1>  
+<h2 align="center"> Classifying political content on Reddit
+ </h2>  
+  
+
+Classifying social media content has been the interest of researchers during the last decade.
+This paper proposes a probabilistic representation of topic-related keywords on social media.
+We aim to estimate the conditional likelihood of a class given a short text like a tweet.
+We used Reddit as a case study with an interest in identifying political content.
+We reported the performance and compared it to machine learning methods.
+Our model achieves a precision of 97% and takes only a few seconds to fit over 500,000 data points.
+-------------------
+To read a preprint: [helo](https:\\)
