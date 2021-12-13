@@ -15,3 +15,6 @@ jupyterhub.sqlite
 Pipfile
 Pipfile.lock
 .idea
+scripts/etc
+scripts/__pycache__
+scripts/.ipynb_checkpoints
