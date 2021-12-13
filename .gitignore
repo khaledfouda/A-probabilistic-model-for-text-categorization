@@ -12,3 +12,5 @@ venu/
 jupyterhub_cookie_secret
 jupyterhub.sqlite
 .gitattributes
+Pipfile
+Pipfile.lock
