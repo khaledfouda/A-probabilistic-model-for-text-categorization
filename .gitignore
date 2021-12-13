@@ -1,5 +1,11 @@
-
+.gitgnore
 *.zst
 *.json
 *.feather
 *.pickle
+/notebooks
+/venu
+/.vs
+/.ipynb_checkpoints
+/.idea
+/.git
