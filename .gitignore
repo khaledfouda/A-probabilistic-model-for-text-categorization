@@ -18,3 +18,7 @@ Pipfile.lock
 scripts/etc
 scripts/__pycache__
 scripts/.ipynb_checkpoints
+data/.ipynb_checkpoints
+data/etc
+data/images/old
+data/images/old2
