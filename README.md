@@ -1,4 +1,4 @@
-[In progress]
+
  ![](./data/images/wordcloud_wp.jpg)
 <h1 align="center">
  A probabilistic model for text categorization
