@@ -7,7 +7,7 @@ import logging.handlers
 """
 The file reads zst files, extracts data related to the provided subreddits, and save data to file.
 An example run:
-	python ./iterate_folder.py ../data/submissions_zst/ ../data/processed/
+	python 2_process_zst.py ‘canada’ ‘politics’ ‘news’
 	
 	where the first input is the folder of zst files and the second is the folder of output json files.
 	Moreover, a user can change the subreddits list below to extract data from other subreddits.
@@ -37,10 +37,12 @@ def read_lines_zst(file_name):
 
 
 if __name__ == '__main__':
-	input_folder = sys.argv[1]
-	output_folder = sys.argv[2]
-	subreddit_list = ['canada', 'liberal', 'conservative', 'politics',
-					  "twoxchromosomes", "Showerthoughts", "todayilearned", "tifu"]
+	input_folder = '../data/submissions_zst/'
+	output_folder = '../data/processed/'
+	subreddit_list = sys.argv[:]
+	if len(subreddit_list) == 0:  # Default list
+		subreddit_list = ['canada', 'liberal', 'conservative', 'politics',
+						"twoxchromosomes", "Showerthoughts", "todayilearned", "tifu"]
 	subreddit_list = [s.lower() for s in subreddit_list]
 	input_files = []
 	output_files = []

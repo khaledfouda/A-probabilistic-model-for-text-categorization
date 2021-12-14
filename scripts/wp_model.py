@@ -42,7 +42,7 @@ def SCORER(y_true, y_pred, flag):
 
 
 class Proto:
-    def __init__(self, label, k, alpha=.5, harmonic_pscore=False, log_to_file=False):
+    def __init__(self, label, k, alpha=.5, harmonic_pscore=True, log_to_file=False):
         # setting initial values to all shared variables.
         self.label = label.upper()
         self.k = k

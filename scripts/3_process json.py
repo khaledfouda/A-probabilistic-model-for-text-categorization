@@ -2,7 +2,7 @@
  This files turns the json files into one pandas feather file.
  One subreddit, One year, twelve files for each month (or less)
  A sample call would be:
- python 3_process_json.py ../data/processed/ canada 2016 ../data/feather_files/
+ python 3_process_json.py  canada 2016
 """
 # ------------------------------------
 import os
@@ -29,10 +29,10 @@ def parsefile(input_file):
 
 
 if __name__ == '__main__':
-    input_folder = sys.argv[1]
-    subreddit = sys.argv[2].lower()
-    year = sys.argv[3]
-    output_folder = sys.argv[4]
+    input_folder = '../data/processed/'
+    subreddit = sys.argv[0].lower()
+    year = sys.argv[1]
+    output_folder = '../data/feather_files/'
     input_files = []
     total_size = 0
     output_file = ''
@@ -44,14 +44,14 @@ if __name__ == '__main__':
             if str(subreddit) not in filename:
                 continue
             if output_file == '':
-                output_file = output_folder + '/' +str(filename.split('-')[0]) +\
-                 "_"+str(subreddit) + '_df.feather'
+                output_file = output_folder + '/' + str(filename.split('-')[0]) +\
+                 "_" + str(subreddit) + '_df.feather'
             file_path = os.path.join(subdir, filename)
             input_files.append(file_path)
             total_size += os.stat(file_path).st_size
     # -----------------------------------------------------
-    log.info(f"Processing {len(input_files)} files of {(total_size/(2**30)):.2f} gigabytes"+
-             f" of the subbreddit {subreddit} and year {year}\nsaving to {output_file}")
+    log.info(f"Processing {len(input_files)} files of {(total_size/(2**30)):.2f} gigabytes" +
+             f" of the subreddit {subreddit} and year {year}\nsaving to {output_file}")
     # ----------------------------------------------------------
     data = pd.DataFrame()
     for file in input_files:
